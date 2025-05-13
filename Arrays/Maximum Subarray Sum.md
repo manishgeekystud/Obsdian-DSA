@@ -127,10 +127,8 @@ public class Solution {
 ### 📍 **Quick Tips**:
 
 - Think: **"Reset the sum when it’s negative, and keep track of the maximum found."**
-    
-- This solution works efficiently for both **positive** and **negative** numbers.
-    
-- Ideal for problems requiring **maximum subarray sum** in linear time.
+  - This solution works efficiently for both **positive** and **negative** numbers.
+  - Ideal for problems requiring **maximum subarray sum** in linear time.
 
 
 
