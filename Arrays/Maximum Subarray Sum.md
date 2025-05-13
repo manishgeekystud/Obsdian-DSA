@@ -34,7 +34,7 @@ public int maxSubArray(int[] nums){
  int maxSum = Integer.MIN_VALUE;
  for (int i = 0; i < n; i++) {
     int sum = nums[i];                // Start a new subarray from index i
-    maxSum = Math.max(maxSum, sum);   // Fix single element (make it max to add further)
+    maxSum = Math.max(maxSum, sum);   // Fix single element (to add further)
     for (int j = i + 1; j < n; j++) {
         sum += nums[j];               // Extend subarray
         maxSum = Math.max(maxSum, sum); // Update max
