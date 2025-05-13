@@ -129,7 +129,9 @@ Yes, I'm sure.
 
 ⭐️ Points
 
-We take smaller max height between left(= `2 height`) and right(= `3 height`) and handle left side because `left max` is smaller than `right max`. That means we don't have to care about right side because we know that we have current tallest bar(= `3 height` at index `4`) on the right side, so at least we can keep water at `2 height`(= `left max`)
+We take smaller max height between left(= `2 height`) and right(= `3 height`) and handle left side because `left max` is smaller than `right max`. 
+
+That means we don't have to care about right side because we know that we have current tallest bar(= `3 height` at index `4`) on the right side, so at least we can keep water at `2 height`(= `left max`)
 
 ---
 
