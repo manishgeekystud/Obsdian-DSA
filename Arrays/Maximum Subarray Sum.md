@@ -20,7 +20,6 @@ Given an integer array `nums`, find the subarray with the largest sum, and re
 
 **Brute Force**
 1. **Try all possible subarrays**:
-    
     - Start from every index `i`.
     - From each `i`, keep adding elements one by one (`j = i+1 to n`).
         
