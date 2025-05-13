@@ -28,6 +28,8 @@ An efficient solution is to traverse the array from left to right. If we see a 
 **Time Complexity :** O(n)   
 **Auxiliary Space :** O(1)
 
+**Brute**
+
 ```
    static int maxConsecutiveOnes(int arr[], int n)
     {
@@ -49,3 +51,23 @@ An efficient solution is to traverse the array from left to right. If we see a 
     	return res;
     }
 ```
+**Efficient**
+
+    static int maxConsecutiveOnes(int arr[], int n)
+    {
+    	int res = 0, curr = 0;
+
+    	for(int i = 0; i < n; i++)
+    	{
+    		if(arr[i] == 0)
+    			curr = 0;
+    		else
+    		{
+    			curr++;
+
+    			res = Math.max(res, curr);
+    		}
+    	}
+    	
+    	return res;
+    
