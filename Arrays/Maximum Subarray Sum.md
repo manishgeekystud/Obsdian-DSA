@@ -120,10 +120,8 @@ public class Solution {
 ### 🧩 **Remember the Flow Like This**:
 
 - **Sum**: Add numbers together (unless the sum is negative, then restart).
-    
 - **Max**: Always check if the current sum is greater than the previous best sum.
     
-
 ---
 
 ### 📍 **Quick Tips**:
