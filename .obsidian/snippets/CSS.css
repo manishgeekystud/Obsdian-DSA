@@ -1,56 +1,39 @@
-/* === LeetCode Light Theme for Java Code Blocks in Obsidian === */
+/* LeetCode-like Java syntax highlighting */
 
-.markdown-preview-view code[class*="language-"] {
-  background-color: #ffffff;
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 14px;
-  padding: 0.6em;
-  line-height: 1.5;
-  border-radius: 6px;
-  color: #000000;
-}
-
-/* Keywords like public, int, if, else */
-.token.keyword {
-  color: #0000FF;
-}
-
-/* Custom class and type names */
-.token.class-name,
-.token.builtin {
-  color: #267f99;
-}
-
-/* Constants: MIN_VALUE */
-.token.constant {
-  color: #AF00DB;
-}
-
-/* Function names like kadaneMax */
-.token.function {
-  color: #795E26;
-}
-
-/* Numeric values: 0, 1, etc */
-.token.number {
-  color: #098658;
-}
-
-/* Comments */
-.token.comment {
-  color: #008000;
+.markdown-preview-view code[class*="language-java"] span.token.comment {
+  color: #008000; /* green */
   font-style: italic;
 }
 
-/* Operators: =, +, -, etc */
-.token.operator {
-  color: #000000;
-  /* Make variable names appear black like LeetCode */
-code span.token.variable,
-code span.token.identifier,
-code span.token.plain,
-code span.token.name {
-  color: #000000 !important;
+.markdown-preview-view code[class*="language-java"] span.token.keyword {
+  color: #0000ff; /* blue */
+  font-weight: bold;
 }
 
+.markdown-preview-view code[class*="language-java"] span.token.class-name,
+.markdown-preview-view code[class*="language-java"] span.token.builtin {
+  color: #2b91af; /* blue */
+}
+
+.markdown-preview-view code[class*="language-java"] span.token.function {
+  color: #795EAD; /* purple - method calls like Math.max */
+}
+
+.markdown-preview-view code[class*="language-java"] span.token.string {
+  color: #A31515; /* brown-red for strings */
+}
+
+.markdown-preview-view code[class*="language-java"] span.token.number {
+  color: #098658; /* number literals */
+}
+
+.markdown-preview-view code[class*="language-java"] span.token.operator {
+  color: #000000; /* operators like +, -, = */
+}
+
+.markdown-preview-view code[class*="language-java"] span.token.plain,
+.markdown-preview-view code[class*="language-java"] span.token.variable,
+.markdown-preview-view code[class*="language-java"] span.token.identifier,
+.markdown-preview-view code[class*="language-java"] span.token.constant {
+  color: #000000; /* black - this handles variable names */
 }
