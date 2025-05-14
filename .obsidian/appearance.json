@@ -2,7 +2,8 @@
   "theme": "moonstone",
   "cssTheme": "",
   "enabledCssSnippets": [
-    "CSS"
+    "CSS",
+    "leet"
   ],
   "baseFontSizeAction": true
 }
