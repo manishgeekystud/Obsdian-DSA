@@ -196,4 +196,64 @@ return (circularMax == 0) ? normalMax : Math.max(normalMax, circularMax);
 
 ```
 
-code
+**code**
+
+```
+class Solution {
+    public int maxSubarraySumCircular(int[] nums) {
+        int n = nums.length;
+
+        // Step 1: Find max subarray sum using standard Kadane's algorithm
+        int normalMax = kadaneMax(nums);
+
+        // Step 2: Find min subarray sum (to calculate circular max)
+        int minSubArraySum = kadaneMin(nums);
+
+        // Step 3: Total sum of the array
+        int tSum = 0;
+        for (int i = 0; i < n; i++)
+            tSum += nums[i];
+
+        // Step 4: Max circular subarray sum = total sum - min subarray sum
+        int circularMax = tSum - minSubArraySum;
+
+        // Step 5: If all elements are negative, circularMax becomes 0 (invalid)
+        return (circularMax == 0) ? normalMax : Math.max(normalMax, circularMax);
+    }
+
+    // Standard Kadane's algorithm to find maximum subarray sum
+    public int kadaneMax(int[] nums) {
+        int maxSum = Integer.MIN_VALUE;
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (sum < 0)
+                sum = nums[i];
+            else
+                sum += nums[i];
+
+            maxSum = Math.max(sum, maxSum);
+        }
+
+        return maxSum;
+    }
+
+    // Modified Kadane's algorithm to find minimum subarray sum
+    public int kadaneMin(int[] nums) {
+        int minSum = Integer.MAX_VALUE;
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (sum > 0)
+                sum = nums[i];     // start new subarray
+            else
+                sum += nums[i];    // extend previous subarray
+
+            minSum = Math.min(sum, minSum);
+        }
+
+        return minSum;
+    }
+}
+
+```
