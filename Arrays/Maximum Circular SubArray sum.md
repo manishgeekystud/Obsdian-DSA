@@ -200,7 +200,7 @@ return (circularMax == 0) ? normalMax : Math.max(normalMax, circularMax);
 
 **code**
 
-```
+```java
 class Solution {
     public int maxSubarraySumCircular(int[] nums) {
         int n = nums.length;
