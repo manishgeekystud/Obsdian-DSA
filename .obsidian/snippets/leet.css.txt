@@ -1,0 +1,7 @@
+/* Make variable names appear black like LeetCode */
+code span.token.variable,
+code span.token.identifier,
+code span.token.plain,
+code span.token.name {
+  color: #000000 !important;
+}
