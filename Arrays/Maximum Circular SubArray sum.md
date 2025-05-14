@@ -150,7 +150,7 @@ public class CircularSubarraySum {
 | ----- | ----- |
 | Time  | O(n²) |
 | Space | O(1)  |
-**Efficient Approach**
+> **Efficient Approach**
 
 # Intuition
 
