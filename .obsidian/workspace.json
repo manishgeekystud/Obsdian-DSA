@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Maximum Index.md",
+                "file": "Arrays/Maximum Circular SubArray sum.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Maximum Index"
+              "title": "Maximum Circular SubArray sum"
             }
           }
         ]
@@ -181,13 +181,13 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Maximum Subarray Sum.md",
+    "Arrays/Maximum Index.md",
     "Arrays/Rearrange Array Alternately.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/maximum consecutive 1s.md",
     "Arrays/Maximum Difference Between Increasing Elements.md",
-    "Arrays/Maximum Subarray Sum.md",
     "Arrays/Rotate an Array by D places.md",
-    "Arrays/Maximum Index.md",
     "Arrays/Reverse Array in K groups.md",
     "Arrays/Move Zeros to End.md",
     "Arrays/Best time to Buy and sell stock-2.md",
