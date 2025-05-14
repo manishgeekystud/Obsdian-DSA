@@ -1,47 +1,48 @@
-/* Match LeetCode-like Light Theme */
+/* === LeetCode Light Theme for Java Code Blocks in Obsidian === */
 
 .markdown-preview-view code[class*="language-"] {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Consolas, 'Courier New', monospace;
-    font-size: 14px;
-    padding: 0.5em;
-    border-radius: 6px;
-    overflow-x: auto;
+  background-color: #ffffff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  padding: 0.6em;
+  line-height: 1.5;
+  border-radius: 6px;
+  color: #000000;
 }
 
-/* Keywords: public, static, for, if */
-.cm-keyword, .token.keyword {
-    color: #0000FF;
+/* Keywords like public, int, if, else */
+.token.keyword {
+  color: #0000FF;
 }
 
-/* Types: int, String, etc. */
-.cm-type, .token.builtin {
-    color: #267f99;
+/* Custom class and type names */
+.token.class-name,
+.token.builtin {
+  color: #267f99;
 }
 
-/* Constants: Integer.MIN_VALUE */
-.cm-variable-2, .token.constant {
-    color: #AF00DB;
+/* Constants: MIN_VALUE */
+.token.constant {
+  color: #AF00DB;
 }
 
-/* Method Calls: System.out.println() */
-.cm-property, .token.function {
-    color: #000000;
+/* Function names like kadaneMax */
+.token.function {
+  color: #795E26;
 }
 
-/* Strings */
-.cm-string, .token.string {
-    color: #A31515;
+/* Numeric values: 0, 1, etc */
+.token.number {
+  color: #098658;
 }
 
 /* Comments */
-.cm-comment, .token.comment {
-    color: #008000;
-    font-style: italic;
+.token.comment {
+  color: #008000;
+  font-style: italic;
 }
 
-/* Numbers */
-.cm-number, .token.number {
-    color: #098658;
+/* Operators: =, +, -, etc */
+.token.operator {
+  color: #000000;
 }
