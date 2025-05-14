@@ -268,9 +268,9 @@
     "baseTheme": "Obsidian",
     "settings": {
       "codeblock": {
-        "enableLineNumbers": false,
-        "enableActiveLineHighlight": false,
-        "codeBlockBorderStylingPosition": "disable",
+        "enableLineNumbers": true,
+        "enableActiveLineHighlight": true,
+        "codeBlockBorderStylingPosition": "left",
         "showIndentationLines": false,
         "enableLinks": false,
         "enableLinkUpdate": false,
@@ -358,9 +358,7 @@
           "textColor": "--code-normal"
         },
         "editorActiveLineColor": "--color-base-20",
-        "languageSpecificColors": {
-          "java": {}
-        }
+        "languageSpecificColors": {}
       },
       "light": {
         "codeblock": {
@@ -393,9 +391,7 @@
           "textColor": "--code-normal"
         },
         "editorActiveLineColor": "--color-base-20",
-        "languageSpecificColors": {
-          "java": {}
-        }
+        "languageSpecificColors": {}
       }
     }
   },
