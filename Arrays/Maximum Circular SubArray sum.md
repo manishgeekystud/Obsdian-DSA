@@ -109,18 +109,40 @@ Given an array `arr[]` of size `n`, return the **maximum sum of a subarray**, al
 
 The code checks **all possible circular subarrays** using brute force. It handles circular indexing using:
 
-`int idx = (i + j) % n;`
+**`int idx = (i + j) % n;`**
 
 ---
 
 ## 💻 Java Code with Comments
 
-java
+```
+public class CircularSubarraySum {
+    static int circularSubarraySum(int[] arr) {
+        int n = arr.length;
 
-CopyEdit
+        // Initialize result with the first element
+        int res = arr[0];
 
-`public class CircularSubarraySum {     static int circularSubarraySum(int[] arr) {         int n = arr.length;          // Initialize result with the first element         int res = arr[0];          // Loop over each index as a starting point         for (int i = 0; i < n; i++) {             int currSum = 0;              // Check subarray of length n starting at i             for (int j = 0; j < n; j++) {                 // Wrap around using modulo for circular index                 int idx = (i + j) % n;                  // Add current element to running sum                 currSum += arr[idx];                  // Update result if current sum is greater                 res = Math.max(res, currSum);             }         }          return res;     }      public static void main(String[] args) {         int[] arr = {8, -1, 3, 4};         System.out.println("Max Circular Subarray Sum: " + circularSubarraySum(arr));     } }`
+        // Loop over each index as a starting point
+        for (int i = 0; i < n; i++) {
+            int currSum = 0;
 
+            // Check subarray of length n starting at i
+            for (int j = 0; j < n; j++) {
+                // Wrap around using modulo for circular index
+                int idx = (i + j) % n;
+
+                // Add current element to running sum
+                currSum += arr[idx];
+
+                // Update result if current sum is greater
+                res = Math.max(res, currSum);
+            }
+        }
+
+        return res;
+    }
+```
 ---
 
 ## 📈 Time & Space Complexity
