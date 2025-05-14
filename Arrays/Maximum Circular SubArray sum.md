@@ -157,21 +157,18 @@ public class CircularSubarraySum {
 I guess you know how to solve max subarray sum (without circular).  
 If not, you can have a reference here: 53. Maximum Subarray  
   
-  # Explanation
+# Explanation
 
 So there are two case.  
-Case 1. The first is that the subarray take only a middle part, and we know how to find the max subarray sum.  
-Case2. The second is that the subarray take a part of head array and a part of tail array.  
+**Case 1**. The first is that the subarray take only a middle part, and we know how to find the max subarray sum.  
+**Case2**. The second is that the subarray take a part of head array and a part of tail array.  
 We can transfer this case to the first one.  
 The maximum result equals to the total sum minus the minimum subarray sum.  
-  
 
-Here is a diagram by @motorix:  
 ![image](https://assets.leetcode.com/users/motorix/image_1538888300.png)
 
 So the max subarray circular sum equals to  
-`max(the max subarray sum, the total sum - the min subarray sum)`  
-  
+TotaSum
 
 # Prove of the second case
 
