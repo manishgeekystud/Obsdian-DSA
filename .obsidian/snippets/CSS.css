@@ -1,3 +1,7 @@
-pre code {
-    color: #ff5733; /* Change to your preferred Java syntax color */
+code[class*="language-java"] {
+    color: #f8f8f2; /* Default text color */
 }
+.token.keyword { color: #ff79c6; } /* Keywords like public, class */
+.token.function { color: #50fa7b; } /* Function names */
+.token.string { color: #f1fa8c; } /* Strings */
+.token.comment { color: #6272a4; font-style: italic; } /* Comments */
