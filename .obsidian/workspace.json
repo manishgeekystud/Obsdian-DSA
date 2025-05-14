@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Array Leaders.md",
+                "file": "Algorithms/Kadane.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Array Leaders"
+              "title": "Kadane"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Algorithms/Kadane.md",
     "Arrays/Array Leaders.md",
+    "Algorithms/Kadane.md",
     "Arrays/maximum consecutive 1s.md",
     "Arrays/Maximum Subarray Sum.md",
     "Arrays/Trapping Rain water.md",
