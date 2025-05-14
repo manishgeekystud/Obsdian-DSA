@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Maximum Circular SubArray sum.md",
+                "file": "Arrays/Rearrange Array Alternately.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Maximum Circular SubArray sum"
+              "title": "Rearrange Array Alternately"
             }
           }
         ]
@@ -181,10 +181,11 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Rearrange Array without extra space.md",
     "Arrays/Maximum Difference Between Increasing Elements.md",
-    "Arrays/Move Zeros to End.md",
-    "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/Maximum Subarray Sum.md",
+    "Arrays/Maximum Circular SubArray sum.md",
+    "Arrays/Move Zeros to End.md",
     "Arrays/Maximum Index.md",
     "Arrays/Rearrange Array Alternately.md",
     "Arrays/maximum consecutive 1s.md",
@@ -209,7 +210,6 @@
     "Pasted image 20250512230452.png",
     "Pasted image 20250512230432.png",
     "Pasted image 20250512230408.png",
-    "Arrays/Rearrange Array without extra space.md",
     "Arrays/Remove Duplicates from Sorted Array.md",
     "Recursion/Palindrome check using Recusrion.md",
     "Recursion/Subset Sum Problem.md",
