@@ -54,7 +54,7 @@ CopyEdit
 
 ## 📈 Time & Space Complexity
 
-|Type|Value|
-|---|---|
-|Time|O(n²)|
-|Space|O(1)|
+| Type  | Value |
+| ----- | ----- |
+| Time  | O(n²) |
+| Space | O(1)  |
