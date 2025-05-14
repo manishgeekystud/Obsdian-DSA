@@ -333,7 +333,7 @@
         "foldPlaceholder": ""
       },
       "highlights": {
-        "activeCodeblockLine": false,
+        "activeCodeblockLine": true,
         "activeEditorLine": false
       },
       "inline": {
@@ -384,7 +384,7 @@
         "highlights": {
           "activeCodeblockLineColour": "--color-base-30",
           "activeEditorLineColour": "--color-base-20",
-          "defaultColour": "--text-highlight-bg",
+          "defaultColour": "#000000",
           "alternativeHighlights": {}
         },
         "inline": {
@@ -427,7 +427,7 @@
         "highlights": {
           "activeCodeblockLineColour": "--color-base-30",
           "activeEditorLineColour": "--color-base-20",
-          "defaultColour": "--text-highlight-bg",
+          "defaultColour": "#000000",
           "alternativeHighlights": {}
         },
         "inline": {
