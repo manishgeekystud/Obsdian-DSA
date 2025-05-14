@@ -16,7 +16,7 @@ Given an array of **positive** integers. Your task is to rearrange the array e
 
 **Brute force O(n)**
 
-```
+```java
 import java.util.*;
 
 public class Solution {
@@ -75,7 +75,8 @@ And to decode:
 **arr[i] = arr[i] / max_elem;**
 
 
-```public class Solution {
+```java
+public class Solution {
     public static void rearrange(long arr[], int n) {
         int max_idx = n - 1;
         int min_idx = 0;
