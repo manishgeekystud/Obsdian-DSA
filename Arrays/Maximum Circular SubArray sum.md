@@ -168,20 +168,13 @@ The maximum result equals to the total sum minus the minimum subarray sum.
 ![image](https://assets.leetcode.com/users/motorix/image_1538888300.png)
 
 So the max subarray circular sum equals to  
-TotaSum
-
-# Prove of the second case
-
-max(prefix+suffix)  
-= max(total sum - subarray)  
-= total sum + max(-subarray)  
-= total sum - min(subarray)  
+circularMax=totalSum-minSubArraySum;
   
-
 # Corner case
 
 Just one to pay attention:  
-If all numbers are negative, `maxSum = max(A)` and `minSum = sum(A)`.  
+If all numbers are negative,
+`maxSum = max(A)` and `minSum = sum(A)`.  
 In this case, `max(maxSum, total - minSum) = 0`, which means the sum of an empty subarray.  
 According to the deacription, We need to return the `max(A)`, instead of sum of am empty subarray.  
 So we return the `maxSum` to handle this corner case.
