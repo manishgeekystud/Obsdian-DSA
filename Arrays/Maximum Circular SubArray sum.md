@@ -172,3 +172,28 @@ circularMax=totalSum-minSubArraySum;
   
 # Corner case
 
+When all elements in the array are negative, the total sum (`tSum`) and the minimum subarray sum (`kadaneMin(nums)`) are equal. This causes `circularMax = tSum - minSubArraySum` to become `0`, which is incorrect since a non-empty subarray must be chosen.
+
+#### **Example Case:**
+
+Given `nums = [-3, -2, -3]`:
+
+- `kadaneMax(nums) = -2` (best non-circular subarray)
+    
+- `kadaneMin(nums) = -8` (entire array)
+    
+- `tSum = -8`
+    
+- `circularMax = tSum - kadaneMin = -8 - (-8) = 0` → **Incorrect!**
+    
+
+#### **Fix:**
+
+Instead of blindly taking `Math.max(normalMax, circularMax)`, 
+ensure circularMax is valid:
+```
+return (circularMax == 0) ? normalMax : Math.max(normalMax, circularMax);
+
+```
+
+code
