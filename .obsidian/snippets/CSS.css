@@ -1,48 +1,47 @@
-/* LeetCode-like syntax highlighting for Obsidian */
-
-.cm-s-obsidian span.cm-keyword,
-.markdown-preview-view code span.cm-keyword {
-    color: #569CD6; /* Keywords */
-}
-
-.cm-s-obsidian span.cm-operator,
-.markdown-preview-view code span.cm-operator {
-    color: #D4D4D4; /* Operators */
-}
-
-.cm-s-obsidian span.cm-variable,
-.markdown-preview-view code span.cm-variable {
-    color: #9CDCFE; /* Variables */
-}
-
-.cm-s-obsidian span.cm-variable-2,
-.markdown-preview-view code span.cm-variable-2 {
-    color: #4EC9B0; /* Functions */
-}
-
-.cm-s-obsidian span.cm-string,
-.markdown-preview-view code span.cm-string {
-    color: #CE9178; /* Strings */
-}
-
-.cm-s-obsidian span.cm-number,
-.markdown-preview-view code span.cm-number {
-    color: #B5CEA8; /* Numbers */
-}
-
-.cm-s-obsidian span.cm-comment,
-.markdown-preview-view code span.cm-comment {
-    color: #6A9955; /* Comments */
-    font-style: italic;
-}
+/* Match LeetCode-like Light Theme */
 
 .markdown-preview-view code[class*="language-"] {
-    background-color: #1E1E1E; /* Background */
-    color: #D4D4D4; /* Default text */
-    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Consolas, 'Courier New', monospace;
     font-size: 14px;
     padding: 0.5em;
     border-radius: 6px;
-    display: block;
     overflow-x: auto;
+}
+
+/* Keywords: public, static, for, if */
+.cm-keyword, .token.keyword {
+    color: #0000FF;
+}
+
+/* Types: int, String, etc. */
+.cm-type, .token.builtin {
+    color: #267f99;
+}
+
+/* Constants: Integer.MIN_VALUE */
+.cm-variable-2, .token.constant {
+    color: #AF00DB;
+}
+
+/* Method Calls: System.out.println() */
+.cm-property, .token.function {
+    color: #000000;
+}
+
+/* Strings */
+.cm-string, .token.string {
+    color: #A31515;
+}
+
+/* Comments */
+.cm-comment, .token.comment {
+    color: #008000;
+    font-style: italic;
+}
+
+/* Numbers */
+.cm-number, .token.number {
+    color: #098658;
 }
