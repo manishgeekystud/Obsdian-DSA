@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Rearrange Array Alternately.md",
+                "file": "Arrays/Maximum Subarray Sum.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rearrange Array Alternately"
+              "title": "Maximum Subarray Sum"
             }
           }
         ]
@@ -181,13 +181,13 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Rearrange Array Alternately.md",
     "Arrays/Rearrange Array without extra space.md",
     "Arrays/Maximum Difference Between Increasing Elements.md",
     "Arrays/Maximum Subarray Sum.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/Move Zeros to End.md",
     "Arrays/Maximum Index.md",
-    "Arrays/Rearrange Array Alternately.md",
     "Arrays/maximum consecutive 1s.md",
     "Arrays/Rotate an Array by D places.md",
     "Arrays/Reverse Array in K groups.md",

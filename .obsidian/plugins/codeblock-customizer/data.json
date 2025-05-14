@@ -358,7 +358,9 @@
           "textColor": "--code-normal"
         },
         "editorActiveLineColor": "--color-base-20",
-        "languageSpecificColors": {}
+        "languageSpecificColors": {
+          "java": {}
+        }
       },
       "light": {
         "codeblock": {
@@ -391,7 +393,9 @@
           "textColor": "--code-normal"
         },
         "editorActiveLineColor": "--color-base-20",
-        "languageSpecificColors": {}
+        "languageSpecificColors": {
+          "java": {}
+        }
       }
     }
   },
@@ -400,7 +404,7 @@
   "alternateHighlightColorName": "",
   "languageBorderColorName": "",
   "foldAllCommand": false,
-  "settingsType": "codeblock",
-  "langSpecificSettingsType": "",
+  "settingsType": "languageSpecific",
+  "langSpecificSettingsType": "codeblock.textColor",
   "languageSpecificLanguageName": ""
 }
