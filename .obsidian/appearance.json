@@ -1,6 +1,6 @@
 {
-  "theme": "obsidian",
-  "cssTheme": "Minimal Dracula",
+  "theme": "moonstone",
+  "cssTheme": "obsidian_ia",
   "enabledCssSnippets": [
     "CSS"
   ],
