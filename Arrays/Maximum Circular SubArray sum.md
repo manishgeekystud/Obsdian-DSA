@@ -115,7 +115,7 @@ The code checks **all possible circular subarrays** using brute force. It handle
 
 ## 💻 Java Code
 
-```
+```java
 public class CircularSubarraySum {
     static int circularSubarraySum(int[] arr) {
         int n = arr.length;
