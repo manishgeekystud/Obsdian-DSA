@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms/Kadane.md",
+                "file": "Arrays/Array Leaders.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kadane"
+              "title": "Array Leaders"
             }
           }
         ]
@@ -181,6 +181,7 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Algorithms/Kadane.md",
     "Arrays/Array Leaders.md",
     "Arrays/maximum consecutive 1s.md",
     "Arrays/Maximum Subarray Sum.md",
@@ -194,7 +195,6 @@
     "Algorithms/Floyd's Cycle Detection Algorithm.md",
     "Arrays/Rotate an Array by D places.md",
     "Arrays/Reverse Array in K groups.md",
-    "Algorithms/Kadane.md",
     "Arrays/Best time to Buy and sell stock-2.md",
     "Arrays/First Missing Positive.md",
     "Arrays/Best time to Buy and sell Stock-1.md",
