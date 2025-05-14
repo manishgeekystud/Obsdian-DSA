@@ -1,17 +1,22 @@
-.markdown-preview-view code[class*="language-java"] span {
+/* Force variable color to black in code blocks */
+.markdown-preview-view code[class*="language-java"] span:not(.token) {
   color: black !important;
 }
 
-.markdown-preview-view code[class*="language-java"] span.token.keyword {
-  color: blue !important;
-  font-weight: bold;
+/* Optional: Style tokens */
+.token.keyword {
+  color: #0000FF !important; /* Blue */
 }
 
-.markdown-preview-view code[class*="language-java"] span.token.comment {
-  color: green !important;
+.token.comment {
+  color: #008000 !important; /* Green */
   font-style: italic;
 }
 
-.markdown-preview-view code[class*="language-java"] span.token.string {
-  color: #A31515 !important;
+.token.string {
+  color: #A31515 !important; /* Red-ish */
+}
+
+.token.function {
+  color: #795E26 !important;
 }
