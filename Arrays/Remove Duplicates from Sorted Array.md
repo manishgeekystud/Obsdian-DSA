@@ -31,7 +31,6 @@ Once the loop finishes, the value of `j` represents the length of the resultin
 Finally, we return `j` as the desired result.
 
 soln:
-```
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {

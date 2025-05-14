@@ -28,8 +28,8 @@ Solution
 ![[Pasted image 20250506212046.png]]
 ![[Pasted image 20250506212159.png]]![[Pasted image 20250506212332.png]]
 
-```
-/ Function to reverse every sub-array of size k
+```java
+//Function to reverse every sub-array of size k
     static void reverseInGroups(int[] arr, int k) {
         int n = arr.length; 
 
