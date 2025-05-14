@@ -1,39 +1,17 @@
-/* LeetCode-like Java syntax highlighting */
-
-.markdown-preview-view code[class*="language-java"] span.token.comment {
-  color: #008000; /* green */
-  font-style: italic;
+.markdown-preview-view code[class*="language-java"] span {
+  color: black !important;
 }
 
 .markdown-preview-view code[class*="language-java"] span.token.keyword {
-  color: #0000ff; /* blue */
+  color: blue !important;
   font-weight: bold;
 }
 
-.markdown-preview-view code[class*="language-java"] span.token.class-name,
-.markdown-preview-view code[class*="language-java"] span.token.builtin {
-  color: #2b91af; /* blue */
-}
-
-.markdown-preview-view code[class*="language-java"] span.token.function {
-  color: #795EAD; /* purple - method calls like Math.max */
+.markdown-preview-view code[class*="language-java"] span.token.comment {
+  color: green !important;
+  font-style: italic;
 }
 
 .markdown-preview-view code[class*="language-java"] span.token.string {
-  color: #A31515; /* brown-red for strings */
-}
-
-.markdown-preview-view code[class*="language-java"] span.token.number {
-  color: #098658; /* number literals */
-}
-
-.markdown-preview-view code[class*="language-java"] span.token.operator {
-  color: #000000; /* operators like +, -, = */
-}
-
-.markdown-preview-view code[class*="language-java"] span.token.plain,
-.markdown-preview-view code[class*="language-java"] span.token.variable,
-.markdown-preview-view code[class*="language-java"] span.token.identifier,
-.markdown-preview-view code[class*="language-java"] span.token.constant {
-  color: #000000; /* black - this handles variable names */
+  color: #A31515 !important;
 }
