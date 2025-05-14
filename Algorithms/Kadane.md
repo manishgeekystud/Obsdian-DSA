@@ -24,11 +24,8 @@ public int maxSubArray(int[] A) {
 
 ---
 
-## 🔥 Desi Style Explanation – "Zindagi Kadane ke Saath"
+## 🔥Remember
 
-Imagine life as a series of ups and downs — each day (element in array) adds or ruins your mood (sum). Kadane's Rule:
-
-> **"Agar mood negative ho gaya, kal se naye tareeke se jeeyenge."**  
 > (_If life becomes negative, start fresh from the next day._)
 
 Keep living, track your best stretch — that's your **max subarray sum**.
