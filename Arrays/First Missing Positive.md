@@ -103,7 +103,7 @@ TC- O(n)  SC - O(n)
 
 **Approach 2**
 
-```
+```java
 public int missingNumber(int[] arr) {
         // Your code here
         int n = arr.length;
