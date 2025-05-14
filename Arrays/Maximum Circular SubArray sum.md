@@ -113,7 +113,7 @@ The code checks **all possible circular subarrays** using brute force. It handle
 
 ---
 
-## 💻 Java Code with Comments
+## 💻 Java Code
 
 ```
 public class CircularSubarraySum {
@@ -127,7 +127,6 @@ public class CircularSubarraySum {
         for (int i = 0; i < n; i++) {
             int currSum = 0;
 
-            // Check subarray of length n starting at i
             for (int j = 0; j < n; j++) {
                 // Wrap around using modulo for circular index
                 int idx = (i + j) % n;
