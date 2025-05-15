@@ -16,4 +16,23 @@ If there are multiple solutions, find the lexicographically smallest one.
 Input: arr[] = [1]  
 Output: [1]
 
-must do in O(n) time and 
+must do in O(n) time and O(1) space
+
+solution
+
+```java
+ public static void swap(int arr[], int from, int to){
+        int temp = arr[from];
+        arr[from] = arr[to];
+        arr[to] = temp;
+    }
+    public static void convertToWave(int arr[], int n){
+        
+        // Your code here
+        if(n%2!=0) n--;
+        
+        for(int i=0; i<n; i+=2){
+            swap(arr, i, i+1);
+        }
+    }
+```
