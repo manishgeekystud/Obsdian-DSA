@@ -14,4 +14,14 @@ The majority element is the element that appears more than `⌊n / 2⌋` times
 
 Solution
 
-__The basic solution is to have two loops and keep track of the__ _****maximum****_ __count for all different elements. If the maximum count becomes greater than__ _****n/2****_ __then break the loops and return the element having the maximum count. If the maximum count doesn’t become more than n/2 then the majority element__ _****doesn’t****_ _
+__The basic solution is to have two loops and keep track of the__ _****maximum****_ __count for all different elements. If the maximum count becomes greater than__ _****n/2****_ __then break the loops and return the element having the maximum count. If the maximum count doesn’t become more than n/2 then the majority element__  doesnt exist
+
+Follow the steps below to solve the given problem:
+
+- Create a variable to store the max count, __count = 0__
+- Traverse through the array from start to end.
+- For every element in the array run another loop to find the count of similar elements in the given array.
+- If the count is greater than the max count update the max count and store the index in another variable.
+- If the maximum count is greater than half the size of the array, print the element. Else print there is no majority element.
+
+Code
