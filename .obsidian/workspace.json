@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/maximum consecutive 1s.md",
+                "file": "Arrays/Reverse Array in K groups.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "maximum consecutive 1s"
+              "title": "Reverse Array in K groups"
             }
           }
         ]
@@ -181,13 +181,13 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/maximum consecutive 1s.md",
     "Arrays/Trapping Rain water.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/Rearrange Array Alternately.md",
     "Arrays/Rearrange Array without extra space.md",
     "Arrays/Move Zeros to End.md",
     "Arrays/First Missing Positive.md",
-    "Arrays/maximum consecutive 1s.md",
     "Arrays/Maximum Index.md",
     "Arrays/Remove Duplicates from Sorted Array.md",
     "Arrays/Untitled.md",
