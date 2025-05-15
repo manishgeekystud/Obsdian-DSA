@@ -67,3 +67,21 @@ class GFG {
 
 but this n2 solution we need a better approach
 
+The **Moore’s Voting Algorithm** is an efficient method used to find a **majority element** in an array — i.e., an element that appears **more than n/2 times**, where `n` is the size of the array.
+
+#### 🔹 **Phase 1 – Find a Candidate**
+
+1. Initialize a candidate (`element`) and a counter.
+    
+2. Traverse the array:
+    
+    - If the counter is 0, update the candidate to the current element.
+        
+    - If the current element is equal to the candidate, increment the counter.
+        
+    - Else, decrement the counter.
+        
+
+#### 🔹 **Phase 2 – Verify the Candidate**
+
+Count how many times the candidate appears. If it occurs more than `n/2` times, return it. Otherwise, there's **no majority element**.
