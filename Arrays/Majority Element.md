@@ -65,4 +65,5 @@ class GFG {
 
 ```
 
-but this n2 solution we nee
+but this n2 solution we need a better approach
+
