@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Maximum Circular SubArray sum.md",
+                "file": "Arrays/maximum consecutive 1s.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Maximum Circular SubArray sum"
+              "title": "maximum consecutive 1s"
             }
           }
         ]
@@ -182,10 +182,10 @@
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
     "Arrays/Trapping Rain water.md",
+    "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/Rearrange Array Alternately.md",
     "Arrays/Rearrange Array without extra space.md",
     "Arrays/Move Zeros to End.md",
-    "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/First Missing Positive.md",
     "Arrays/maximum consecutive 1s.md",
     "Arrays/Maximum Index.md",
