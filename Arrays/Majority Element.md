@@ -85,3 +85,48 @@ The **Moore’s Voting Algorithm** is an efficient method used to find a **major
 #### 🔹 **Phase 2 – Verify the Candidate**
 
 Count how many times the candidate appears. If it occurs more than `n/2` times, return it. Otherwise, there's **no majority element**.
+
+### ✅ Purpose:
+
+We're **"voting"** for the current candidate:
+
+- Each match **adds a vote**.
+    
+- Each mismatch **removes a vote**.
+    
+- If the count becomes `0`, we switch to a new candidate.
+
+```java
+public class Solution {
+    public int majorityElement(int[] nums) {
+        // Phase 1: Find a candidate for majority element
+        int count = 0;
+        int candidate = 0;
+
+        for (int num : nums) {
+            if (count == 0) {
+                // Reset candidate when count drops to 0
+                candidate = num;
+            }
+
+            if (num == candidate) {
+                count += 1; // Vote for the current candidate
+            } else {
+                count -= 1; // Vote against the candidate
+            }
+        }
+
+        // Phase 2: Verify if the candidate is actually the majority
+        count = 0;
+        for (int num : nums) {
+            if (num == candidate) {
+                count++;
+            }
+        }
+
+        // Return the candidate if it's a valid majority
+        return (count > nums.length / 2) ? candidate : -1;
+    }
+}
+
+```
