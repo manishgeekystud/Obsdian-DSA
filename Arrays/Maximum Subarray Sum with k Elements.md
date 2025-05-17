@@ -17,9 +17,7 @@ There is no subarray of size 3 as size of whole
 array is 2.
 
 **Naive**
-
- 
-
+```java
     static int maxSum(int arr[], int n, int k)
     {
         // Initialize result
@@ -37,6 +35,10 @@ array is 2.
 
         return max_sum;
     }
+```
+ 
+
+
     
 
 **Efficient Approach**
