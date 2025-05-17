@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms/Sliding Window Technique.md",
+                "file": "Arrays/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sliding Window Technique"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Algorithms/Kadane.md",
     "Algorithms/Sliding Window Technique.md",
+    "Arrays/Untitled.md",
+    "Algorithms/Kadane.md",
     "Arrays/Maximum Subarray Sum with k Elements.md",
     "Arrays/Majority Element.md",
     "Arrays/Wave Array.md",
@@ -216,7 +217,6 @@
     "Pasted image 20250512230452.png",
     "Pasted image 20250512230432.png",
     "Pasted image 20250512230408.png",
-    "Recursion/Palindrome check using Recusrion.md",
     "Untitled.canvas",
     "Untitled/desktop.ini",
     "images",
