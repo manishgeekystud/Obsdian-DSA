@@ -54,3 +54,22 @@ So for each index i, we can check if prefixSum[i - 1] = suffixSum[i + 1] but to 
 ```
 
 Above is O(n) time and O(n) space  lets write it in O(1) space
+
+### ✅ **Purpose:**
+
+Find an index `i` in the array such that the **sum of elements to the left** of `i` is equal to the **sum of elements to the right** of `i`.
+
+
+
+`arr[0] + arr[1] + ... + arr[i-1] == arr[i+1] + ... + arr[n-1]`
+
+---
+
+### 🧠 **Key Concepts Used:**
+
+- **Total sum (`tsum`)** of all elements
+    
+- **Left sum (`leftSum`)** which is accumulated as we move forward
+    
+- **Right sum (`rightSum`)** which is computed dynamically:  
+    `rightSum = totalSum - leftSum - arr[i]`
