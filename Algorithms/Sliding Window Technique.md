@@ -97,3 +97,7 @@ code
         return max_sum;
     }
 ```
+
+**2. Dynamic-Size Window:** In a dynamic-size window, the size of the window can change as it slides through the data. This type of sliding window is used when the problem requires adjusting the window size based on specific conditions or constraints.
+
+_Example: Longest Subarray with Sum at Most K (Dynamic-Size Window)_
