@@ -55,6 +55,8 @@ So for each index i, we can check if prefixSum[i - 1] = suffixSum[i + 1] but to 
 
 Above is O(n) time and O(n) space  lets write it in O(1) space
 
+**Expected Approach**
+
 ### ✅ **Purpose:**
 
 Find an index `i` in the array such that the **sum of elements to the left** of `i` is equal to the **sum of elements to the right** of `i`.
