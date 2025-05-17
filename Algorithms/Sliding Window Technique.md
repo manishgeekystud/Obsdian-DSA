@@ -32,3 +32,20 @@ Let’s explore each type with examples:
 **1. Fixed-Size Window:** In a fixed-size window, the size of the window remains constant as it slides through the data. This type of sliding window is particularly useful when you need to process data within a fixed range or for a specific length of elements.
 
 _Example: Maximum Sum Subarray (Fixed-Size Window)_
+### Example Problem - Maximum Sum of a Subarray with K Elements
+
+Given an array and an integer k, we need to calculate the maximum sum of a subarray having size exactly k****.****
+
+> ****Input  :**** arr[] = {100, 200, 300, 400}, k = 2  
+> ****Output :**** 700  
+> We get maximum sum by considering the subarray [300, 400]
+> 
+> ****Input  :**** arr[] = {1, 4, 2, 10, 23, 3, 1, 0, 20}, k = 4   
+> ****Output :**** 39  
+> We get maximum sum by adding subarray {4, 2, 10, 23} of size 4.
+> 
+> ****Input  :**** arr[] = {2, 3}, k = 3  
+> ****Output :**** Invalid  
+> There is no subarray of size 3 as size of whole array is 2.
+
+-------------------
