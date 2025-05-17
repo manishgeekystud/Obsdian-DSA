@@ -73,3 +73,31 @@ Find an index `i` in the array such that the **sum of elements to the left** of 
     `rightSum = totalSum - leftSum - arr[i]`
 
 Code
+```java
+public static int findEquilibrium(int arr[]) {
+    // Step 1: Calculate the total sum of the array
+    int tsum = 0;
+    for (int i = 0; i < arr.length; i++)
+        tsum += arr[i];  // Add all elements to get the total sum
+
+    // Step 2: Initialize left sum
+    int leftSum = 0;
+
+    // Step 3: Traverse the array to find the equilibrium index
+    for (int i = 0; i < arr.length; i++) {
+        // Step 4: Calculate right sum for index i
+        int rightSum = tsum - leftSum - arr[i];
+
+        // Step 5: Check if left sum equals right sum
+        if (rightSum == leftSum)
+            return i;  // Found the equilibrium index
+
+        // Step 6: Update left sum for next iteration
+        leftSum += arr[i];
+    }
+
+    // Step 7: No equilibrium index found
+    return -1;
+}
+
+```
