@@ -69,3 +69,7 @@ The below representation will make it clear how the window slides over the array
 > 
 > ![](https://media.geeksforgeeks.org/wp-content/uploads/sliding-window3.png)
 
+code
+```
+
+```
