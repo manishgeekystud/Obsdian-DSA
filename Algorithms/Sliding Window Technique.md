@@ -102,3 +102,82 @@ code
 **2. Dynamic-Size Window:** In a dynamic-size window, the size of the window can change as it slides through the data. This type of sliding window is used when the problem requires adjusting the window size based on specific conditions or constraints.
 
 _Example: Longest Subarray with Sum at Most K (Dynamic-Size Window)_
+
+### 🔄 **What is a Dynamic-Size Sliding Window?**
+
+A **sliding window** is a range (subarray) within the array that you adjust as you move through the data.
+
+- In **fixed-size** window problems (e.g., max sum of size `k`), the window length stays the same.
+    
+- In **dynamic-size** windows, **the size of the window can grow or shrink** based on conditions—like the sum being too high, or constraints like at most `K` unique elements.
+    
+
+---
+
+## 🧠 Problem Example:
+
+### **Longest Subarray with Sum at Most K**
+
+🧾 **Given:**
+
+- An array: `arr = [1, 2, 1, 0, 1, 1, 0]`
+    
+- A sum limit: `K = 4`
+    
+
+🔍 **Goal:**  
+Find the **maximum length** of a contiguous subarray whose elements sum to **at most K**.
+
+---
+
+### ✅ **Approach (Dynamic Window)**
+
+We’ll use two pointers:
+
+- `start` → Beginning of the window
+    
+- `end` → Expands the window by moving forward
+    
+- Track `sum` of the current window
+    
+
+If `sum > K`, shrink the window from the left (`start++`)  
+If `sum <= K`, consider it as a valid window and possibly expand further.
+
+---
+
+### 🔄 Dry Run with Dynamic Window
+
+|Step|Start|End|Subarray|Sum|Action|Max Length|
+|---|---|---|---|---|---|---|
+|1|0|0|[1]|1|Valid, expand|1|
+|2|0|1|[1, 2]|3|Valid, expand|2|
+|3|0|2|[1, 2, 1]|4|Valid, expand|3|
+|4|0|3|[1, 2, 1, 0]|4|Valid, expand|4|
+|5|0|4|[1, 2, 1, 0, 1]|5|Too much, shrink|4|
+|6|1|4|[2, 1, 0, 1]|4|Valid, expand|4|
+|7|1|5|[2, 1, 0, 1, 1]|5|Too much, shrink|4|
+|8|2|5|[1, 0, 1, 1]|3|Valid, expand|4|
+|9|2|6|[1, 0, 1, 1, 0]|3|Valid|**5** ✅|
+
+---
+
+### 🧮 Final Answer:
+
+**Longest subarray with sum ≤ 4 is of length 5**  
+Subarray: `[1, 0, 1, 1, 0]`
+
+---
+
+### 💡 Summary
+
+- The **window starts small**.
+    
+- As long as the **sum is under the limit**, we **expand** the window.
+    
+- If the **sum exceeds K**, we **shrink** from the left until valid.
+    
+- Track the **maximum valid window length** during this process.
+    
+
+This is the essence of **dynamic-size sliding window**: adjust window **size on the fly** based on logic.
