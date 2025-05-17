@@ -16,3 +16,9 @@ Given an array ****arr[]**** of size ****n****, the task is to return an ***
 > ****Output****: 3  
 > ****Explanation:**** The sum of left of index 3 is -7 + 1 + 5 = -1 and sum on right of index 3 is -4 + 3 + 0 = -1.
 
+-------------------------------------------------
+**Solution**
+
+precompute the [prefix sum array](https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/) and [suffix sum array](https://www.geeksforgeeks.org/suffix-sum-array/), and simply access this in O(1) time.
+
+So for each index i, we can check if prefixSum[i - 1] = suffixSum[i + 1] but to avoid unnecessary boundary checks we can also check if prefixSum[i] = suffixSum[i].
