@@ -168,19 +168,7 @@ If `sum <= K`, consider it as a valid window and possibly expand further.
 Subarray: `[1, 0, 1, 1, 0]`
 
 ---
-
-### 💡 Summary
-
-- The **window starts small**.
-    
-- As long as the **sum is under the limit**, we **expand** the window.
-    
-- If the **sum exceeds K**, we **shrink** from the left until valid.
-    
-- Track the **maximum valid window length** during this process.
-    
-
-This is the essence of **dynamic-size sliding window**: adjust window **size on the fly** based on logic.
+CODE
 
 ```java
 public class LongestSubarraySumAtMostK {
@@ -216,3 +204,15 @@ public class LongestSubarraySumAtMostK {
 }
 
 ```
+### 💡 Summary
+
+- The **window starts small**.
+    
+- As long as the **sum is under the limit**, we **expand** the window.
+    
+- If the **sum exceeds K**, we **shrink** from the left until valid.
+    
+- Track the **maximum valid window length** during this process.
+    
+
+This is the essence of **dynamic-size sliding window**: adjust window **size on the fly** based on logic.
