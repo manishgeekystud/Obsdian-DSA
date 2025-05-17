@@ -16,7 +16,7 @@ of size 4.
 There is no subarray of size 3 as size of whole  
 array is 2.
 
-Naive
+**Naive**
 
  static int maxSum(int arr[], int n, int k)
     {
@@ -35,3 +35,6 @@ Naive
 
         return max_sum;
     }
+
+**Efficient Approach**
+

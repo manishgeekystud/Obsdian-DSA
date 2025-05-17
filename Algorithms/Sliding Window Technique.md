@@ -68,6 +68,7 @@ The below representation will make it clear how the window slides over the array
 > Therefore, for the above array our maximum_sum is 6.
 > 
 > ![](https://media.geeksforgeeks.org/wp-content/uploads/sliding-window3.png)
+> 
 
 code
 ```java
