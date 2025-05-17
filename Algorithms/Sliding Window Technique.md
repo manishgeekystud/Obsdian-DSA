@@ -181,3 +181,38 @@ Subarray: `[1, 0, 1, 1, 0]`
     
 
 This is the essence of **dynamic-size sliding window**: adjust window **size on the fly** based on logic.
+
+```
+public class LongestSubarraySumAtMostK {
+
+    public static int longestSubarray(int[] arr, int k) {
+        int start = 0;
+        int sum = 0;
+        int maxLen = 0;
+
+        for (int end = 0; end < arr.length; end++) {
+            sum += arr[end];  // expand the window
+
+            // Shrink window if sum exceeds k
+            while (sum > k && start <= end) {
+                sum -= arr[start];
+                start++;
+            }
+
+            // Check max length of valid window
+            maxLen = Math.max(maxLen, end - start + 1);
+        }
+
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 1, 0, 1, 1, 0};
+        int k = 4;
+
+        int result = longestSubarray(arr, k);
+        System.out.println("Longest subarray length with sum at most " + k + " is: " + result);
+    }
+}
+
+```
