@@ -59,8 +59,6 @@ Above is O(n) time and O(n) space  lets write it in O(1) space
 
 Find an index `i` in the array such that the **sum of elements to the left** of `i` is equal to the **sum of elements to the right** of `i`.
 
-
-
 `arr[0] + arr[1] + ... + arr[i-1] == arr[i+1] + ... + arr[n-1]`
 
 ---
@@ -73,3 +71,5 @@ Find an index `i` in the array such that the **sum of elements to the left** of 
     
 - **Right sum (`rightSum`)** which is computed dynamically:  
     `rightSum = totalSum - leftSum - arr[i]`
+
+Code
