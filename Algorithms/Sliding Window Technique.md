@@ -22,3 +22,4 @@ So, you’re sold on trying out the sliding window pattern? Awesome! Here’s a 
 **Step 4:** Adjust the Window: If the window no longer meets the constraints, don’t fret. Simply adjust it by incrementing the start pointer while ensuring the window’s size stays constant.
 
 **Step 5:** Rinse and Repeat: Keep sliding and adjusting that window until you’ve worked through the entire array or list. Eventually, you’ll get the result you’re aiming for.
+
