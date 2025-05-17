@@ -23,3 +23,12 @@ So, you’re sold on trying out the sliding window pattern? Awesome! Here’s a 
 
 **Step 5:** Rinse and Repeat: Keep sliding and adjusting that window until you’ve worked through the entire array or list. Eventually, you’ll get the result you’re aiming for.
 
+## Are there any types?
+
+Yes, the sliding window pattern can be categorized into two main types: fixed-size windows and dynamic-size windows.
+
+Let’s explore each type with examples:
+
+**1. Fixed-Size Window:** In a fixed-size window, the size of the window remains constant as it slides through the data. This type of sliding window is particularly useful when you need to process data within a fixed range or for a specific length of elements.
+
+_Example: Maximum Sum Subarray (Fixed-Size Window)_
