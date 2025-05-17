@@ -18,7 +18,9 @@ array is 2.
 
 **Naive**
 
- static int maxSum(int arr[], int n, int k)
+ 
+
+    static int maxSum(int arr[], int n, int k)
     {
         // Initialize result
         int max_sum = Integer.MIN_VALUE;
@@ -35,6 +37,7 @@ array is 2.
 
         return max_sum;
     }
+    
 
 **Efficient Approach**
 
