@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Arrays/Maximum Subarray Sum with k Elements.md",
+    "Algorithms/Kadane.md",
     "Algorithms/Sliding Window Technique.md",
+    "Arrays/Maximum Subarray Sum with k Elements.md",
     "Arrays/Majority Element.md",
     "Arrays/Wave Array.md",
     "Arrays/Minimum adjacent difference in a circular array.md",
@@ -202,7 +203,6 @@
     "Arrays/Best time to Buy and sell stock-2.md",
     "Arrays/Array Leaders.md",
     "Arrays/Maximum Subarray Sum.md",
-    "Algorithms/Kadane.md",
     "Token.md",
     "Algorithms/Floyd's Cycle Detection Algorithm.md",
     "Arrays/Best time to Buy and sell Stock-1.md",

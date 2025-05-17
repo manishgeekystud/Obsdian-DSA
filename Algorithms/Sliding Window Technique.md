@@ -182,7 +182,7 @@ Subarray: `[1, 0, 1, 1, 0]`
 
 This is the essence of **dynamic-size sliding window**: adjust window **size on the fly** based on logic.
 
-```
+```java
 public class LongestSubarraySumAtMostK {
 
     public static int longestSubarray(int[] arr, int k) {
