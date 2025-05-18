@@ -21,7 +21,7 @@ Given a sorted array **arr[]** and an integer **x**, find the index (0-based)
 Code
 
 O(n )
-```
+```java
  static int findFloor(long arr[], int n, long x)
     {
         
@@ -39,3 +39,5 @@ O(n )
         
     }
 ```
+
+Expected Approach
