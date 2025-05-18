@@ -14,4 +14,26 @@
 - **Best Case:** `O(1)` (when the element is in the middle)
 - **Average Case:** `O(log n)`
 - **Worst Case:** `O(log n)`
+
 ![[Pasted image 20250518223632.png]]
+```java
+public static int binarySearch(int[] arr, int target) {
+    int low = 0;
+    int high = arr.length - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == target)
+            return mid; // Target found at mid
+        else if (arr[mid] < target)
+            low = mid + 1; // Discard left half
+        else
+            high = mid - 1; // Discard right half
+    }
+
+    return -1; // Target not found
+}
+
+```
+
