@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Trapping Rain water.md",
+                "file": "Token.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Trapping Rain water"
+              "title": "Token"
             }
           }
         ]
@@ -181,6 +181,7 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Trapping Rain water.md",
     "Algorithms/Binary Search Algo.md",
     "Searching/Searching in Sorted Array.md",
     "Pasted image 20250518225240.png",
@@ -198,7 +199,6 @@
     "Arrays/Maximum Difference Between Increasing Elements.md",
     "Arrays/Reverse Array in K groups.md",
     "Arrays/maximum consecutive 1s.md",
-    "Arrays/Trapping Rain water.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/Rearrange Array Alternately.md",
     "Arrays/Rearrange Array without extra space.md",
