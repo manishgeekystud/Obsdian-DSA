@@ -54,3 +54,12 @@ public static int binarySearchRecursive(int[] arr, int low, int high, int target
 }
 
 ```
+### 🔍 Use Cases:
+
+- Search in sorted arrays
+- Efficient searching in large datasets
+- Problems like:
+    - First/Last occurrence of element
+    - Count of occurrences
+    - Peak element in mountain array
+    - Binary Search on answer (optimization problems)
