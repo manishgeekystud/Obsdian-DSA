@@ -41,3 +41,33 @@ O(n )
 ```
 
 Expected Approach
+```java
+// Function to find the floor of a number x in a sorted array.
+// Floor = greatest element in the array which is <= x.
+// Returns the index of the floor element, or -1 if no such element exists.
+static int findFloor(int[] arr, int x) {
+    int low = 0, high = arr.length - 1;
+
+    // This will store the index of the potential floor value
+    int res = -1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2; // Find the middle index
+
+        if (arr[mid] <= x) {
+            // arr[mid] is a valid floor candidate
+            res = mid;
+
+            // Try to find a larger value that is still <= x
+            low = mid + 1;
+        } else {
+            // arr[mid] is too large, look on the left side
+            high = mid - 1;
+        }
+    }
+
+    // If found, returns index of floor; else returns -1
+    return res;
+}
+
+```
