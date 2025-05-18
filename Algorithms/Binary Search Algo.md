@@ -1,5 +1,10 @@
 **Binary Search** is an efficient algorithm for finding an item from a sorted list of elements by repeatedly dividing the search interval in half.
 
+The most commonly used methods in Java to perform Binary Search are:
+
+- Arrays.binarySearch()
+- Collections.binarySearch()****
+-
 ### ✅ Prerequisite:
 
 - **The array must be sorted** (either ascending or descending).
