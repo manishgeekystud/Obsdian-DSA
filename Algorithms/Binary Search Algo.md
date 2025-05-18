@@ -16,6 +16,7 @@
 - **Worst Case:** `O(log n)`
 
 ![[Pasted image 20250518223632.png]]
+
 ```java
 public static int binarySearch(int[] arr, int target) {
     int low = 0;
