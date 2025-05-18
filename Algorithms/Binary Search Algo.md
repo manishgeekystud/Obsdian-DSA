@@ -8,7 +8,7 @@ The most commonly used methods in Java to perform Binary Search are:
 ### ✅ Prerequisite:
 
 - **The array must be sorted** (either ascending or descending).
-- Hello
+- Hello Manish
 ### 🧠 Intuition:
 
 - Pick the middle element.
