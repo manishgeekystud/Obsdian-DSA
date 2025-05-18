@@ -37,3 +37,4 @@ public static int binarySearch(int[] arr, int target) {
 
 ```
 
+📌 Recursive Version:
