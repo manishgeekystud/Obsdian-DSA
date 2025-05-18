@@ -13,7 +13,7 @@ Given an array, **arr[]** sorted in ascending order and an integer **k**. Ret
 **Input:** arr[] = [2, 3, 5, 6], k = 1
 **Output:** false
 
-Code
+Code- Binary Search
 ```java
 static boolean searchInSorted(int arr[], int k) {
         // Your code here
