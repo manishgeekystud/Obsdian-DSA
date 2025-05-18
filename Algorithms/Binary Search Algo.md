@@ -15,6 +15,7 @@
 - **Average Case:** `O(log n)`
 - **Worst Case:** `O(log n)`
 
+![[Pasted image 20250518225240.png]]
 
 
 ```java
