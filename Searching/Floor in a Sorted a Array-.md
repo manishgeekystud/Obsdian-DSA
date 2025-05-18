@@ -17,3 +17,25 @@ Given a sorted array **arr[]** and an integer **x**, find the index (0-based)
 **Input:** arr[] = [1, 2, 8, 10, 10, 12, 19], x = 0  
 **Output:** -1
 **Explanation:** No element less than or equal to 0 is found. So, output is -1.
+
+Code
+
+O(n )
+```
+ static int findFloor(long arr[], int n, long x)
+    {
+        
+        // Naive
+        for(int i=0;i < n; i++){
+            
+            if(arr[i] == x)
+                return i;
+            else if(arr[i] > x)
+                return i-1;
+            
+        }
+        
+        return n-1;
+        
+    }
+```
