@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms/Binary Search Algo.md",
+                "file": "Searching/Finding Last Occurence of Element.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Binary Search Algo"
+              "title": "Finding Last Occurence of Element"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Searching/Finding Last Occurence of Element.md",
     "Searching/Finding First Occurrence of an Element Using Binary Search.md",
+    "Searching/Finding Last Occurence of Element.md",
+    "Algorithms/Binary Search Algo.md",
     "Arrays/Majority Element.md",
     "Searching/Floor in a Sorted a Array-.md",
     "Searching/Searching in Sorted Array.md",
@@ -191,7 +192,6 @@
     "Recursion/Rope Cutting Problem.md",
     "Recursion/Palindrome check using Recusrion.md",
     "Arrays/Trapping Rain water.md",
-    "Algorithms/Binary Search Algo.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
     "Pasted image 20250518223632.png",
