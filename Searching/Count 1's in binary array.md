@@ -55,7 +55,7 @@ The intuition is to reduce our searching area. We can think of using binary sear
 **Auxiliary Space: O(1)**, there is no required any extra space for binary
 
 **Code**
-```
+```java
 //Back-end complete function Template for Java
 
 class Solution{
