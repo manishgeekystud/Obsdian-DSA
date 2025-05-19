@@ -42,3 +42,14 @@ Step 3: mid = 3 → arr[mid] = 2 → result = 3 → low = 4
 Return result = 3
 
 ```
+### 🧠 **Recap Points**
+
+- The `result` variable holds the most recent matching index.
+    
+- On matching, **update result and go right** (`low = mid + 1`) to ensure it's the last.
+    
+- Good for:
+    
+    - Counting total occurrences (`last - first + 1`)
+        
+    - Searching in frequency-based problems.
