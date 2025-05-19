@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Searching/Count 1's in binary array.md",
+                "file": "Searching/Count Occurrences in Sorted.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Count 1's in binary array"
+              "title": "Count Occurrences in Sorted"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Searching/Finding Last Occurence of Element.md",
     "Searching/Count 1's in binary array.md",
+    "Searching/Count Occurrences in Sorted.md",
+    "Searching/Finding Last Occurence of Element.md",
     "Searching/Finding First Occurrence of an Element Using Binary Search.md",
     "Algorithms/Binary Search Algo.md",
     "Arrays/Majority Element.md",
@@ -210,7 +211,6 @@
     "Arrays/Maximum Circular SubArray sum.md",
     "Arrays/Rearrange Array Alternately.md",
     "Arrays/Rearrange Array without extra space.md",
-    "Arrays/Move Zeros to End.md",
     "Pasted image 20250512230617.png",
     "Pasted image 20250512230603.png",
     "Pasted image 20250512230554.png",
