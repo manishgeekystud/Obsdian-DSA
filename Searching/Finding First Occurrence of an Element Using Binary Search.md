@@ -21,7 +21,7 @@ static int findFirstOccurrence(int[] arr, int x) {
 
         if (arr[mid] == x) {
             result = mid;        // Possible answer found
-            high = mid - 1;      // Move left to find earlier occurrence
+            high = mid - 1;      // Move left to find earlier occurrence as it might
         } else if (arr[mid] > x) {
             high = mid - 1;      // Discard right half
         } else {
@@ -45,3 +45,9 @@ Step 3: mid = 1 → arr[mid] = 2 → result = 1 → high = 0
 Return result = 1
 
 ```
+### 🧠 **Recap Points**
+
+- Use a variable `result` to store potential answer.
+- On finding `x`, don’t stop. Update `result` and move `high = mid - 1` to go left.
+- This ensures we get the **first position** where `x` occurs.
+- Useful in problems like counting occurrences, finding range etc.
