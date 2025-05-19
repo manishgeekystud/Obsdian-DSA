@@ -22,6 +22,7 @@ static int findFirstOccurrence(int[] arr, int x) {
         if (arr[mid] == x) {
             result = mid;        // Possible answer found
             high = mid - 1;      // Move left to find earlier occurrence as it might
+                                 // be possibel that first occured is left to mid 
         } else if (arr[mid] > x) {
             high = mid - 1;      // Discard right half
         } else {
