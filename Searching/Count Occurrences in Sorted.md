@@ -18,3 +18,6 @@ Given a sorted array arr[] and a number x, write a function that counts the occu
  ** Output:** -1 // 4 doesn't occur in arr[] 
 
 **Method: Binary Search**
+```
+
+```
