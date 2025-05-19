@@ -4,6 +4,9 @@ The most commonly used methods in Java to perform Binary Search are:
 
 - Arrays.binarySearch()
 - Collections.binarySearch()****
+
+Note:- in case you want to avoid overflow of data for int use below for mid
+
 -
 ### ✅ Prerequisite:
 
