@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Majority Element.md",
+                "file": "Searching/Finding First Occurrence of an Element Using Binary Search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Majority Element"
+              "title": "Finding First Occurrence of an Element Using Binary Search"
             }
           }
         ]
@@ -181,6 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Majority Element.md",
+    "Searching/Finding First Occurrence of an Element Using Binary Search.md",
     "Searching/Floor in a Sorted a Array-.md",
     "Searching/Searching in Sorted Array.md",
     "Token.md",
@@ -198,7 +200,6 @@
     "Algorithms/Sliding Window Technique.md",
     "Algorithms/Kadane.md",
     "Arrays/Maximum Subarray Sum with k Elements.md",
-    "Arrays/Majority Element.md",
     "Arrays/Wave Array.md",
     "Arrays/Minimum adjacent difference in a circular array.md",
     "Arrays/Maximum Difference Between Increasing Elements.md",
@@ -210,7 +211,6 @@
     "Arrays/Move Zeros to End.md",
     "Arrays/First Missing Positive.md",
     "Arrays/Maximum Index.md",
-    "Arrays/Remove Duplicates from Sorted Array.md",
     "Pasted image 20250512230617.png",
     "Pasted image 20250512230603.png",
     "Pasted image 20250512230554.png",
