@@ -31,5 +31,17 @@ static int findFirstOccurrence(int[] arr, int x) {
 
     return result; // Returns -1 if not found, else index
 }
+```
+### 🔁 **Dry Run Example**
+
+```java
+arr = {1, 2, 2, 2, 3, 4}, x = 2
+
+Initial: low = 0, high = 5
+Step 1: mid = 2 → arr[mid] = 2 → result = 2 → high = 1
+Step 2: mid = 0 → arr[mid] = 1 → low = 1
+Step 3: mid = 1 → arr[mid] = 2 → result = 1 → high = 0
+
+Return result = 1
 
 ```
