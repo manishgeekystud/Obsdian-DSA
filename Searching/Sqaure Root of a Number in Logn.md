@@ -18,3 +18,4 @@ Given a positive integer **n,** find the square root of n. If **n** is not a
 **Constraints:**  
 1 ≤ n ≤  3 x 104
 
+![[Pasted image 20250521011046.png]]
