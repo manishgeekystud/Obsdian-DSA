@@ -140,10 +140,19 @@ while (left < right) {
 }
 
 ```
+**Sliding window:**
 
+```
+int left = 0;
+for (int right = 0; right < arr.length; right++) {
+    // expand window
+    while (window is invalid) {
+        // shrink window
+        left++;
+    }
+}
 
-#### Sliding window:
-
+```
 
 ---
 

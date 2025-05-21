@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms/🧭 Two Pointer Technique.md",
+                "file": "Algorithms/Two Pointer Technique.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🧭 Two Pointer Technique"
+              "title": "Two Pointer Technique"
             }
           }
         ]
@@ -182,7 +182,7 @@
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
     "Searching/Find Peak Element – Binary Search Approach.md",
-    "Algorithms/🧭 Two Pointer Technique.md",
+    "Algorithms/Two Pointer Technique.md",
     "Searching/Search in Rotated Sorted Array.md",
     "Searching/Sqaure Root of a Number in Logn.md",
     "Pasted image 20250521011215.png",
