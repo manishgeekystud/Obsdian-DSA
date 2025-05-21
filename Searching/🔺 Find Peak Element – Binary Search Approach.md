@@ -63,4 +63,26 @@ We keep narrowing the search space based on slope:
 - Now `low == high == 2` → Return 2 ✅
 
 **Code**
+```java
+public int findPeakElement(int[] nums) {
+    int low = 0;
+    int high = nums.length - 1;
 
+    while (low < high) {
+        int mid = low + (high - low) / 2;
+
+        // Compare mid with next element to decide the slope
+        if (nums[mid] < nums[mid + 1]) {
+            // Ascending slope → peak is to the right
+            low = mid + 1;
+        } else {
+            // Descending slope → peak is to the left or at mid
+            high = mid;
+        }
+    }
+
+    // At this point low == high and is the peak
+    return low;
+}
+
+```
