@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Searching/Sqaure Root of a Number in Logn.md",
+                "file": "Searching/Search in Rotated Sorted Array.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sqaure Root of a Number in Logn"
+              "title": "Search in Rotated Sorted Array"
             }
           }
         ]
@@ -181,6 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Searching/Sqaure Root of a Number in Logn.md",
+    "Searching/Search in Rotated Sorted Array.md",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
     "Pasted image 20250521011153.png",
@@ -190,7 +192,6 @@
     "Pasted image 20250521011108.png",
     "Pasted image 20250521011046.png",
     "Searching/Count Occurrences in Sorted.md",
-    "Searching/Sqaure Root of a Number in Logn.md",
     "Searching/Count 1's in binary array.md",
     "Searching/Finding Last Occurence of Element.md",
     "Searching/Finding First Occurrence of an Element Using Binary Search.md",
@@ -205,7 +206,6 @@
     "Arrays/Trapping Rain water.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
-    "Pasted image 20250518223632.png",
     "Arrays/Equilibrium Point- Amazon , Microsoft-Easy.md",
     "Searching",
     "Arrays/Longest SubArray  of Even Odd.md",
