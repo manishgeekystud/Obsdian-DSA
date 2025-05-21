@@ -37,7 +37,7 @@
 - Used when input is **sorted**.
     
 - 🔄 Pointers move towards each other.
-```
+```java
 int[] arr = {1, 2, 3, 4, 5};
 int left = 0, right = arr.length - 1;
 while (left < right) {
@@ -65,7 +65,17 @@ while (left < right) {
 
 ✅ Example:
 
+```java
+int left = 0, sum = 0;
+for (int right = 0; right < arr.length; right++) {
+    sum += arr[right];
+    while (sum > target) {
+        sum -= arr[left];
+        left++;
+    }
+}
 
+```
 
 ---
 
@@ -121,7 +131,15 @@ while (left < right) {
 ### 🧾 Template Snippet
 
 #### Opposite ends (Sorted Array):
+```
+int left = 0, right = arr.length - 1;
+while (left < right) {
+    // do something
+    if (condition) right--;
+    else left++;
+}
 
+```
 
 
 #### Sliding window:
