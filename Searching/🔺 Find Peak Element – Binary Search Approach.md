@@ -84,5 +84,21 @@ public int findPeakElement(int[] nums) {
     // At this point low == high and is the peak
     return low;
 }
-
 ```
+
+### 📌 Time & Space Complexity
+
+- **Time**: `O(log n)` – because we divide the array each step.
+    
+- **Space**: `O(1)` – no extra space used.
+    
+
+---
+
+### 🧠 Summary
+
+- We’re not checking for a **specific** peak – just **any** peak.
+    
+- It’s guaranteed by problem constraints that a peak always exists.
+    
+- Binary search reduces complexity from O(n) to O(log n) ✅.
