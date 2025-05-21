@@ -37,15 +37,20 @@
 - Used when input is **sorted**.
     
 - 🔄 Pointers move towards each other.
-    
+```
+int[] arr = {1, 2, 3, 4, 5};
+int left = 0, right = arr.length - 1;
+while (left < right) {
+    int sum = arr[left] + arr[right];
+    if (sum == target) return true;
+    else if (sum < target) left++;
+    else right--;
+}
+
+```
 
 ✅ Example:
 
-java
-
-CopyEdit
-
-`int[] arr = {1, 2, 3, 4, 5}; int left = 0, right = arr.length - 1; while (left < right) {     int sum = arr[left] + arr[right];     if (sum == target) return true;     else if (sum < target) left++;     else right--; }`
 
 ---
 
@@ -60,11 +65,7 @@ CopyEdit
 
 ✅ Example:
 
-java
 
-CopyEdit
-
-`int left = 0, sum = 0; for (int right = 0; right < arr.length; right++) {     sum += arr[right];     while (sum > target) {         sum -= arr[left];         left++;     } }`
 
 ---
 
@@ -121,19 +122,10 @@ CopyEdit
 
 #### Opposite ends (Sorted Array):
 
-java
 
-CopyEdit
-
-`int left = 0, right = arr.length - 1; while (left < right) {     // do something     if (condition) right--;     else left++; }`
 
 #### Sliding window:
 
-java
-
-CopyEdit
-
-`int left = 0; for (int right = 0; right < arr.length; right++) {     // expand window     while (window is invalid) {         // shrink window         left++;     } }`
 
 ---
 
