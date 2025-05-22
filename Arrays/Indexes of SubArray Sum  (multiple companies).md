@@ -21,7 +21,7 @@ There is no subarray with sum 2.
 **Explanation:** 
 ---
 
-## 1 .🔍 Approach: Two Pointer / Sliding Window
+## ✅1 .🔍 Approach: Two Pointer / Sliding Window
 
 ### 💡 Intuition:
 - For **non-negative integers**, the sum of a subarray will **only increase** when we move the right pointer forward.
