@@ -113,5 +113,70 @@ Match found → left = 1, right = 3 → return [2, 4]
     
 - Smallest subarray with sum ≥ k (uses similar logic)
     
+## ✅ 2. **Prefix Sum + HashMap** – `O(n)`
+
+> **Works with negative numbers also**
+
+### Logic:
+
+- Store cumulative sum (prefix) and its first occurrence index in a HashMap.
+    
+- If at index `i`, `prefixSum[i] - target` exists in map → subarray exists.
+    
+
+### Code:
+
+```java
+static ArrayList<Integer> subarraySum(int[] arr, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    int prefixSum = 0;
+    ArrayList<Integer> ans = new ArrayList<>();
+
+    for (int i = 0; i < arr.length; i++) {
+        prefixSum += arr[i];
+
+        if (prefixSum == target) {
+            ans.add(1);
+            ans.add(i + 1);
+            return ans;
+        }
+
+        if (map.containsKey(prefixSum - target)) {
+            ans.add(map.get(prefixSum - target) + 2);
+            ans.add(i + 1);
+            return ans;
+        }
+
+        map.putIfAbsent(prefixSum, i);
+    }
+
+    ans.add(-1);
+    return ans;
+}
 
 ```
+
+### Example:
+
+- `arr = [10, 2, -2, -20, 10]`, `target = -10`
+    
+- `prefixSum = -10` found at index 3 → subarray from index 1 to 4
+    
+
+---
+
+## 🧠 Comparison of Two `O(n)` Approaches
+
+|Approach|Handles Negatives|Space|Extra Structure|
+|---|---|---|---|
+|Sliding Window|❌|`O(1)`|None|
+|Prefix Sum + HashMap|✅|`O(n)`|HashMap|
+
+---
+
+## ⚡ When to Use Which:
+
+- **Non-negative elements only** → use **Sliding Window**
+    
+- **Possible negative numbers** → use **Prefix Sum + HashMap**
+###### 
