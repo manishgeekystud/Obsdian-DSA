@@ -142,9 +142,22 @@ Let:
 prefixSum[i] - prefixSum[j] == target  
 ⇒ subarray from j+1 to i adds to target
 
-yaml
 
-CopyEdit
+So, check if `prefixSum - target` exists in the map.
+
+---
+
+## 🧪 Dry Run Example
+
+```text
+Input: arr = [10, 2, -2, -20, 10], target = -10
+
+Step-by-step:
+- i = 0 → prefixSum = 10   → map: {10: 0}
+- i = 1 → prefixSum = 12   → map: {10: 0, 12: 1}
+- i = 2 → prefixSum = 10   → already exists, skip
+- i = 3 → prefixSum = -10  → prefixSum == target → return [1, 4]
+
 
 ---
 
@@ -163,3 +176,32 @@ CopyEdit
     
 - **Possible negative numbers** → use **Prefix Sum + HashMap**
 ###### 
+
+ CODE
+ 
+static ArrayList<Integer> subarraySum(int[] arr, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    int prefixSum = 0;
+    ArrayList<Integer> ans = new ArrayList<>();
+
+    for (int i = 0; i < arr.length; i++) {
+        prefixSum += arr[i];
+
+        if (prefixSum == target) {
+            ans.add(1);           // 1-based indexing
+            ans.add(i + 1);
+            return ans;
+        }
+
+        if (map.containsKey(prefixSum - target)) {
+            ans.add(map.get(prefixSum - target) + 2); // +2 for 1-based
+            ans.add(i + 1);
+            return ans;
+        }
+
+        map.putIfAbsent(prefixSum, i);
+    }
+
+    ans.add(-1);
+    return ans;
+}
