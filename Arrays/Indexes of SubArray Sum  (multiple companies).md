@@ -16,11 +16,12 @@ If no such subarray is found, return `[-1]`.
 
 **Input:** arr[] = [5, 3, 4], target = 2
 **Output:** [-1]
+There is no subarray with sum 2.
 
-**Explanation:** There is no subarray with sum 2.
+**Explanation:** 
 ---
 
-## 🔍 Approach: Two Pointer / Sliding Window
+## 1 .🔍 Approach: Two Pointer / Sliding Window
 
 ### 💡 Intuition:
 - For **non-negative integers**, the sum of a subarray will **only increase** when we move the right pointer forward.
