@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms/Sliding Window Technique.md",
+                "file": "Arrays/Indexes of SubArray Sum  (multiple companies).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sliding Window Technique"
+              "title": "Indexes of SubArray Sum  (multiple companies)"
             }
           }
         ]
@@ -181,6 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Algorithms/Sliding Window Technique.md",
+    "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Algorithms/Two Pointer Technique.md",
     "Searching/Find Peak Element – Binary Search Approach.md",
     "Searching/Search in Rotated Sorted Array.md",
@@ -211,13 +213,11 @@
     "Arrays/Equilibrium Point- Amazon , Microsoft-Easy.md",
     "Searching",
     "Arrays/Longest SubArray  of Even Odd.md",
-    "Algorithms/Sliding Window Technique.md",
     "Algorithms/Kadane.md",
     "Arrays/Maximum Subarray Sum with k Elements.md",
     "Arrays/Wave Array.md",
     "Arrays/Minimum adjacent difference in a circular array.md",
     "Arrays/Maximum Difference Between Increasing Elements.md",
-    "Arrays/Reverse Array in K groups.md",
     "Untitled.canvas",
     "Untitled/desktop.ini",
     "images",
