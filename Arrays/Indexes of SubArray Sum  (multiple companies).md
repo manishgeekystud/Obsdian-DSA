@@ -56,3 +56,48 @@ static ArrayList<Integer> subarraySum(int[] arr, int target) {
     ans.add(-1);
     return ans;
 }
+```
+
+
+## 🧪 Dry Run Example
+
+Input: `arr = [1, 2, 3, 7, 5]`, `target = 12`
+
+### Steps:
+
+```
+left = 0, right = 0, currentSum = 0
+
+right = 0 → currentSum = 1
+right = 1 → currentSum = 3
+right = 2 → currentSum = 6
+right = 3 → currentSum = 13 (too much)
+    → currentSum -= arr[0] (1) → currentSum = 12
+Match found → left = 1, right = 3 → return [2, 4]
+
+```
+---
+
+## 🧠 Notes:
+
+- This algorithm works **only when elements are non-negative**.
+    
+- Time complexity: `O(n)`
+    
+- Space complexity: `O(1)`
+    
+- For arrays with negative numbers, use **prefix sum with HashMap**.
+    
+
+---
+
+## 🧩 Related Variations
+
+- Count number of subarrays with sum `k` → use HashMap + Prefix Sum
+    
+- Longest subarray with given sum
+    
+- Smallest subarray with sum ≥ k (uses similar logic)
+    
+
+```
