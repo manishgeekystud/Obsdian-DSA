@@ -118,51 +118,33 @@ Match found → left = 1, right = 3 → return [2, 4]
 
 > **Works with negative numbers also**
 
-### Logic:
+## ✅ Problem Statement
+Given an array `arr[]`, find the **starting and ending index (1-based)** of a subarray whose sum is equal to a given `target`.
 
-- Store cumulative sum (prefix) and its first occurrence index in a HashMap.
-    
-- If at index `i`, `prefixSum[i] - target` exists in map → subarray exists.
-    
+> The array may contain **negative numbers**, so sliding window won't always work.
 
-### Code:
+---
 
-```java
-static ArrayList<Integer> subarraySum(int[] arr, int target) {
-    Map<Integer, Integer> map = new HashMap<>();
-    int prefixSum = 0;
-    ArrayList<Integer> ans = new ArrayList<>();
+## 🔍 Core Idea (Prefix Sum + HashMap)
 
-    for (int i = 0; i < arr.length; i++) {
-        prefixSum += arr[i];
+- Maintain a **running prefix sum**.
+- Store the **first occurrence** of each prefix sum in a HashMap.
+- If `prefixSum - target` is found in the map, the subarray between those indexes adds up to `target`.
 
-        if (prefixSum == target) {
-            ans.add(1);
-            ans.add(i + 1);
-            return ans;
-        }
+---
 
-        if (map.containsKey(prefixSum - target)) {
-            ans.add(map.get(prefixSum - target) + 2);
-            ans.add(i + 1);
-            return ans;
-        }
+## 🧮 Mathematical Insight
 
-        map.putIfAbsent(prefixSum, i);
-    }
+Let:
+- `prefixSum[i]` be the sum of all elements from index `0` to `i`.
+- If there's a previous prefix sum `prefixSum[j]` such that:
 
-    ans.add(-1);
-    return ans;
-}
+prefixSum[i] - prefixSum[j] == target  
+⇒ subarray from j+1 to i adds to target
 
-```
+yaml
 
-### Example:
-
-- `arr = [10, 2, -2, -20, 10]`, `target = -10`
-    
-- `prefixSum = -10` found at index 3 → subarray from index 1 to 4
-    
+CopyEdit
 
 ---
 
