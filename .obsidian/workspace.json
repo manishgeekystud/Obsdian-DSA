@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Bubble Sort.md",
+                "file": "Sorting/Selection Sort.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bubble Sort"
+              "title": "Selection Sort"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Sorting/Bubble Sort.md",
+    "Sorting/Selection Sort.md",
+    "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Sorting",
     "Untitled.md",
     "Arrays/Best time to Buy and sell stock-2.md",
@@ -218,7 +219,6 @@
     "Searching",
     "Arrays/Longest SubArray  of Even Odd.md",
     "Algorithms/Kadane.md",
-    "Arrays/Maximum Subarray Sum with k Elements.md",
     "Untitled.canvas",
     "Untitled/desktop.ini",
     "images",
