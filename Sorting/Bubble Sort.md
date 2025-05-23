@@ -19,7 +19,7 @@ Bubble Sort is a **simple comparison-based sorting algorithm** that repeatedly s
 
 ```java
 for (int i = 0; i < n - 1; i++) {
-    for (int j = 0; j < n - i - 1; j++) {
+    for (int j = 0; j < n - i - 1; j++) { //n-
         if (arr[j] > arr[j + 1]) {
             // swap arr[j] and arr[j+1]
         }
@@ -39,6 +39,21 @@ Pass 4: [1, 2, 4, 5, 8] (no swaps)
 
 ```
 
+Code
+```java
+void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (arr[j] > arr[j + 1]) {
+                    // swap arr[j+1] and arr[j]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+    }
+```
 ## ⏱️ Time and Space Complexity
 
 |Case|Time Complexity|
