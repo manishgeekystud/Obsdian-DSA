@@ -42,3 +42,43 @@ class SelectionSort
         }
     }
 ```
+## ⏱️ Time and Space Complexity
+
+|Case|Time Complexity|
+|---|---|
+|Best|O(n²)|
+|Average|O(n²)|
+|Worst|O(n²)|
+
+- **Space Complexity**: O(1) (In-place)
+    
+
+---
+
+## 📌 Characteristics
+
+- **Stable**: ❌ Not stable (can be made stable with extra steps)
+    
+- **In-Place**: ✅ Yes
+    
+- **Adaptive**: ❌ No (doesn’t benefit from a sorted array)
+    
+
+---
+
+## 🚫 When Not to Use
+
+- When stability is required
+    
+- For large datasets (inefficient)
+    
+
+---
+
+## 🟢 When to Use
+
+- When memory space is extremely limited
+    
+- For small or almost-sorted datasets
+    
+- When number of swaps must be minimal (Selection Sort does fewer swaps compared to Bubble Sort)
