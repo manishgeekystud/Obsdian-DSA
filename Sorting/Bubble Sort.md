@@ -48,3 +48,31 @@ Pass 4: [1, 2, 4, 5, 8] (no swaps)
 |Worst|O(n²)|
 
 - **Space Complexity**: O(1) (in-place)
+
+## 📌 Characteristics
+
+- **Stable**: Yes
+    
+- **In-Place**: Yes
+    
+- **Adaptive**: Yes (with optimization)
+    
+
+---
+
+## 🚫 When Not to Use
+
+- For large datasets (inefficient)
+    
+- When optimal performance is needed
+    
+
+---
+
+## 🟢 When to Use
+
+- Learning basic sorting
+    
+- Small datasets
+    
+- Situations where simplicity matters more than performance
