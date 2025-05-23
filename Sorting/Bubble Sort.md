@@ -27,3 +27,24 @@ for (int i = 0; i < n - 1; i++) {
 }
 
 ```
+## ✅ Dry Run Example
+
+Input: `arr = [5, 1, 4, 2, 8]`
+
+```
+Pass 1: [1, 4, 2, 5, 8]
+Pass 2: [1, 2, 4, 5, 8]
+Pass 3: [1, 2, 4, 5, 8]
+Pass 4: [1, 2, 4, 5, 8] (no swaps)
+
+```
+
+## ⏱️ Time and Space Complexity
+
+|Case|Time Complexity|
+|---|---|
+|Best (sorted array)|O(n) – with optimized version|
+|Average|O(n²)|
+|Worst|O(n²)|
+
+- **Space Complexity**: O(1) (in-place)
