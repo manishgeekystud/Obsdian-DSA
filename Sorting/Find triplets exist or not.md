@@ -34,3 +34,38 @@
 ---
 
 ## ✅ Java Code
+
+```java
+public boolean findTriplets(int[] arr) {
+    int n = arr.length;
+
+    // Step 1: Sort the array
+    Arrays.sort(arr);
+
+    // Step 2: Iterate through the array
+    for (int i = 0; i < n - 2; i++) {
+        int l = i + 1;
+        int r = n - 1;
+
+        // Step 3: Two-pointer traversal
+        while (l < r) {
+            int sum = arr[i] + arr[l] + arr[r];
+
+            if (sum == 0) {
+                // Triplet found
+                return true;
+            } else if (sum < 0) {
+                // Increase sum by moving left pointer to the right
+                l++;
+            } else {
+                // Decrease sum by moving right pointer to the left
+                r--;
+            }
+        }
+    }
+
+    // No triplet found with zero sum
+    return false;
+}
+
+```
