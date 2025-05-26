@@ -37,6 +37,62 @@ Given two sorted arrays (which may contain duplicate elements), return the **sor
 
 ### ✅ Java Code with Explanation:
 
-java
+```java
+public static ArrayList<Integer> findUnion(int a[], int b[]) {
+    ArrayList<Integer> unionList = new ArrayList<>();
+    int n1 = a.length;
+    int n2 = b.length;
+    int i = 0;
+    int j = 0;
 
-CopyEdit
+    // Traverse both arrays
+    while (i < n1 && j < n2) {
+        // Skip duplicates in a[]
+        if (i > 0 && a[i] == a[i - 1]) {
+            i++;
+            continue;
+        }
+
+        // Skip duplicates in b[]
+        if (j > 0 && b[j] == b[j - 1]) {
+            j++;
+            continue;
+        }
+
+        // If equal, add only once
+        if (a[i] == b[j]) {
+            unionList.add(a[i]);
+            i++;
+            j++;
+        }
+        // Add smaller one
+        else if (a[i] < b[j]) {
+            unionList.add(a[i]);
+            i++;
+        } else {
+            unionList.add(b[j]);
+            j++;
+        }
+    }
+
+    // Process remaining elements in a[]
+    while (i < n1) {
+        if (i == 0 || a[i] != a[i - 1]) {
+            unionList.add(a[i]);
+        }
+        i++;
+    }
+
+    // Process remaining elements in b[]
+    while (j < n2) {
+        if (j == 0 || b[j] != b[j - 1]) {
+            unionList.add(b[j]);
+        }
+        j++;
+    }
+
+    return unionList;
+}
+
+```
+
