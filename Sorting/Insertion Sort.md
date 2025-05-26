@@ -20,24 +20,37 @@
 ---
 
 ## 🧠 Pseudocode
+```java
+for (int i = 1; i < n; i++) {
+    int key = arr[i];
+    int j = i - 1;
 
-java
+    // Shift elements of arr[0..i-1], that are greater than key
+    while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
+        j = j - 1;
+    }
+    arr[j + 1] = key;
+}
 
-CopyEdit
-
-`for (int i = 1; i < n; i++) {     int key = arr[i];     int j = i - 1;      // Shift elements of arr[0..i-1], that are greater than key     while (j >= 0 && arr[j] > key) {         arr[j + 1] = arr[j];         j = j - 1;     }     arr[j + 1] = key; }`
+```
 
 ---
 
 ## ✅ Dry Run Example
-
 Input: `arr = [5, 3, 4, 1, 2]`
 
 ini
 
 CopyEdit
 
-`i = 1, key = 3 -> [3, 5, 4, 1, 2] i = 2, key = 4 -> [3, 4, 5, 1, 2] i = 3, key = 1 -> [1, 3, 4, 5, 2] i = 4, key = 2 -> [1, 2, 3, 4, 5]`
+```
+i = 1, key = 3 -> [3, 5, 4, 1, 2]
+i = 2, key = 4 -> [3, 4, 5, 1, 2]
+i = 3, key = 1 -> [1, 3, 4, 5, 2]
+i = 4, key = 2 -> [1, 2, 3, 4, 5]
+
+```
 
 ---
 
