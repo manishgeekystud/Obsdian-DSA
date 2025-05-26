@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Selection Sort.md",
+                "file": "Sorting/Insertion Sort.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Selection Sort"
+              "title": "Insertion Sort"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Bubble Sort.md",
     "Sorting/Selection Sort.md",
+    "Sorting/Insertion Sort.md",
+    "Sorting/Bubble Sort.md",
     "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Sorting",
     "Untitled.md",
@@ -218,7 +219,6 @@
     "Arrays/Equilibrium Point- Amazon , Microsoft-Easy.md",
     "Searching",
     "Arrays/Longest SubArray  of Even Odd.md",
-    "Algorithms/Kadane.md",
     "Untitled.canvas",
     "Untitled/desktop.ini",
     "images",
