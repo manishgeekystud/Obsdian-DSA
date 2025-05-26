@@ -2,7 +2,6 @@
 
 Merge Sort works by breaking down a problem into smaller subproblems, solving them individually, and then combining the results to form the final solution.
     
-
 It is **stable**, **efficient**, and guarantees **O(n log n)** time complexity in all cases.
 
 ---
@@ -29,3 +28,18 @@ Sorting `[38, 27, 43, 3, 9, 82, 10]` using Merge Sort:
 4. Merge sorted groups → `[3, 27, 38, 43]` and `[9, 10, 82]`
     
 5. Merge final halves → `[3, 9, 10, 27, 38, 43, 82]`
+
+**Psedo** **Code**
+```
+mergeSort(arr):
+    if size of arr > 1:
+        mid = size of arr / 2
+        left = first half of arr
+        right = second half of arr
+        
+        mergeSort(left)
+        mergeSort(right)
+
+        merge(left, right, arr)
+
+```
