@@ -20,3 +20,5 @@ It is **stable**, **efficient**, and guarantees **O(n log n)** time complexity i
 2. **Recursively sort** both halves.
     
 3. **Merge** the two sorted halves into a single sorted array.
+
+🧠 Pseudocode
