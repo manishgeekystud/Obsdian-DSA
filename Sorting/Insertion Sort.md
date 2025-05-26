@@ -38,12 +38,8 @@ for (int i = 1; i < n; i++) {
 ---
 
 ## ✅ Dry Run Example
+
 Input: `arr = [5, 3, 4, 1, 2]`
-
-ini
-
-CopyEdit
-
 ```
 i = 1, key = 3 -> [3, 5, 4, 1, 2]
 i = 2, key = 4 -> [3, 4, 5, 1, 2]
