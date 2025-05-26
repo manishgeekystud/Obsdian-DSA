@@ -96,3 +96,7 @@ public static ArrayList<Integer> findUnion(int a[], int b[]) {
 
 ```
 
+other not so efficient way using Hashet
+
+
+
