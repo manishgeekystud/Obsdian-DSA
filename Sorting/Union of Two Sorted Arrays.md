@@ -98,5 +98,29 @@ public static ArrayList<Integer> findUnion(int a[], int b[]) {
 
 other not so efficient way using Hashet
 
+```java
+import java.util.*;
 
+public class UnionWithHashSet {
+    public static ArrayList<Integer> findUnion(int[] a, int[] b) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // Add all elements from both arrays
+        for (int num : a) {
+            set.add(num);
+        }
+
+        for (int num : b) {
+            set.add(num);
+        }
+
+        // Convert set to list and sort it
+        ArrayList<Integer> unionList = new ArrayList<>(set);
+        Collections.sort(unionList);
+
+        return unionList;
+    }
+}
+
+```
 
