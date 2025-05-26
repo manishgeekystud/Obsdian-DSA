@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Merge Sort.md",
+                "file": "Sorting/Merge Without Extra Space.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Merge Sort"
+              "title": "Merge Without Extra Space"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Insertion Sort.md",
     "Sorting/Merge Sort.md",
+    "Sorting/Merge Without Extra Space.md",
+    "Sorting/Insertion Sort.md",
     "Sorting/Selection Sort.md",
     "Sorting/Bubble Sort.md",
     "Arrays/Indexes of SubArray Sum  (multiple companies).md",
@@ -217,7 +218,6 @@
     "Arrays/Trapping Rain water.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
-    "Arrays/Equilibrium Point- Amazon , Microsoft-Easy.md",
     "Searching",
     "Untitled.canvas",
     "Untitled/desktop.ini",
