@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/QuickSort.md",
+                "file": "Algorithms/Sliding Window Technique.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QuickSort"
+              "title": "Sliding Window Technique"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Count of Inversions.md",
     "Sorting/QuickSort.md",
+    "Sorting/Count of Inversions.md",
     "Sorting/Merge Sort.md",
     "Sorting/Union of Two Sorted Arrays.md",
     "Sorting/Find triplets exist or not.md",
