@@ -134,3 +134,19 @@ public class InversionCounter {
 
 ```
 
+### 🔢 Time and Space Complexity
+
+|Approach|Time Complexity|Space Complexity|
+|---|---|---|
+|Naive|O(n²)|O(1)|
+|Merge|O(n log n)|O(n)|
+
+---
+
+### ✅ Applications
+
+- **Sorting evaluation** – how close is a sequence to being sorted?
+    
+- **Kendall Tau distance** – used in ranking and recommendation systems.
+    
+- **Comparing arrays or permutations**.
