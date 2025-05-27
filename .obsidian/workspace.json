@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Count of Inversions.md",
+                "file": "Sorting/QuickSort.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Count of Inversions"
+              "title": "QuickSort"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Merge Sort.md",
     "Sorting/Count of Inversions.md",
+    "Sorting/QuickSort.md",
+    "Sorting/Merge Sort.md",
     "Sorting/Union of Two Sorted Arrays.md",
     "Sorting/Find triplets exist or not.md",
     "Sorting/Merge Without Extra Space.md",
@@ -215,7 +216,6 @@
     "Searching/Floor in a Sorted a Array-.md",
     "Searching/Searching in Sorted Array.md",
     "Token.md",
-    "Recursion/Subset Sum Problem.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
     "Searching",
