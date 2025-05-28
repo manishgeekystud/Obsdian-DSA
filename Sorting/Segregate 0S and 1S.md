@@ -16,5 +16,30 @@ We compare elements at index type0 
 
 **Code**
 ```
+// Java program to sort an array with two types
+// of values in one traversal.public class GFG {
+/* Method for segregation 0 and 1
+     given input array */
+class segregation {
+    static void segregate0and1(int arr[], int n)
+    {
+        int type0 = 0;
+        int type1 = n - 1;
 
+        while (type0 < type1) {
+            if (arr[type0] == 1) {
+
+                // swap type0 and type1
+                   int temp = arr[type0];
+                   arr[type0] = arr[type1];
+              arr[type1] = temp;
+
+                type1--;
+            }
+            else {
+                type0++;
+            }
+        }
+    }
+}
 ```
