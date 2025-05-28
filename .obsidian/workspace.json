@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Merge Intervals or Meeting problems.md",
+                "file": "Sorting/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Merge Intervals or Meeting problems"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Closet 0s 1s and 2s.md",
     "Sorting/Merge Intervals or Meeting problems.md",
+    "Sorting/Untitled.md",
+    "Sorting/Closet 0s 1s and 2s.md",
     "Sorting/Segregate 0S and 1S.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Algorithms/Kadane.md",
@@ -215,7 +216,6 @@
     "Searching/Count Occurrences in Sorted.md",
     "Searching/Count 1's in binary array.md",
     "Searching/Finding Last Occurence of Element.md",
-    "Searching/Finding First Occurrence of an Element Using Binary Search.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
     "Searching",
