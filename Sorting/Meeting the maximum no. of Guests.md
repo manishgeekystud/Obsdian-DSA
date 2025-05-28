@@ -56,61 +56,38 @@ At time 5, both Guest 2 and Guest 3 are present ⇒ max = **2**
 ---
 
 ### 🧑‍💻 Java Code
-```
-// Java Program to find maximum guest 
-// at any time in a party
-import java.util.*;
+```java
+import java.util.Arrays;
 
-class GFG {
+public class GuestMax {
 
-    static void findMaxGuests(int arrl[], int exit[],
-                                          int n)    
-    {   
-    // Sort arrival and exit arrays
-    Arrays.sort(arrl);
-    Arrays.sort(exit);
+    // Function to find the maximum number of guests present at the same time
+    public static int findMaxGuests(int[] arr, int[] dep) {
+        // Step 1: Sort both arrival and departure times
+        Arrays.sort(arr);
+        Arrays.sort(dep);
+        
+        int n = arr.length;
+        int i = 0;      // Pointer for arrival
+        int j = 0;      // Pointer for departure
+        int guests = 0; // Current number of guests present
+        int maxGuests = 0; // Track the maximum guests at any time
 
-    // guests_in indicates number of guests at a time
-    int guests_in = 1, max_guests = 1, time = arrl[0];
-    int i = 1, j = 0;
-
-    // Similar to merge in merge sort to process
-    // all events in sorted order
-    while (i < n && j < n)
-    {
-        // If next event in sorted order is arrival,
-        // increment count of guests
-        if (arrl[i] <= exit[j])
-        {
-            guests_in++;
-
-            // Update max_guests if needed
-            if (guests_in > max_guests)
-            {
-                max_guests = guests_in;
-                time = arrl[i];
+        // Step 2: Traverse both arrays
+        while (i < n && j < n) {
+            // If a guest arrives before or at the same time as the next departure
+            if (arr[i] <= dep[j]) {
+                guests++; // One more guest has arrived
+                maxGuests = Math.max(maxGuests, guests); // Update max if needed
+                i++; // Move to the next arrival
+            } else {
+                guests--; // One guest has departed
+                j++; // Move to the next departure
             }
-            i++; //increment index of arrival array
         }
-        else // If event is exit, decrement count
-        { // of guests.
-            guests_in--;
-            j++;
-        }
-    }
 
-    System.out.println("Maximum Number of Guests = "+
-                    max_guests + " at time " + time);
-    }
-
-    // Driver program to test above function
-    public static void main(String[] args)
-    {
-        int arrl[] = {1, 2, 10, 5, 5};
-        int exit[] = {4, 5, 12, 9, 12};
-        int n = arrl.length;
-        findMaxGuests(arrl, exit, n);
+        return maxGuests; // Return the maximum number of guests present at the same time
     }
 }
-// This code is contributed by Prerna Saini
+
 ```
