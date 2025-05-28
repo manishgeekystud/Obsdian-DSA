@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Segregate 0S and 1S.md",
+                "file": "Sorting/Closet 0s 1s and 2s.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Segregate 0S and 1S"
+              "title": "Closet 0s 1s and 2s"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Arrays/Maximum Circular SubArray sum.md",
     "Sorting/Segregate 0S and 1S.md",
+    "Sorting/Closet 0s 1s and 2s.md",
+    "Arrays/Maximum Circular SubArray sum.md",
     "Algorithms/Kadane.md",
     "Sorting/QuickSort.md",
     "Algorithms/Sliding Window Technique.md",
@@ -215,7 +216,6 @@
     "Searching/Finding Last Occurence of Element.md",
     "Searching/Finding First Occurrence of an Element Using Binary Search.md",
     "Algorithms/Binary Search Algo.md",
-    "Arrays/Majority Element.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
     "Searching",
