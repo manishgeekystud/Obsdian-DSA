@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Meeting the maximum no. of Guests.md",
+                "file": "Sorting/Minimum Platforms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Meeting the maximum no. of Guests"
+              "title": "Minimum Platforms"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Meeting the maximum no. of Guests.md",
+    "Sorting/Minimum Platforms.md",
+    "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Closet 0s 1s and 2s.md",
     "Sorting/Segregate 0S and 1S.md",
     "Arrays/Maximum Circular SubArray sum.md",
@@ -215,7 +216,6 @@
     "Pasted image 20250521011046.png",
     "Searching/Count Occurrences in Sorted.md",
     "Searching/Count 1's in binary array.md",
-    "Searching/Finding Last Occurence of Element.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
     "Searching",
