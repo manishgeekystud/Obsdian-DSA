@@ -12,3 +12,6 @@ Given an array of 0s, 1s, and 2s. Arrange the array elements such that all 0s co
 
 **Input**: N = 3, arr[] = {0, 1, 0}
 **Output**: 0 0 1
+
+======================================================
+
