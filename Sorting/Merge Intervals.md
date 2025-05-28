@@ -70,13 +70,9 @@ class MergeIntervals {
         // Step 1: Edge case
         if (intervals.length <= 1)
             return intervals;
-
+ 
         // Step 2: Sort intervals based on start time
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            public int compare(int[] a, int[] b) {
-                return a[0] - b[0]; // Sort by starting point
-            }
-        });
+           Arrays.sort(intervals,(a,b)->a[0]-b[0]);//comparator shorthand
 
         // Step 3: Create result list
         List<int[]> result = new ArrayList<>();
