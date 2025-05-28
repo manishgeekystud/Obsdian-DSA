@@ -102,3 +102,24 @@ class MergeIntervals {
 }
 
 ```
+
+## ⏱️ Time and Space Complexity
+
+- **Time Complexity**: `O(n log n)`
+    
+    - Due to sorting.
+        
+- **Space Complexity**: `O(n)`
+    
+    - For the result list.
+        
+
+---
+
+## ✅ When to Use
+
+- In scheduling problems (e.g., merging meeting times)
+    
+- Calendar availability checks
+    
+- Range compression

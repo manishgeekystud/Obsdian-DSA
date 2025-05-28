@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Merge Intervals.md",
+                "file": "Sorting/Merge Intervals or Meeting problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Merge Intervals"
+              "title": "Merge Intervals or Meeting problems"
             }
           }
         ]
@@ -182,7 +182,7 @@
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
     "Sorting/Closet 0s 1s and 2s.md",
-    "Sorting/Merge Intervals.md",
+    "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Segregate 0S and 1S.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Algorithms/Kadane.md",
