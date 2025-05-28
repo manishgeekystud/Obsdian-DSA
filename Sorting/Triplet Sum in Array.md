@@ -59,7 +59,7 @@ public boolean hasTripletBruteForce(int[] arr, int target) {
     
 2. Loop through each element `i` and apply **two-pointer** approach to the subarray `arr[i+1 ... n-1]` to find if there is a pair that sums up to `target - arr[i]`.
 
-```
+```java
 import java.util.Arrays;
 
 public class TripletSum {
@@ -93,13 +93,5 @@ public class TripletSum {
         // No triplet found that sums to target
         return false;
     }
-
-    // Example Usage
-    public static void main(String[] args) {
-        System.out.println(hasTripletWithSum(new int[]{1, 4, 45, 6, 10, 8}, 13)); // true
-        System.out.println(hasTripletWithSum(new int[]{1, 2, 4, 3, 6, 7}, 10));   // true
-        System.out.println(hasTripletWithSum(new int[]{40, 20, 10, 3, 6, 7}, 24)); // false
-    }
-}
 
 ```
