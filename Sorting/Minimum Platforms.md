@@ -58,3 +58,35 @@ return maxPlatform;
 - If a train departs before the next one arrives → free a platform.
     
 - Keep track of the **maximum number of platforms used at any time**.
+
+**Code**
+```java
+static int findPlatform(int arr[], int dep[]) {
+    // Step 1: Sort arrival and departure arrays
+    Arrays.sort(arr);
+    Arrays.sort(dep);
+    
+    int i = 0, j = 0;
+    int n = arr.length;
+    int currentPlatform = 0;
+    int maxPlatform = Integer.MIN_VALUE;
+
+    // Step 2: Traverse both arrays with two pointers
+    while (i < n && j < n) {
+        if (arr[i] <= dep[j]) {
+            // New train has arrived before the earliest one departs
+            currentPlatform++; // Need a new platform
+            i++;
+        } else {
+            // One train has departed before the next arrives
+            currentPlatform--; // Free up a platform
+            j++;
+        }
+        // Step 3: Update the maximum platform count
+        maxPlatform = Math.max(maxPlatform, currentPlatform);
+    }
+
+    return maxPlatform;
+}
+
+```
