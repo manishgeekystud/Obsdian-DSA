@@ -15,7 +15,7 @@ We compare elements at index type0 
 2) else it will be 0 then we need to simple increment index type0
 
 **Code**
-```
+```java
 // Java program to sort an array with two types
 // of values in one traversal.public class GFG {
 /* Method for segregation 0 and 1
@@ -32,7 +32,7 @@ class segregation {
                 // swap type0 and type1
                    int temp = arr[type0];
                    arr[type0] = arr[type1];
-              arr[type1] = temp;
+                   arr[type1] = temp;
 
                 type1--;
             }
