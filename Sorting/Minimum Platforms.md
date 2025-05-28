@@ -21,3 +21,40 @@ At any given time, the same platform cannot be used for both the arrival of one 
 **Explanation**: All 3 trains have to be there from 11:00 to 11:30
 
 ----------------------------------------------------------------------------
+## 🪜 **Brute Force Approach**
+
+### 🔧 Idea:
+
+For each train, count how many other trains are overlapping (i.e., their time intervals intersect), and keep track of the **maximum overlap**.
+
+### 🧑‍💻 Pseudocode:
+```
+int maxPlatform = 1;
+for (int i = 0; i < n; i++) {
+    int platforms = 1;
+    for (int j = 0; j < n; j++) {
+        if (i != j && arr[i] >= arr[j] && arr[i] <= dep[j]) {
+            platforms++;
+        }
+    }
+    maxPlatform = Math.max(maxPlatform, platforms);
+}
+return maxPlatform;
+
+```
+### ⏱ Time Complexity:
+
+- **O(n²)** due to nested loops
+    
+- **No sorting needed**
+
+⚡ **Efficient Solution**
+- Sort both arrival and departure times.
+    
+- Use two pointers (`i` for arrivals, `j` for departures).
+    
+- If a train arrives before the previous one departs → need a new platform.
+    
+- If a train departs before the next one arrives → free a platform.
+    
+- Keep track of the **maximum number of platforms used at any time**.
