@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hashing/Count Non-Repeated Elements.md",
+                "file": "Hashing/First repeating Element.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Count Non-Repeated Elements"
+              "title": "First repeating Element"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Sorting/Closet 0s 1s and 2s.md",
     "Hashing/Count Non-Repeated Elements.md",
+    "Hashing/First repeating Element.md",
+    "Sorting/Closet 0s 1s and 2s.md",
     "Hashing",
     "Untitled 1.md",
     "Sorting/Merge Intervals or Meeting problems.md",
@@ -208,7 +209,6 @@
     "Arrays/Best time to Buy and sell stock-2.md",
     "Algorithms/Two Pointer Technique.md",
     "Searching/Find Peak Element – Binary Search Approach.md",
-    "Searching/Search in Rotated Sorted Array.md",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
     "Pasted image 20250521011153.png",
