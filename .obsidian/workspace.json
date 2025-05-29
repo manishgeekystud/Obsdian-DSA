@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Closet 0s 1s and 2s.md",
+                "file": "Hashing/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Closet 0s 1s and 2s"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,11 +181,14 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Sorting/Closet 0s 1s and 2s.md",
+    "Hashing/Untitled.md",
+    "Hashing",
+    "Untitled 1.md",
     "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Triplet Sum in Array.md",
     "Sorting/Minimum Platforms.md",
     "Sorting/Meeting the maximum no. of Guests.md",
-    "Sorting/Closet 0s 1s and 2s.md",
     "Sorting/Segregate 0S and 1S.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Algorithms/Kadane.md",
@@ -206,7 +209,6 @@
     "Algorithms/Two Pointer Technique.md",
     "Searching/Find Peak Element – Binary Search Approach.md",
     "Searching/Search in Rotated Sorted Array.md",
-    "Searching/Sqaure Root of a Number in Logn.md",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
     "Pasted image 20250521011153.png",
@@ -215,7 +217,6 @@
     "Pasted image 20250521011122.png",
     "Pasted image 20250521011108.png",
     "Pasted image 20250521011046.png",
-    "Searching/Count Occurrences in Sorted.md",
     "Pasted image 20250518225240.png",
     "Pasted image 20250518225051.png",
     "Searching",
