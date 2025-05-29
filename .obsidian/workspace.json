@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sorting/Merge Intervals or Meeting problems.md",
+                "file": "Sorting/Closet 0s 1s and 2s.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Merge Intervals or Meeting problems"
+              "title": "Closet 0s 1s and 2s"
             }
           }
         ]
@@ -181,10 +181,10 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Triplet Sum in Array.md",
     "Sorting/Minimum Platforms.md",
     "Sorting/Meeting the maximum no. of Guests.md",
-    "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Closet 0s 1s and 2s.md",
     "Sorting/Segregate 0S and 1S.md",
     "Arrays/Maximum Circular SubArray sum.md",
