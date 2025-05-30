@@ -109,16 +109,18 @@ Input:
 
 Prefix sums:
 
-
 `[1, 0, 2, 0, 3]`
 
 HashMap updates and counts:
 
-ini
+```
+preSum = 1 → map = {0:1, 1:1}
+preSum = 0 → found! map.get(0) = 1 → count = 1 → map = {0:2, 1:1}
+preSum = 2 → map = {0:2, 1:1, 2:1}
+preSum = 0 → found! map.get(0) = 2 → count = 3 → map = {0:3, 1:1, 2:1}
+preSum = 3 → map = {0:3, 1:1, 2:1, 3:1}
 
-CopyEdit
-
-`preSum = 1 → map = {0:1, 1:1} preSum = 0 → found! map.get(0) = 1 → count = 1 → map = {0:2, 1:1} preSum = 2 → map = {0:2, 1:1, 2:1} preSum = 0 → found! map.get(0) = 2 → count = 3 → map = {0:3, 1:1, 2:1} preSum = 3 → map = {0:3, 1:1, 2:1, 3:1}`
+```
 
 So total subarrays with sum = 0 = **3**
 
