@@ -68,7 +68,38 @@ class Solution {
 - This means:
     
     > **A subarray with sum = 0 exists**, between two indices with the same prefix sum.
+
+### ✅ Core Rule:
+
+`preSum[i] == preSum[j], i < j`
+
+Then:
+`sum(i+1 to j) == 0`
+
+So when you do:
+
+java
+
+CopyEdit
+
+`if (!hs.add(preSum)) return true;`
+
+You're asking:
+
+> Have I seen this exact sum **before**?
+
+- If yes → the values between those two positions **must sum to zero**.
     
+
+---
+
+### 🧠 Visual Summary:
+
+text
+
+CopyEdit
+
+`[4, 2, -3, 1, 6]      ↑     ↑      |     |     same preSum → subarray between these is zero`
 
 ---
 
