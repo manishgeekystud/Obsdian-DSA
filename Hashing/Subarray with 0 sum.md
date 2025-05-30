@@ -14,3 +14,32 @@ Given an array of integers, **arr[]**. Find if there is a **subarray** (of si
 **Output:** false
 
 ------------------------------------------------------------------------
+```java
+class Solution {
+    // Function to check whether there is a subarray present with 0-sum or not.
+    static boolean findsum(int arr[]) {
+        // Create a HashSet to store prefix sums
+        HashSet<Integer> hs = new HashSet<>();
+        int preSum = 0;
+
+        // Add 0 initially to handle case where subarray starts from index 0
+        hs.add(preSum);
+
+        // Traverse the array
+        for (int n : arr) {
+            preSum += n;
+
+            // 🔑 KEY LINE:
+            // If preSum already exists in the set,
+            // it means there is a subarray with sum = 0
+            if (!hs.add(preSum))
+                return true;
+        }
+
+        // No zero-sum subarray found
+        return false;
+    }
+}
+
+```
+
