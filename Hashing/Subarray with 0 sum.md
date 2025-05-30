@@ -43,3 +43,37 @@ class Solution {
 
 ```
 
+### 🧠 **How It Works (Core Idea)**
+
+- **Prefix sum**: Sum of elements from start to current index.
+    
+- If **any prefix sum repeats**, then the subarray between those two indices has **sum = 0**.
+    
+- Example:
+    
+    - If prefix sum is `6` at index `i` and again `6` at index `j`, then elements from `i+1` to `j` sum to `0`.
+        
+
+---
+
+### 🔑 **Key Line Explanation:**
+
+
+`if (!hs.add(preSum))     return true;`
+
+- `hs.add(preSum)` tries to add the current prefix sum.
+    
+- If it **fails** (returns `false`), the prefix sum **already existed**.
+    
+- This means:
+    
+    > **A subarray with sum = 0 exists**, between two indices with the same prefix sum.
+    
+
+---
+
+### 🧾 Notes Summary:
+
+- ✅ Uses prefix sum and `HashSet` to detect duplicates.
+    
+- ✅ Efficient: **O(n)** time, **O(n)** space.
