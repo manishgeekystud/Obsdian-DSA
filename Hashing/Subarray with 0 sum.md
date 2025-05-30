@@ -78,10 +78,6 @@ Then:
 
 So when you do:
 
-java
-
-CopyEdit
-
 `if (!hs.add(preSum)) return true;`
 
 You're asking:
@@ -95,11 +91,9 @@ You're asking:
 
 ### 🧠 Visual Summary:
 
-text
-
-CopyEdit
-
-`[4, 2, -3, 1, 6]      ↑     ↑      |     |     same preSum → subarray between these is zero`
+`[4, 2, -3, 1, 6]    
+     ↑          ↑      |    
+ |     same preSum → subarray between these is zero`
 
 ---
 
