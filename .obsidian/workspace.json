@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hashing/SubArrays longest with Equal 0s and 1s.md",
+                "file": "Hashing/Subarray with 0 sum.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SubArrays longest with Equal 0s and 1s"
+              "title": "Subarray with 0 sum"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Hashing/SubArrays Count with 0 Sum.md",
     "Hashing/SubArrays longest with Equal 0s and 1s.md",
+    "Hashing/SubArrays Count with 0 Sum.md",
     "Hashing/Subarray with 0 sum.md",
     "Hashing/First repeating Element.md",
     "Hashing/Count Non-Repeated Elements.md",
