@@ -79,3 +79,35 @@ public int longestConsecutive(int[] nums) {
 }
 
 ```
+
+### 🧠 Dry Run (Input: [100, 4, 200, 1, 3, 2])
+
+**Set:** {100, 4, 200, 1, 3, 2}
+
+- 100 → no 99 → length = 1
+    
+- 4 → has 3 → skip
+    
+- 1 → no 0 → start sequence: 1 → 2 → 3 → 4 → length = 4 ✅
+    
+
+---
+
+## 📌 Time & Space Complexity
+
+|Complexity|Value|
+|---|---|
+|Time|O(n)|
+|Space|O(n)|
+|Data Structure|HashSet|
+
+---
+
+## 📝 Summary Table
+
+|Step|Explanation|
+|---|---|
+|Use HashSet|For O(1) lookups|
+|Check only num - 1|To start a new sequence|
+|While num + 1 exists|Extend sequence|
+|Keep track of max length|Return at the end|
