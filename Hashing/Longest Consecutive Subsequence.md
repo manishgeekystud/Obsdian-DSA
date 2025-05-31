@@ -48,3 +48,34 @@ Only start building a sequence **if the current number is the beginning** (i.e.,
 ---
 
 ### ✅ Java Code
+```java
+public int longestConsecutive(int[] nums) {
+    HashSet<Integer> set = new HashSet<>();
+    
+    // Step 1: Insert all numbers into set
+    for (int num : nums) {
+        set.add(num);
+    }
+
+    int maxLength = 0;
+
+    // Step 2: Look for starts of sequences
+    for (int num : nums) {
+        if (!set.contains(num - 1)) {
+            int currentNum = num;
+            int currentLength = 1;
+
+            // Step 3: Extend the sequence
+            while (set.contains(currentNum + 1)) {
+                currentNum++;
+                currentLength++;
+            }
+
+            maxLength = Math.max(maxLength, currentLength);
+        }
+    }
+
+    return maxLength;
+}
+
+```
