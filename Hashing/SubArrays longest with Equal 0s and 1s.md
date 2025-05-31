@@ -85,3 +85,32 @@ public int countSubarrWithEqualZeroAndOne(int[] arr, int n) {
 }
 
 ```
+## 🔍 **Example**
+
+### Input:
+
+`arr = [1, 0, 0, 1, 0, 1, 1]`
+
+### After conversion:
+
+`[1, -1, -1, 1, -1, 1, 1]`
+
+### Prefix Sums:
+
+`[1, 0, -1, 0, -1, 0, 1]`
+
+### Matching prefix sums (same values at different indices) show where subarrays with sum = 0 exist.
+
+Total subarrays with equal number of 0s and 1s = **8**
+
+---
+
+## 📝 Recap Table
+
+|Concept|Description|
+|---|---|
+|Convert `0` → `-1`|So we can treat the problem as sum = 0|
+|Use `prefix sum`|Track cumulative sums|
+|HashMap of prefix sum freq|Detect & count zero-sum subarrays|
+|Time Complexity|`O(n)`|
+|Space Complexity|`O(n)`|
