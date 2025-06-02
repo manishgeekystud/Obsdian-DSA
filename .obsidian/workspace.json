@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hashing/SubArrays longest with Equal 0s and 1s.md",
+                "file": "Hashing/Count Distinct elements in a  window.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SubArrays longest with Equal 0s and 1s"
+              "title": "Count Distinct elements in a  window"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Hashing/Longest Consecutive Subsequence.md",
     "Hashing/SubArrays longest with Equal 0s and 1s.md",
+    "Hashing/Count Distinct elements in a  window.md",
+    "Hashing/Longest Consecutive Subsequence.md",
     "Hashing/SubArrays Count with 0 Sum.md",
     "Hashing/Subarray with 0 sum.md",
     "Hashing/First repeating Element.md",
@@ -207,7 +208,6 @@
     "Sorting/Insertion Sort.md",
     "Sorting/Selection Sort.md",
     "Sorting/Bubble Sort.md",
-    "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Sorting",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
