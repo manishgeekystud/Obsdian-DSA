@@ -1,4 +1,6 @@
 ```java
+
+
 // Function to locate the first occurrence of the pattern in the text using brute force
 int firstOccurence(String txt, String pat) {
     int patLen = pat.length(); // Length of pattern
@@ -30,3 +32,23 @@ int firstOccurence(String txt, String pat) {
 }
 
 ```
+
+## ⚡ **Better (optimized) approach**
+
+**Brute force** has **time complexity O(N*M)** where:
+
+- `N` = length of text
+    
+- `M` = length of pattern
+    
+
+**Better algorithms** reduce it to **O(N)** in most cases. The most famous is **KMP (Knuth-Morris-Pratt)**.
+
+✅ **Idea of KMP:**
+
+- Preprocess pattern to build a **Longest Prefix Suffix (LPS)** array.
+    
+- When a mismatch happens, instead of rechecking from scratch, reuse info in LPS to skip redundant comparisons.
+    
+
+**Java code for KMP:**
