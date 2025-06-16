@@ -49,6 +49,58 @@ int firstOccurence(String txt, String pat) {
 - Preprocess pattern to build a **Longest Prefix Suffix (LPS)** array.
     
 - When a mismatch happens, instead of rechecking from scratch, reuse info in LPS to skip redundant comparisons.
-    
+
 
 **Java code for KMP:**
+```java
+// Function to find first occurrence using KMP algorithm
+int firstOccurrenceKMP(String txt, String pat) {
+    int N = txt.length();
+    int M = pat.length();
+
+    // Step 1: Build LPS array for the pattern
+    int[] lps = new int[M];
+    int len = 0;
+    lps[0] = 0; // LPS[0] is always 0
+
+    int i = 1;
+    while (i < M) {
+        if (pat.charAt(i) == pat.charAt(len)) {
+            len++;
+            lps[i] = len;
+            i++;
+        } else {
+            if (len != 0) {
+                len = lps[len - 1];
+                // Do not increment i here
+            } else {
+                lps[i] = 0;
+                i++;
+            }
+        }
+    }
+
+    // Step 2: Use LPS to search the pattern in text
+    i = 0; // index for txt
+    int j = 0; // index for pat
+
+    while (i < N) {
+        if (pat.charAt(j) == txt.charAt(i)) {
+            i++;
+            j++;
+        }
+        if (j == M) {
+            return i - j; // Found pattern at i - j
+        } else if (i < N && pat.charAt(j) != txt.charAt(i)) {
+            if (j != 0) {
+                j = lps[j - 1];
+            } else {
+                i++;
+            }
+        }
+    }
+
+    return -1; // Not found
+}
+
+```
