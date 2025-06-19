@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/First Occurence.md",
+                "file": "Algorithms/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "First Occurence"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Strings/Palindrome String.md",
     "Strings/First Occurence.md",
+    "Algorithms/Untitled.md",
+    "Strings/Palindrome String.md",
     "Hashing/Count Distinct elements in a  window.md",
     "Pasted image 20250602232830.png",
     "Hashing/SubArrays longest with Equal 0s and 1s.md",
@@ -208,7 +209,6 @@
     "Sorting/Union of Two Sorted Arrays.md",
     "Sorting/Find triplets exist or not.md",
     "Sorting/Merge Without Extra Space.md",
-    "Sorting/Insertion Sort.md",
     "Sorting",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
