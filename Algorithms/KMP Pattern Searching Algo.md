@@ -72,7 +72,30 @@ This skips redundant checks!
 
 ### 📌 **Java Code — LPS**
 
+```java
+void computeLPS(String pat, int[] lps) {
+    int len = 0; // current longest prefix which is also suffix
+    lps[0] = 0;  // always 0 for first char
 
+    int i = 1; // start from second char
+    while (i < pat.length()) {
+        if (pat.charAt(i) == pat.charAt(len)) {
+            len++;
+            lps[i] = len;
+            i++;
+        } else {
+            if (len != 0) {
+                // Try shorter prefix
+                len = lps[len - 1];
+            } else {
+                lps[i] = 0;
+                i++;
+            }
+        }
+    }
+}
+
+```
 
 ---
 
@@ -92,7 +115,39 @@ This skips redundant checks!
     
 
 ### 📌 **Java Code — Search**
+```java
+void KMPSearch(String pat, String txt) {
+    int M = pat.length();
+    int N = txt.length();
 
+    int[] lps = new int[M];
+    computeLPS(pat, lps);
+
+    int i = 0; // index for text
+    int j = 0; // index for pattern
+
+    while (i < N) {
+        if (pat.charAt(j) == txt.charAt(i)) {
+            i++;
+            j++;
+        }
+
+        if (j == M) {
+            // Found pattern at i - j
+            System.out.println("Pattern found at index " + (i - j));
+            // Check for next match
+            j = lps[j - 1];
+        } else if (i < N && pat.charAt(j) != txt.charAt(i)) {
+            if (j != 0) {
+                j = lps[j - 1]; // use LPS to skip
+            } else {
+                i++; // move in text only
+            }
+        }
+    }
+}
+
+```
 
 ## 📊 **Time Complexity**
 
