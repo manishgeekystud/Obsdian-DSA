@@ -20,3 +20,60 @@ will be connected to the last node in the LinkedList.
 **Output:** 0
 **Explanation:** There is no loop.
 
+## ✅ **1. What’s the problem?**
+
+Given the head of a linked list, detect if a **loop/cycle** exists.  
+If a loop is present, **return the number of nodes in the loop**.
+
+---
+
+## ✅ **2. What’s the approach?**
+
+We use **Floyd’s Cycle Detection Algorithm (Tortoise and Hare)**:
+
+1. **Detect the loop** using two pointers moving at different speeds.
+    
+2. **Find the meeting point** inside the loop.
+    
+3. From the meeting point, **count the number of nodes to come back to the same point.**
+    
+
+---
+
+## ✅ **3. Step-by-Step Method**
+
+### 🟢 **Step 1: Detect the Loop**
+
+- Use two pointers:
+    
+    - `slow` moves **1 step**
+        
+    - `fast` moves **2 steps**
+        
+- Traverse:
+    
+    - If `fast == null` or `fast.next == null`: **No loop**
+        
+    - If `slow == fast`: **Loop detected**
+        
+
+---
+
+### 🟢 **Step 2: Count the Length**
+
+- Keep `slow` fixed at meeting point.
+    
+- Initialize `count = 1`.
+    
+- Move another pointer (`temp = slow.next`) one step at a time:
+    
+    - Increment `count` each step.
+        
+    - Stop when `temp == slow`.
+        
+- The final `count` is the **length of the loop**.
+    
+
+---
+
+## ✅ **4. Visual Example**
