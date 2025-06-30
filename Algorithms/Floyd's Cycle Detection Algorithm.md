@@ -49,7 +49,38 @@ At this instant, **both are at the same flag**. So they will come to notice tha
 ![Find loop in Singly Linked List](https://files.codingninjas.in/article_images/floyd-s-cycle-finding-algorithm-8-1657036936.webp)
 
   // Function to find the length of a loop in the linked list.
-```
+```java
+class Solution {
+    // Function to count nodes in loop
+    public int countNodesinLoop(Node head) {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;           // move 1 step
+            fast = fast.next.next;      // move 2 steps
+
+            // If they meet, loop detected
+            if (slow == fast) {
+                return countLoopLength(slow);
+            }
+        }
+        // No loop
+        return 0;
+    }
+
+    // Helper function to count loop length
+    private int countLoopLength(Node meetingPoint) {
+        Node temp = meetingPoint;
+        int count = 1;
+
+        while (temp.next != meetingPoint) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+}
 
 ```
 ## Find the Starting Node of a Cycle in a Linked List
