@@ -77,3 +77,12 @@ We use **Floyd’s Cycle Detection Algorithm (Tortoise and Hare)**:
 ---
 
 ## ✅ **4. Visual Example**
+```java
+1 -> 2 -> 3 -> 4 -> 5
+           ^        |
+           |________|
+- Loop: `3 -> 4 -> 5 -> 3`
+    
+- Length = 3 nodes.
+```
+CODE
