@@ -20,6 +20,9 @@ will be connected to the last node in the LinkedList.
 **Output:** 0
 **Explanation:** There is no loop.
 
+**SOLUTION**
+
+
 ## ✅ **1. What’s the problem?**
 
 Given the head of a linked list, detect if a **loop/cycle** exists.  
@@ -85,4 +88,38 @@ We use **Floyd’s Cycle Detection Algorithm (Tortoise and Hare)**:
     
 - Length = 3 nodes.
 ```
-CODE
+**CODE**
+
+```java
+public int countNodesInLoop(Node head) {
+    Node slow = head;
+    Node fast = head;
+
+    // Step 1: Detect loop
+    while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
+
+        if (slow == fast) {
+            // Loop found, count length
+            return countLoopLength(slow);
+        }
+    }
+
+    // No loop
+    return 0;
+}
+
+// Helper method to count loop length
+private int countLoopLength(Node nodeInLoop) {
+    Node temp = nodeInLoop;
+    int count = 1;
+
+    while (temp.next != nodeInLoop) {
+        temp = temp.next;
+        count++;
+    }
+    return count;
+}
+
+```
