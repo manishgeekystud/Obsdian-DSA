@@ -49,27 +49,9 @@ At this instant, **both are at the same flag**. So they will come to notice tha
 ![Find loop in Singly Linked List](https://files.codingninjas.in/article_images/floyd-s-cycle-finding-algorithm-8-1657036936.webp)
 
   // Function to find the length of a loop in the linked list.
-    
-    public int countNodesinLoop(Node head) {
-        Node slow =head;
-        Node fast=head.next;
-      while(slow!=fast)
-       {
-           if(fast==null || fast.next==null)
-              return 0;
-         fast=fast.next.next;
-         slow=slow.next;
-      }
-      int size=1;
-       fast=fast.next;
-       while(fast!=slow)
-       {
-           fast=fast.next;
-           size++;
-       }
-       return size; 
-    }
-}
+```
+
+```
 ## Find the Starting Node of a Cycle in a Linked List
 
 To find the starting node of a cycle in a linked list, follow the steps below:
