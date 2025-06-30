@@ -217,22 +217,7 @@ void KMPSearch(String pat, String txt) {
 
 **KMP = Preprocess pattern → reuse matches → linear time!**
 
----
 
-If you want, I can also share:  
-✅ A step-by-step dry run,  
-✅ A full Java program with input & output,  
-✅ Or a practice problem.
-
-**Just say “Yes!”** 🔥
-
-##### You said:
-
-make it markdown format
-
-###### ChatGPT said:
-
-Absolutely! Here’s your detailed **KMP Algorithm Guide** rewritten in clean **Markdown** — copy this and you’ll always have a clear reference.
 
 ---
 
