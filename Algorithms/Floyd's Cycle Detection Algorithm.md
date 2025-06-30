@@ -91,48 +91,46 @@ To find the starting node of a cycle in a linked list, follow the steps below:
 > - After detecting the cycle, reset one pointer ****(slow)**** to the ****head**** of the list. Keep the other pointer ****(fast)**** at the meeting point.
 > - Move both pointers ****one s****tep at a time. The node where they meet again is the ****start**** of the cycle.
 
-```
-// Function to detect and remove loop
-// in a linked list that may contain loop
-static Node detectAndRemoveLoop(Node head)
-{
-  // If list is empty or has 
-  // only one node without loop
-  if (head == null || head.next == null)
-    return null;
+```java
+// Function to detect and return the starting node of the loop (if any)
+static Node detectLoopStart(Node head) {
+    if (head == null || head.next == null) {
+        // No loop possible
+        return null;
+    }
 
-  Node slow = head, fast = head;
+    Node slow = head;
+    Node fast = head;
 
-  // Move slow and fast 1 
-  // and 2 steps ahead 
-  // respectively.
-  slow = slow.next;
-  fast = fast.next.next;
+    // Step 1: Detect if a loop exists using Floyd’s cycle detection
+    while (fast != null && fast.next != null) {
+        slow = slow.next;           // move 1 step
+        fast = fast.next.next;      // move 2 steps
 
-  // Search for loop using 
-  // slow and fast pointers
-  while (fast != null && 
-         fast.next != null) 
-  {
-    if (slow == fast)
-      break;
-    slow = slow.next;
-    fast = fast.next.next;
-  }
+        if (slow == fast) {
+            // Loop detected
+            break;
+        }
+    }
 
-  // If loop does not exist
-  if (slow != fast)
-    return null;
+    // If no loop was detected
+    if (fast == null || fast.next == null) {
+        return null;
+    }
 
-  // If loop exists. Start slow from
-  // head and fast from meeting point.
-  slow = head;
-  while (slow != fast) 
-  {
-    slow = slow.next;
-    fast = fast.next;
-  }
+    // Step 2: Move slow to head. Keep fast at meeting point.
+    slow = head;
 
-  return slow;
+    // Move both pointers one step at a time until they meet again.
+    // That meeting point is the start of the loop.
+    while (slow != fast) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+
+    // Both pointers now point to the start of the loop.
+    return slow;
 }
+
+
 ```
