@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linked List/Add Two Numbers.md",
+                "file": "Linked List/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Add Two Numbers"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Linked List/Find Length of Loop.md",
     "Linked List/Add Two Numbers.md",
+    "Linked List/Untitled.md",
+    "Linked List/Find Length of Loop.md",
     "Algorithms/Floyd's Cycle Detection Algorithm.md",
     "Algorithms/KMP Pattern Searching Algo.md",
     "Strings/First Occurence.md",
@@ -208,7 +209,6 @@
     "Sorting/QuickSort.md",
     "Algorithms/Sliding Window Technique.md",
     "Sorting/Count of Inversions.md",
-    "Sorting/Merge Sort.md",
     "Sorting",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
