@@ -24,7 +24,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 ## Java Solution (Your Code)
 
-```
+```java
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
@@ -123,7 +123,7 @@ l2 = 5 -> 6 -> 4
 
 ### 2. **Recursive Approach**
 
-```
+```java
 public ListNode addTwoNumbers(ListNode l1, ListNode l2, int carry) {
     if (l1 == null && l2 == null && carry == 0) return null;
     int sum = carry;
