@@ -61,7 +61,7 @@ Explanation: The two lists do not intersect, so return null.
 -----------------------------------------------------------------------
 **SOLUTION**
 
-## Two Pointer Switching
+## ✅ Approach 1 Two Pointer Switching
 
 ### 💡 Idea:
 
