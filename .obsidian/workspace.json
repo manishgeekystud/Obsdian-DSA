@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linked List/Find Length of Loop.md",
+                "file": "Linked List/Add Two Numbers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Find Length of Loop"
+              "title": "Add Two Numbers"
             }
           }
         ]
@@ -181,6 +181,8 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Linked List/Find Length of Loop.md",
+    "Linked List/Add Two Numbers.md",
     "Algorithms/Floyd's Cycle Detection Algorithm.md",
     "Algorithms/KMP Pattern Searching Algo.md",
     "Strings/First Occurence.md",
@@ -207,8 +209,6 @@
     "Algorithms/Sliding Window Technique.md",
     "Sorting/Count of Inversions.md",
     "Sorting/Merge Sort.md",
-    "Sorting/Union of Two Sorted Arrays.md",
-    "Sorting/Find triplets exist or not.md",
     "Sorting",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
