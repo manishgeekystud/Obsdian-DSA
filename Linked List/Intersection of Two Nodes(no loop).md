@@ -61,7 +61,25 @@ Explanation: The two lists do not intersect, so return null.
 -----------------------------------------------------------------------
 **SOLUTION**
 
-## ✅ Your Approach (Length Difference Alignment)
+## Two Pointer Switching
+
+### 💡 Idea:
+
+- Start two pointers at heads of each list.
+    
+- When one reaches the end, switch it to the other list's head.
+    
+- They will either:
+    
+    - Meet at intersection
+        
+    - Or both reach `null` (no intersection
+**code**
+
+```
+
+```
+## ✅ Approach 2 (Length Difference Alignment)
 
 ### 💡 Logic:
 
