@@ -76,7 +76,18 @@ Explanation: The two lists do not intersect, so return null.
     - Or both reach `null` (no intersection
 **code**
 
-```
+```java
+public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    ListNode a = headA;
+    ListNode b = headB;
+
+    while (a != b) {
+        a = (a == null) ? headB : a.next;
+        b = (b == null) ? headA : b.next;
+    }
+
+    return a; // Can be null or the intersection node
+}
 
 ```
 ## ✅ Approach 2 (Length Difference Alignment)
