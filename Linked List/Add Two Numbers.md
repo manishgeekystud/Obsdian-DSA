@@ -145,3 +145,12 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2, int carry) {
 - Push digits onto stacks, pop and add.
     
 - Useful if numbers are stored in forward order.
+
+if the question is in Forward order
+### 🔄 Strategy:
+
+1. **Reverse both input lists**
+    
+2. **Use your existing code** to add them (which works for reverse-order)
+    
+3. **Reverse the result back** to restore forward order
