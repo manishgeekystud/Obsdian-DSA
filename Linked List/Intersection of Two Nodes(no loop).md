@@ -72,6 +72,61 @@ Explanation: The two lists do not intersect, so return null.
 3. Move both pointers one-by-one until they meet.
 
 **CODE**
-```
+```java
+public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    // Initialize pointers and lengths
+    ListNode tempA = headA, tempB = headB;
+    int l1 = 0, l2 = 0;
+
+    // Count lengths of both lists
+    while (tempA != null || tempB != null) {
+        // Count length of list A
+        if (tempA != null) {
+            l1++;
+            tempA = tempA.next;
+        }
+
+        // Count length of list B
+        if (tempB != null) {
+            l2++;
+            tempB = tempB.next;
+        }
+    }
+
+    // Reset pointers to heads of both lists
+    tempA = headA;
+    tempB = headB;
+
+    // If list A is longer, skip the extra nodes
+    if (l1 > l2) {
+        int skip = l1 - l2;
+        while (skip > 0) {
+            tempA = tempA.next;
+            skip--;
+        }
+    }
+    // If list B is longer, skip the extra nodes
+    else {
+        int skip = l2 - l1;
+        while (skip > 0) {
+            tempB = tempB.next;
+            skip--;
+        }
+    }
+
+    // Traverse both lists together and compare nodes
+    while (tempA != null && tempB != null) {
+        // If nodes are same by reference, intersection found
+        if (tempA == tempB)
+            return tempA;
+
+        // Move both pointers forward
+        tempA = tempA.next;
+        tempB = tempB.next;
+    }
+
+    // If no intersection found, return null
+    return null;
+}
 
 ```
