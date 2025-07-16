@@ -56,5 +56,55 @@ while (temp != null) {
     
 - If both nodes are the same (i.e., `2k - 1 == n`), no need to swap.
     
+if (k > n || 2 * k - 1 == n) return head;`
 
-`if (k > n || 2 * k - 1 == n) return head;`
+✅ Step 3: Find `k-th` node from beginning (`first`) and its previous (`prev1`)
+Node prev1 = null, first = head;
+for (int i = 1; i < k; i++) {
+    prev1 = first;
+    first = first.next;
+}
+
+### ✅ Step 4: Find `k-th` node from end (`last`) and its previous (`prev2`)
+
+`Node prev2 = null, 
+last = head; 
+for (int i = 1; i < n - k + 1; i++) {     prev2 = last;     last = last.next; }`
+
+---
+
+### ✅ Step 5: Reconnect Previous Pointers
+
+java
+
+CopyEdit
+
+`if (prev1 != null) prev1.next = last; else head = last;  // if first was head  if (prev2 != null) prev2.next = first; else head = first;  // if last was head`
+
+---
+
+### ✅ Step 6: Swap `.next` Pointers of `first` and `last`
+
+java
+
+CopyEdit
+
+`Node tempNext = first.next; first.next = last.next; last.next = tempNext;`
+
+---
+
+### ✅ Step 7: Return Updated Head
+
+java
+
+CopyEdit
+
+`return head;`
+
+---
+
+## ✅ Final Java Code
+
+java
+
+CopyEdit
