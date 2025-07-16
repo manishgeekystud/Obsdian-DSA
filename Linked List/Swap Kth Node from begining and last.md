@@ -28,6 +28,7 @@ If you're swapping two nodes in a singly linked list:
 ... → prev1 → A → ... → prev2 → B → ...
 
 
+
 To swap A and B:
 
 - You must update the `.next` of `prev1` and `prev2`
@@ -36,6 +37,8 @@ To swap A and B:
 ---
 
 ## 🧠 Step-by-Step Approach
+
+---
 
 ### ✅ Step 1: Count the total number of nodes (n)
 
@@ -46,4 +49,3 @@ while (temp != null) {
     n++;
     temp = temp.next;
 }
-
