@@ -26,3 +26,24 @@ In a singly linked list:
 If you're swapping two nodes in a singly linked list:
 
 ... → prev1 → A → ... → prev2 → B → ...
+
+
+To swap A and B:
+
+- You must update the `.next` of `prev1` and `prev2`
+- You also need to swap `A.next` and `B.next` to maintain correct list structure
+
+---
+
+## 🧠 Step-by-Step Approach
+
+### ✅ Step 1: Count the total number of nodes (n)
+
+```java
+Node temp = head;
+int n = 0;
+while (temp != null) {
+    n++;
+    temp = temp.next;
+}
+
