@@ -42,10 +42,19 @@ To swap A and B:
 
 ### ✅ Step 1: Count the total number of nodes (n)
 
-```java
+
 Node temp = head;
 int n = 0;
 while (temp != null) {
     n++;
     temp = temp.next;
 }
+
+### ✅ Step 2: Handle Edge Cases
+
+- If `k > n`, return head as it is.
+    
+- If both nodes are the same (i.e., `2k - 1 == n`), no need to swap.
+    
+
+`if (k > n || 2 * k - 1 == n) return head;`
