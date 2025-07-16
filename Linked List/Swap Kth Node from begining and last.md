@@ -67,19 +67,21 @@ for (int i = 1; i < k; i++) {
 
 ### ✅ Step 4: Find `k-th` node from end (`last`) and its previous (`prev2`)
 
+```java
 `Node prev2 = null, 
 last = head; 
-for (int i = 1; i < n - k + 1; i++) {     prev2 = last;     last = last.next; }`
+for (int i = 1; i < n - k + 1; i++)
+{     prev2 = last;   
+    last = last.next; }`
 
+```
 ---
 
 ### ✅ Step 5: Reconnect Previous Pointers
 
-java
-
-CopyEdit
-
-`if (prev1 != null) prev1.next = last; else head = last;  // if first was head  if (prev2 != null) prev2.next = first; else head = first;  // if last was head`
+`if (prev1 != null) prev1.next = last;
+else head = last;  // if first was head  
+if (prev2 != null)prev2.next = first; else head = first;  // if last was head`
 
 ---
 
