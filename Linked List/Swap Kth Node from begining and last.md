@@ -4,6 +4,20 @@
 
 Given a **singly linked list** and an integer `k`, swap the `k-th` node from the **beginning** and the `k-th` node from the **end** of the list.
 
+**Examples:**
+
+**Input:** LinkedList: 1->2->3->4, k = 1
+**Output:** true
+**Explanation:** Here k = 1, hence after swapping the 1st node from the beginning and end the new list will be 4->2->3->1. 
+
+**Input:** LinkedList: 1->2->3->4->5, k = 7
+**Output:** true
+**Explanation:** k > n. Swapping is invalid. Return the head node as it is.  
+![](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/701070/Web/Other/blobid1_1722511116.png) 
+
+**Expected Time Complexity**: O(n)  
+**Expected Auxillary Space:** O(1)
+
 ✅ You must swap the **nodes by changing links**, not their data.
 
 ---
