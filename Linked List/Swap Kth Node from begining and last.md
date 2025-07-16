@@ -81,15 +81,12 @@ for (int i = 1; i < n - k + 1; i++)
 
 `if (prev1 != null) prev1.next = last;
 else head = last;  // if first was head  
-if (prev2 != null)prev2.next = first; else head = first;  // if last was head`
+if (prev2 != null)prev2.next = first; 
+else head = first;  // if last was head`
 
 ---
 
 ### ✅ Step 6: Swap `.next` Pointers of `first` and `last`
-
-java
-
-CopyEdit
 
 `Node tempNext = first.next; first.next = last.next; last.next = tempNext;`
 
@@ -97,16 +94,54 @@ CopyEdit
 
 ### ✅ Step 7: Return Updated Head
 
-java
-
-CopyEdit
-
 `return head;`
 
 ---
 
 ## ✅ Final Java Code
 
-java
+```java
+public Node swapKthNode(Node head, int k) {
+    if (head == null) return null;
 
-CopyEdit
+    // Step 1: count total nodes
+    Node temp = head;
+    int n = 0;
+    while (temp != null) {
+        n++;
+        temp = temp.next;
+    }
+
+    // Step 2: edge cases
+    if (k > n || 2 * k - 1 == n) return head;
+
+    // Step 3: find k-th from start
+    Node prev1 = null, first = head;
+    for (int i = 1; i < k; i++) {
+        prev1 = first;
+        first = first.next;
+    }
+
+    // Step 4: find k-th from end
+    Node prev2 = null, last = head;
+    for (int i = 1; i < n - k + 1; i++) {
+        prev2 = last;
+        last = last.next;
+    }
+
+    // Step 5: fix previous pointers
+    if (prev1 != null) prev1.next = last;
+    else head = last;
+
+    if (prev2 != null) prev2.next = first;
+    else head = first;
+
+    // Step 6: swap next pointers
+    Node tempNext = first.next;
+    first.next = last.next;
+    last.next = tempNext;
+
+    return head;
+}
+
+```
