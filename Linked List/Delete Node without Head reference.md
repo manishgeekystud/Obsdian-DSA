@@ -27,3 +27,53 @@ You are given a **pointer/reference to a node (`del_node`)** in a **singly linke
 
 Solution
 
+## ✅ Idea / Intuition
+
+You **cannot** delete the node in the traditional way (i.e., by updating the previous node’s `.next`) because you don’t have access to the **previous node** or the **head**.
+
+> Instead, you can copy the data from the **next node** into the current node, and delete the next node.
+
+This way, the given node's value gets replaced, and we delete the following node — thus achieving the effect of deleting the current node.
+
+---
+
+## ✅ Code (Java)
+
+```java
+class Node {
+    int data;
+    Node next;
+    
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Solution {
+    public void deleteNode(Node del_node) {
+
+        // Step 1: Copy data from next node
+        del_node.data = del_node.next.data;
+
+        // Step 2: Remove next node
+        del_node.next = del_node.next.next;
+    }
+}
+
+```
+
+## 🔍 Dry Run
+
+### Input:
+
+
+`List: 1 → 2 → 3 → 4 → 5 Given: del_node = 3`
+
+### Process:
+
+- Copy `4` into `3` → list becomes: `1 → 2 → 4 → 4 → 5`
+    
+- Skip the next `4` → list becomes: `1 → 2 → 4 → 5`
+    
+
+✅ Done! Node `3` is effectively removed.
