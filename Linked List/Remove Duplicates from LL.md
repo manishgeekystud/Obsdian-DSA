@@ -48,7 +48,7 @@ This way, we can remove all duplicates **in a single pass** using **O(1)** space
 
 ## ✅ Java Code with Comments
 
-```java
+
 // Function to remove duplicates from sorted linked list
 Node removeDuplicates(Node head) {
     // Start from the head node
@@ -67,6 +67,3 @@ Node removeDuplicates(Node head) {
 
     return head;  // return the updated list
 }
-
----
-
