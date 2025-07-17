@@ -29,3 +29,22 @@ A loop is present in the list, and it is removed.
 
 **SOLUTION**
 
+Given the ****head**** of a linked list that may contain a loop.  A loop means that the ****last node**** of the linked list is connected back to a node in the same list. The task is to ****remove**** the loop from the linked list (if it exists).
+
+****Example:****
+
+> ****Input:**** 
+> 
+> ![](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/700332/Web/Other/blobid0_1718609709.png)
+> 
+> ****Output:**** 1 -> 3 -> 4  
+> ****Explanation:**** The Loop is removed from the above example.
+
+### 1. [Detect Loop in Linked List using Floyd's Cycle Detection Algorithm](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/):
+
+- Use two pointers, ****slow**** and ****fast**** and initialize them with the ****head**** of the linked list.
+- Move the ****fast**** pointer ****forward**** by two nodes and move the ****slow**** pointer forward by ****one**** node.
+- If the ****slow**** and ****fast**** pointer points to the ****same node****, ****loop**** is found.
+- Else if the ****fast**** pointer reaches ****NULL****, then ****no loop**** is found.
+- Else ****repeat**** the above steps till we reach the ****end**** of the linked list or a ****loop**** is found.
+
