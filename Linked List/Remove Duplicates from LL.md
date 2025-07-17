@@ -49,6 +49,7 @@ This way, we can remove all duplicates **in a single pass** using **O(1)** space
 ## ✅ Java Code with Comments
 
 
+```java
 // Function to remove duplicates from sorted linked list
 Node removeDuplicates(Node head) {
     // Start from the head node
@@ -67,3 +68,36 @@ Node removeDuplicates(Node head) {
 
     return head;  // return the updated list
 }
+```
+
+
+## 🧪 Dry Run
+
+### Input:
+
+`1 → 1 → 2 → 3 → 3`
+
+### Execution:
+
+- `curr = 1`: `1 == 1` → skip → `1 → 2 → 3 → 3`
+    
+- `curr = 1`: `1 != 2` → move
+    
+- `curr = 2`: `2 != 3` → move
+    
+- `curr = 3`: `3 == 3` → skip → `1 → 2 → 3`
+    
+
+### Output:
+
+`1 → 2 → 3`
+
+---
+
+## ⏱️ Time and Space Complexity
+
+|Complexity|Value|
+|---|---|
+|Time|O(n)|
+|Space|O(1)|
+|In-place|✅ Yes|
