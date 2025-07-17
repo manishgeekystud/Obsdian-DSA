@@ -77,13 +77,12 @@ Node findMiddle(Node head) {
 }
 🔍 Dry Run (Odd-Length List)
 Input:
-Copy
-Edit
 1 → 2 → 3 → 4 → 5
+
 Step	slow	fast
-0	1	1
-1	2	3
-2	3	5
-3	-	null
+0	      1	   1
+1	      2	   3
+2        3	   5
+3	      -	        null
 
 ✅ Output: slow = 3
