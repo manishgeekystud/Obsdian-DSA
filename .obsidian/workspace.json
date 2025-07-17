@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linked List/Intersection of Two Nodes(no loop).md",
+                "file": "Linked List/Remove Duplicates from LL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intersection of Two Nodes(no loop)"
+              "title": "Remove Duplicates from LL"
             }
           }
         ]
@@ -181,9 +181,10 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Linked List/Intersection of Two Nodes(no loop).md",
+    "Linked List/Remove Duplicates from LL.md",
     "Linked List/Delete Node without Head reference.md",
     "Linked List/Swap Kth Node from begining and last.md",
-    "Linked List/Intersection of Two Nodes(no loop).md",
     "Linked List/Add Two Numbers.md",
     "Linked List/Find Length of Loop.md",
     "Algorithms/Floyd's Cycle Detection Algorithm.md",
@@ -208,7 +209,6 @@
     "Sorting/Segregate 0S and 1S.md",
     "Arrays/Maximum Circular SubArray sum.md",
     "Algorithms/Kadane.md",
-    "Sorting/QuickSort.md",
     "Sorting",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
