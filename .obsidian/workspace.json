@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms/Floyd's Cycle Detection Algorithm.md",
+                "file": "Linked List/Remove loop in Linked List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Floyd's Cycle Detection Algorithm"
+              "title": "Remove loop in Linked List"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Linked List/LOOP detection-length-starting point.md",
     "Algorithms/Floyd's Cycle Detection Algorithm.md",
+    "Linked List/Remove loop in Linked List.md",
+    "Linked List/LOOP detection-length-starting point.md",
     "Linked List/Reverse a Linked List.md",
     "Linked List/Middle of Linked List.md",
     "Linked List/Remove Duplicates from LL.md",
@@ -208,7 +209,6 @@
     "Sorting/Merge Intervals or Meeting problems.md",
     "Sorting/Triplet Sum in Array.md",
     "Sorting/Minimum Platforms.md",
-    "Sorting/Meeting the maximum no. of Guests.md",
     "Sorting",
     "Pasted image 20250521011215.png",
     "Pasted image 20250521011207.png",
