@@ -40,11 +40,61 @@ Given the ****head**** of a linked list that may contain a loop.  A loop mean
 > ****Output:**** 1 -> 3 -> 4  
 > ****Explanation:**** The Loop is removed from the above example.
 
-### 1. [Detect Loop in Linked List using Floyd's Cycle Detection Algorithm](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/):
+## 🚀 Approach: Floyd’s Cycle Detection (Tortoise & Hare)
 
-- Use two pointers, ****slow**** and ****fast**** and initialize them with the ****head**** of the linked list.
-- Move the ****fast**** pointer ****forward**** by two nodes and move the ****slow**** pointer forward by ****one**** node.
-- If the ****slow**** and ****fast**** pointer points to the ****same node****, ****loop**** is found.
-- Else if the ****fast**** pointer reaches ****NULL****, then ****no loop**** is found.
-- Else ****repeat**** the above steps till we reach the ****end**** of the linked list or a ****loop**** is found.
+- Use **two pointers**: `slow` and `fast`
+- Detect the loop using Floyd's algorithm
+- Once detected:
+  - If the loop starts at the `head`, handle that as a **special case**
+  - Otherwise, move both pointers until they meet at the **node just before the loop start**
+- Break the loop by setting `fast.next = null`
+
+---
+
+## ✅ Clean Java Code with Comments
+
+
+// Function to remove a loop in the linked list
+public static void removeLoop(Node head) {
+    // Step 1: Initialize two pointers
+    Node slow = head;
+    Node fast = head;
+
+    // Step 2: Detect loop using Floyd’s algorithm
+    while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
+
+        // Loop detected
+        if (fast == slow)
+            break;
+    }
+
+    // Step 3: No loop found — exit
+    if (fast == null || fast.next == null)
+        return;
+
+    // Step 4: Reset slow to head to find the start of the loop
+    slow = head;
+
+    // 🔄 Special Case: Loop starts at head
+    if (slow == fast) {
+        // Move fast until it reaches the last node in the loop
+        while (fast.next != slow) {
+            fast = fast.next;
+        }
+        // Break the loop
+        fast.next = null;
+        return;
+    }
+
+    // 🔁 General Case: Loop starts somewhere after head
+    while (slow.next != fast.next) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+
+    // Break the loop
+    fast.next = null;
+}
 
