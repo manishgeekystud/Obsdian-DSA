@@ -26,3 +26,6 @@ A loop is present in the list, and it is removed.
 **Explanation:** The linked list looks like   
 ![](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/700332/Web/Other/blobid2_1718609744.png)  
 A loop is present in the list, and it is removed.
+
+**SOLUTION**
+
