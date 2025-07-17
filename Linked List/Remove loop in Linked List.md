@@ -54,6 +54,7 @@ Given the ****head**** of a linked list that may contain a loop.  A loop mean
 ## ✅ Clean Java Code with Comments
 
 
+```java
 // Function to remove a loop in the linked list
 public static void removeLoop(Node head) {
     // Step 1: Initialize two pointers
@@ -97,4 +98,36 @@ public static void removeLoop(Node head) {
     // Break the loop
     fast.next = null;
 }
+```
 
+## 🧠 Intuition Behind Logic
+
+- **Meeting Point** in Floyd’s algorithm is guaranteed inside the loop if one exists.
+    
+- By moving `slow` back to the head and then shifting both `slow` and `fast` one step at a time, they will meet **just before** the loop's starting node.
+    
+- For the **special case** where the loop starts at the head itself, `slow == fast` right after detection.  
+    So, to find the **last node in the loop**, we move `fast` until `fast.next == slow`.
+    
+
+---
+
+## 📊 Time & Space Complexity
+
+|Metric|Value|
+|---|---|
+|Time Complexity|O(n)|
+|Space Complexity|O(1)|
+|Extra Data Structures|❌ None used|
+
+---
+
+## ✅ Edge Cases Handled
+
+- Loop starts at the head
+    
+- Loop starts in the middle
+    
+- No loop exists
+    
+- List has only one node
