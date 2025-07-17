@@ -31,7 +31,7 @@ Middle Node = 4 (2nd middle in even case)
 ### 💡 Space: O(1)
 
 ### ✅ Code (Java):
-```java
+
 Node findMiddle(Node head) {
     int count = 0;
     Node temp = head;
@@ -53,10 +53,8 @@ Node findMiddle(Node head) {
 }
 
 
-
-
-🥈 Approach 2: Slow and Fast Pointer (Tortoise Method) ✅ Most Optimal
-👉 Idea:
+🥈 **Approach 2: Slow and Fast Pointer (Tortoise Method) ✅ Most Optimal**
+**👉 Idea:**
 Use two pointers: slow moves one step, fast moves two.
 
 When fast reaches end, slow will be at the middle.
