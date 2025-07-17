@@ -17,3 +17,56 @@ LinkedList: 2->2->2->2->2
 
 **Expected Time Complexity** : O(n)  
 **Expected Space** **Complexity**: O(1)
+
+## 🧠 Intuition
+
+In a **sorted list**, duplicates are always **consecutive**. So, while traversing, we can simply check:
+
+- If `current.data == current.next.data` → duplicate found → **skip it**
+- Else → move to the next node
+
+This way, we can remove all duplicates **in a single pass** using **O(1)** space.
+
+---
+
+## ✅ Approach
+
+### Steps:
+1. Initialize a pointer `curr` to the head of the list.
+2. Loop until `curr.next == null`:
+   - If `curr.data == curr.next.data`, remove the duplicate by:
+     ```java
+     curr.next = curr.next.next;
+     ```
+   - Else, move `curr` forward:
+     ```java
+     curr = curr.next;
+     ```
+3. Return the updated head.
+
+---
+
+## ✅ Java Code with Comments
+
+```java
+// Function to remove duplicates from sorted linked list
+Node removeDuplicates(Node head) {
+    // Start from the head node
+    Node curr = head;
+
+    // Traverse until the end of the list
+    while (curr != null && curr.next != null) {
+
+        // If current and next node have the same data, skip the next node
+        if (curr.data == curr.next.data) {
+            curr.next = curr.next.next;  // duplicate removed
+        } else {
+            curr = curr.next;  // move forward
+        }
+    }
+
+    return head;  // return the updated list
+}
+
+---
+
