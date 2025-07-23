@@ -10,7 +10,23 @@ Given two **sorted** singly linked lists `head1` and `head2`, merge them into a 
 - Return the **head** of the new linked list.
 - The input lists are already sorted individually.
 
----
+**Examples:**
+
+**Input:** head1 = 5 -> 10 -> 15 -> 40, head2 = 2 -> 3 -> 20
+**Output:** 2 -> 3 -> 5 -> 10 -> 15 -> 20 -> 40
+**Explanation:  
+![](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/700176/Web/Other/blobid1_1722768650.png)**
+
+**Input**: head1 = 1 -> 1, head2 = 2 -> 4
+**Output:** 1 -> 1 -> 2 -> 4
+**Explanation:  
+![](https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/700176/Web/Other/blobid3_1722768742.png)**
+
+**Constraints:**  
+1 <= no. of nodes<= 103  
+0 <= node->data <= 105
+
+
 
 ## 🧠 Intuition
 
@@ -77,4 +93,45 @@ Node sortedMerge(Node head1, Node head2) {
 
     // Step 4: Return the new head
     return head;
-}
+}```
+
+## 🔁 Dry Run Example
+
+### Input:
+
+ini
+
+CopyEdit
+
+`head1 = 1 → 3 → 5 head2 = 2 → 4 → 6`
+
+### Step-by-Step:
+
+1. Start:
+    
+    - `head = 1` (head1 smaller)
+        
+    - `tail = 1`
+        
+2. Compare: 3 vs 2 → pick 2 → `1 → 2`
+    
+3. Compare: 3 vs 4 → pick 3 → `1 → 2 → 3`
+    
+4. Compare: 5 vs 4 → pick 4 → `1 → 2 → 3 → 4`
+    
+5. Compare: 5 vs 6 → pick 5 → `1 → 2 → 3 → 4 → 5`
+    
+6. head1 is null → attach remaining head2 (6)
+    
+
+**Output:** `1 → 2 → 3 → 4 → 5 → 6`
+
+---
+
+## ⏱ Time and Space Complexity
+
+|Metric|Value|
+|---|---|
+|Time Complexity|O(n + m)|
+|Space Complexity|O(1)|
+```
