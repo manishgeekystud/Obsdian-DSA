@@ -38,17 +38,9 @@ When you are given a pair of nodes like this:
 
 prev → first → second → next
 
-css
-Copy
-Edit
-
 You want to rearrange it to:
 
 prev → second → first → next
-
-csharp
-Copy
-Edit
 
 You need:
 - A dummy node to easily manage changes at the head.
@@ -126,15 +118,14 @@ Move prev = 1
 first = 3, second = 4
 
 Swap → prev.next = 4,
-          4.next = 3, 3.next = null
+          4.next = 3,
+          3.next = null
 
 New list: dummy → 2 → 1 → 4 → 3
 
 Final Output:
-csharp
-Copy
-Edit
 [2, 1, 4, 3]
+
 ⏱️ Time and Space Complexity
 Metric	Value
 Time Complexity	O(n)
@@ -147,18 +138,9 @@ Every pair is swapped using 3 pointer changes.
 
 We never modify the values, only rearrange nodes.
 
-✅ This is a clean and optimal solution for the "Swap Nodes in Pairs" problem.
-
-vbnet
-Copy
-Edit
-
-Let me know if you want this in PDF or want to practice the **recursive version** next!
 
 
 
 
 
 
-
-Ask ChatGPT
