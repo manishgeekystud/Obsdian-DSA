@@ -32,3 +32,135 @@ Given the head of a singly linked list, swap every two adjacent nodes and return
 
 ---------------------------------------------------------------------
 Solution
+## ✅ Intuition
+
+When you are given a pair of nodes like this:
+
+prev → first → second → next
+
+css
+Copy
+Edit
+
+You want to rearrange it to:
+
+prev → second → first → next
+
+csharp
+Copy
+Edit
+
+You need:
+- A dummy node to easily manage changes at the head.
+- A pointer `prev` to keep track of the node before the pair.
+- Inside the loop, grab two nodes at a time (`first` and `second`), then perform the swap using 3 pointer updates.
+
+---
+
+## 📘 Algorithm
+
+1. Create a dummy node pointing to the head.
+2. Set `prev = dummy`
+3. Loop while `prev.next` and `prev.next.next` are not null:
+   - Set `first = prev.next`
+   - Set `second = prev.next.next`
+   - Perform the swap:
+     - `first.next = second.next`
+     - `second.next = first`
+     - `prev.next = second`
+   - Move `prev = first` to check the next pair.
+4. Return `dummy.next` (new head after all swaps)
+
+---
+
+## ✅ Java Code (with Comments)
+
+```java
+public ListNode swapPairs(ListNode head) {
+    // Dummy node to handle edge cases like swapping at head
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+
+    // prev tracks the node before the pair
+    ListNode prev = dummy;
+
+    // Loop through list in pairs
+    while (prev.next != null && prev.next.next != null) {
+        // Identify the pair to swap
+        ListNode first = prev.next;
+        ListNode second = prev.next.next;
+
+        // Swap the nodes
+        first.next = second.next;  // First now points to node after second
+        second.next = first;       // Second points to first, reversing them
+        prev.next = second;        // prev now points to second (new front of pair)
+
+        // Move prev to the end of this swapped pair
+        prev = first;
+    }
+
+    // Return the new head
+    return dummy.next;
+}
+
+
+🔁 Dry Run Example
+Input:
+ini
+Copy
+Edit
+head = [1, 2, 3, 4]
+Initial Setup:
+makefile
+Copy
+Edit
+dummy → 1 → 2 → 3 → 4
+prev = dummy
+1st Iteration:
+first = 1, second = 2
+
+Swap → prev.next = 2, 2.next = 1, 1.next = 3
+
+New list: dummy → 2 → 1 → 3 → 4
+
+Move prev = 1
+
+2nd Iteration:
+first = 3, second = 4
+
+Swap → prev.next = 4, 4.next = 3, 3.next = null
+
+New list: dummy → 2 → 1 → 4 → 3
+
+Final Output:
+csharp
+Copy
+Edit
+[2, 1, 4, 3]
+⏱️ Time and Space Complexity
+Metric	Value
+Time Complexity	O(n)
+Space Complexity	O(1)
+
+🧠 Summary
+We use a dummy node to make swapping at the head easier.
+
+Every pair is swapped using 3 pointer changes.
+
+We never modify the values, only rearrange nodes.
+
+✅ This is a clean and optimal solution for the "Swap Nodes in Pairs" problem.
+
+vbnet
+Copy
+Edit
+
+Let me know if you want this in PDF or want to practice the **recursive version** next!
+
+
+
+
+
+
+
+Ask ChatGPT
