@@ -102,24 +102,21 @@ public ListNode swapPairs(ListNode head) {
     // Return the new head
     return dummy.next;
 }
-
+```
+```
 
 🔁 Dry Run Example
 Input:
-ini
-Copy
-Edit
 head = [1, 2, 3, 4]
 Initial Setup:
-makefile
-Copy
-Edit
 dummy → 1 → 2 → 3 → 4
 prev = dummy
 1st Iteration:
 first = 1, second = 2
 
-Swap → prev.next = 2, 2.next = 1, 1.next = 3
+Swap → prev.next = 2, 
+          2.next = 1, 
+          1.next = 3
 
 New list: dummy → 2 → 1 → 3 → 4
 
@@ -128,7 +125,8 @@ Move prev = 1
 2nd Iteration:
 first = 3, second = 4
 
-Swap → prev.next = 4, 4.next = 3, 3.next = null
+Swap → prev.next = 4,
+          4.next = 3, 3.next = null
 
 New list: dummy → 2 → 1 → 4 → 3
 
