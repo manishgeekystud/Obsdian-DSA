@@ -65,7 +65,7 @@ You need:
 
 ---
 
-## ✅ Java Code (with Comments)
+## ✅ Java Code
 
 ```java
 public ListNode swapPairs(ListNode head) {
