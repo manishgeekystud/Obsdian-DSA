@@ -99,11 +99,8 @@ Node sortedMerge(Node head1, Node head2) {
 
 ### Input:
 
-ini
-
-CopyEdit
-
-`head1 = 1 → 3 → 5 head2 = 2 → 4 → 6`
+`head1 = 1 → 3 → 5 
+head2 = 2 → 4 → 6`
 
 ### Step-by-Step:
 
