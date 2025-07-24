@@ -60,6 +60,7 @@ First push all data in stack, and then traverse linked list and keep popping ele
 
 # Code
 
+```
 ```java
 class Solution {
     public boolean isPalindrome(ListNode head) {
@@ -78,3 +79,4 @@ class Solution {
 }
 ```
 ```
+
