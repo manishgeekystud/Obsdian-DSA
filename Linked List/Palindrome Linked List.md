@@ -80,3 +80,28 @@ class Solution {
 ```
 ```
 
+# Approach#3 ( Using Recursion )
+
+As you know, if any problem you can do using stack only then you can use recursion as well ( mostly ).
+
+So we will have one global pointer as curr we will move this pointer once we reach the end and recursion will start from end of the list.
+
+# Code
+```
+```java
+class Solution {
+    ListNode curr;
+    public boolean isPalindrome(ListNode head) {
+        curr = head;
+        return solve(head);
+    }
+
+    public boolean solve(ListNode head) {
+        if(head == null) return true;
+        boolean ans = solve(head.next) && head.val == curr.val;
+        curr = curr.next;
+        return ans;
+    }
+}
+```
+```
