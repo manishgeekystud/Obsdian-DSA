@@ -23,3 +23,18 @@ Given the `head` of a singly linked list, return `true` _if it is a_ _palin
 **Interview Tip**
 Every Linked List Problem, if you can't do it in LinkedList format, copy the data in list and now your question would become for an array, solve it.
 
+# Approach ( Using List )
+
+To Check if the Given Linked List is palindrome or not , we can copy the data in list and then check if the list if palindrome or not.
+
+# Complexity
+
+- Time complexity: O(N)
+
+- Space complexity: O(N)
+
+# Code
+
+```
+
+```
