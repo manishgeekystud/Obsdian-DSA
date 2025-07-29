@@ -31,10 +31,30 @@ An input string is valid if:
 **Output:** true
 
 ---------------------------------------------------------------
-### ✅ Example Inputs:
+### ✅ 1. **Stack-Based Approach** (Standard, Most Efficient)
 
-text
+#### ✅ Time Complexity: O(n)
 
-CopyEdit
+#### ✅ Space Complexity: O(n)
 
-`Input: "[{()}]"         → Output: true   Input: "[()()]{}"       → Output: true   Input: "[({)]}"         → Output: false   Input: "[(])"           → Output: false   Input: "["              → Output: false   Input: ""               → Output: true (empty string is valid)`
+```java
+public boolean isValid(String s) {
+    Stack<Character> stack = new Stack<>();
+
+    for (char ch : s.toCharArray()) {
+        if (ch == '(' || ch == '[' || ch == '{') {
+            stack.push(ch);
+        } else {
+            if (stack.isEmpty()) return false;
+            char top = stack.pop();
+            if ((ch == ')' && top != '(') ||
+                (ch == ']' && top != '[') ||
+                (ch == '}' && top != '{')) {
+                return false;
+            }
+        }
+    }
+    return stack.isEmpty();
+}
+
+```
