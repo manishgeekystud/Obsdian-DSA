@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Untitled.md",
+                "file": "Stack/check Valid Parenthesis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "check Valid Parenthesis"
             }
           }
         ]
@@ -182,7 +182,7 @@
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
     "Linked List/Palindrome Linked List.md",
-    "Stack/Untitled.md",
+    "Stack/check Valid Parenthesis.md",
     "Stack",
     "Linked List/Merge Sorted Linked List.md",
     "Linked List/Swap Nodes in Pairs.md",
