@@ -27,26 +27,8 @@ pop2()   the stack2 is now empty hence returned -1.
 --------------------------------------------------------------------
 ## ****Implement two stacks in an array by Dividing the space into two halves:****
 
-> The idea to implement two stacks is to divide the array into two halves and assign two halves to two stacks, i.e., use arr[0] to arr[n/2] for stack1, and arr[(n/2) + 1] to arr[n-1] for stack2 where arr[] is the array to be used to implement two stacks and size of array be n. 
 
-Follow the steps below to solve the problem:
 
-- To implement ****push1():****
-    - First, check whether the ****top1**** is greater than 0 
-        - If it is then add an element at the top1 index and decrement top1 by 1
-        - Else return Stack Overflow
-- To implement ****push2():****
-    - First, check whether ****top2**** is less than n - 1
-        - If it is then add an element at the top2 index and increment the top2 by 1
-        - Else return Stack Overflow
-- To implement ****pop1():****
-    - First, check whether the ****top1**** is less than or equal to n / 2
-        - If it is then Decrement the top1 by 1 and return that element.
-        - Else return Stack Underflow
-- To implement ****pop2():****
-    - First, check whether the ****top2**** is greater than or equal to (n + 1) / 2
-        - If it is then increment the top2 by 1 and return that element.
-        - Else return Stack Underflow
 **CODE**
 
 ```java
