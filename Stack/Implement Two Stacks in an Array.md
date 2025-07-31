@@ -26,20 +26,26 @@ pop2()   the stack2 is now empty hence returned -1.
 
 --------------------------------------------------------------------
 ## ****Implement two stacks in an array by Dividing the space into two halves:****
-## ✅ Key Idea:
 
-Use one array of size `n`:
+### 🔸 **Key Concept**
 
-- `Stack1` starts from the **left (index 0)** and grows right.
+- Use a **single array** `arr[0 ... n-1]` to hold both stacks.
     
-- `Stack2` starts from the **right (index n-1)** and grows left.
+- **Stack 1** grows **left → right** from index `0`.
     
-- Maintain two pointers:
+- **Stack 2** grows **right → left** from index `n-1`.
     
-    - `top1` (initially `-1`) → top of Stack 1
-        
-    - `top2` (initially `n`) → top of Stack 2
 
+---
+
+### 🔸 **Pointers**
+
+- `top1`: Points to the top of Stack 1. Initially `-1`.
+    
+- `top2`: Points to the top of Stack 2. Initially `n`.
+    
+
+---
 
 
 **CODE**
