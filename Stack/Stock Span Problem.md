@@ -12,6 +12,7 @@ Given `N` days of stock prices `price[0...N-1]`, compute an array `span[0...N-1]
 > ****Explanation:**** Traversing the given input span for 10 will be 1, 4 is smaller than 10 so the span will be 1, 5 is greater than 4 so the span will be 2 and so on. Hence, the output will be 1 1 2 4 5 1.
 
 ![[Pasted image 20250731225407.png]]
+
 -------------------------------------------------------------------------------------------------
 You’re watching the **stock price of a company** every day.
 
