@@ -13,3 +13,15 @@ Given `N` days of stock prices `price[0...N-1]`, compute an array `span[0...N-1]
 
 ![[Pasted image 20250731225407.png]]
 -------------------------------------------------------------------------------------------------
+You’re watching the **stock price of a company** every day.
+
+Let’s say these are the prices over a few days:
+`Day     1   2   3   4   5   6   7
+ Price      100  80    60  70     60    75   85`
+
+Now, for each day, we want to answer:
+
+> **"How many consecutive days up to today (including today) has the price been less than or equal to today’s price?"**
+
+This is called the **"stock span"**.
+
