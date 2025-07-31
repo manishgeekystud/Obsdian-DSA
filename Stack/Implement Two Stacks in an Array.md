@@ -47,3 +47,63 @@ Follow the steps below to solve the problem:
     - First, check whether the ****top2**** is greater than or equal to (n + 1) / 2
         - If it is then increment the top2 by 1 and return that element.
         - Else return Stack Underflow
+**CODE**
+
+```java
+class TwoStacks {
+    int size;
+    int top1, top2;
+    int[] arr;
+
+    // Constructor: Initialize array and pointers
+    public TwoStacks(int n) {
+        size = n;
+        arr = new int[n];
+        top1 = -1;         // Stack1 starts from beginning
+        top2 = n;          // Stack2 starts from end
+    }
+
+    // Method to push an element to stack1
+    public void push1(int x) {
+        if (top1 < top2 - 1) {
+            top1++;
+            arr[top1] = x;
+        } else {
+            // Stack Overflow, do nothing or handle
+        }
+    }
+
+    // Method to push an element to stack2
+    public void push2(int x) {
+        if (top1 < top2 - 1) {
+            top2--;
+            arr[top2] = x;
+        } else {
+            // Stack Overflow, do nothing or handle
+        }
+    }
+
+    // Method to pop an element from stack1
+    public int pop1() {
+        if (top1 >= 0) {
+            int val = arr[top1];
+            top1--;
+            return val;
+        } else {
+            return -1; // Stack1 is empty
+        }
+    }
+
+    // Method to pop an element from stack2
+    public int pop2() {
+        if (top2 < size) {
+            int val = arr[top2];
+            top2++;
+            return val;
+        } else {
+            return -1; // Stack2 is empty
+        }
+    }
+}
+
+```
