@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Best time to Buy and sell Stock-1.md",
+                "file": "Stack/Stock Span Problem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Best time to Buy and sell Stock-1"
+              "title": "Stock Span Problem"
             }
           }
         ]
@@ -181,6 +181,7 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Best time to Buy and sell Stock-1.md",
     "Arrays/Best time to Buy and sell stock-2.md",
     "Stack/Stock Span Problem.md",
     "Pasted image 20250731225407.png",
@@ -209,7 +210,6 @@
     "Hashing/Count Distinct elements in a  window.md",
     "Pasted image 20250602232830.png",
     "Hashing/SubArrays longest with Equal 0s and 1s.md",
-    "Hashing/Longest Consecutive Subsequence.md",
     "Hashing",
     "Sorting",
     "Pasted image 20250521011215.png",
