@@ -25,3 +25,56 @@ Now, for each day, we want to answer:
 
 This is called the **"stock span"**.
 
+### 📊 Breakdown:
+
+Let’s go **day-by-day**:
+
+- **Day 1: Price = 100**
+    
+    - No previous day. So, span = 1
+        
+- **Day 2: Price = 80**
+    
+    - Yesterday was 100 (more), so only today counts → span = 1
+        
+- **Day 3: Price = 60**
+    
+    - Yesterday was 80 (more), so only today counts → span = 1
+        
+- **Day 4: Price = 70**
+    
+    - Yesterday was 60 (less) ✅ → keep counting back
+        
+    - Day 2: 80 (more) ❌ → stop
+        
+    - So span = 2 (Day 4 and 3)
+        
+- **Day 5: Price = 60**
+    
+    - Yesterday was 70 (more), so only today counts → span = 1
+        
+- **Day 6: Price = 75**
+    
+    - Day 5: 60 ✅
+        
+    - Day 4: 70 ✅
+        
+    - Day 2: 80 ❌ → stop
+        
+    - So span = 4 (Day 6, 5, 4, 3)
+        
+- **Day 7: Price = 85**
+    
+    - All prices before are less! ✅
+        
+    - So span = 6
+        
+
+---
+
+### ✅ Final Span Array:
+
+
+`Day:    1   2  3  4  5  6  7 
+Price:       100 80  60 70 60 75  85 
+Span:        1     1   1   2  1    4   6`
