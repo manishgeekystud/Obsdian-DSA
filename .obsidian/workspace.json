@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Stock Span Problem.md",
+                "file": "Arrays/Best time to Buy and sell Stock-1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stock Span Problem"
+              "title": "Best time to Buy and sell Stock-1"
             }
           }
         ]
@@ -181,9 +181,10 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Arrays/Best time to Buy and sell stock-2.md",
+    "Stack/Stock Span Problem.md",
     "Pasted image 20250731225407.png",
     "Stack/Implement Two Stacks in an Array.md",
-    "Stack/Stock Span Problem.md",
     "Stack/Removing consecutive duplicates.md",
     "Stack/check Valid Parenthesis.md",
     "Linked List/Palindrome Linked List.md",
@@ -219,7 +220,6 @@
     "Pasted image 20250521011122.png",
     "Pasted image 20250521011108.png",
     "Pasted image 20250521011046.png",
-    "Pasted image 20250518225240.png",
     "Searching",
     "Untitled.canvas",
     "Untitled/desktop.ini",
