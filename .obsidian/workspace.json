@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Implement Two Stacks in an Array.md",
+                "file": "Stack/Stock Span Problem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Implement Two Stacks in an Array"
+              "title": "Stock Span Problem"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Stack/Removing consecutive duplicates.md",
     "Stack/Implement Two Stacks in an Array.md",
+    "Stack/Stock Span Problem.md",
+    "Stack/Removing consecutive duplicates.md",
     "Stack/check Valid Parenthesis.md",
     "Linked List/Palindrome Linked List.md",
     "Stack",
@@ -208,7 +209,6 @@
     "Hashing/SubArrays longest with Equal 0s and 1s.md",
     "Hashing/Longest Consecutive Subsequence.md",
     "Hashing/SubArrays Count with 0 Sum.md",
-    "Hashing/Subarray with 0 sum.md",
     "Hashing",
     "Sorting",
     "Pasted image 20250521011215.png",
