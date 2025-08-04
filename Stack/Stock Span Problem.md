@@ -123,3 +123,5 @@ public ArrayList<Integer> calculateSpan(int[] price) {
 
 ```
 
+**Optimal** **Solution**
+
