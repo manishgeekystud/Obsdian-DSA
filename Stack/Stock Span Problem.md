@@ -218,9 +218,43 @@ public ArrayList<Integer> calculateSpan(int[] arr) {
 
 Let’s dry-run first 4 elements of `arr = [100, 80, 60, 70]`
 
-|i|arr[i]|Stack (indices) before|Stack After|Span|
-|---|---|---|---|---|
-|0|100|[]|[0]|1|
-|1|80|[0]|[0, 1]|1|
-|2|60|[0, 1]|[0, 1, 2]|1|
-|3|70|[0, 1, 2] → pop(2)|[0, 1, 3]|2|
+| i   | arr[i] | Stack (indices) before | Stack After | Span |
+| --- | ------ | ---------------------- | ----------- | ---- |
+| 0   | 100    | []                     | [0]         | 1    |
+| 1   | 80     | [0]                    | [0, 1]      | 1    |
+| 2   | 60     | [0, 1]                 | [0, 1, 2]   | 1    |
+| 3   | 70     | [0, 1, 2] → pop(2)     | [0, 1, 3]   | 2    |
+## 🧮 Time & Space Complexity
+
+|Metric|Value|
+|---|---|
+|Time Complexity|**O(n)**|
+|Space Complexity|**O(n)** (stack + result)|
+
+- Each element is **pushed and popped once** from the stack → O(n)
+    
+- Space is used for result array and the stack.
+    
+
+---
+
+## ✅ Key Concepts Used
+
+- **Monotonic Stack (Decreasing)** — Used to track previous higher values
+    
+- **Index-Based Span Calculation** — To avoid storing actual prices in stack
+    
+- **Span = i - last_higher_index** — Efficient way to calculate consecutive values
+    
+
+---
+
+## 🧠 When to Use This
+
+- **Stock span**
+    
+- **Previous greater element**
+    
+- **Temperature trend problems**
+    
+- **Histogram problems**
