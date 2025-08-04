@@ -188,3 +188,29 @@ To do that, we:
 `stack.push(i);`
 
 - This day may help in calculating the span for future days.
+
+**CODE**
+
+```java
+public ArrayList<Integer> calculateSpan(int[] arr) {
+    ArrayList<Integer> span = new ArrayList<>();
+    Stack<Integer> st = new Stack<>();
+
+    for (int i = 0; i < arr.length; i++) {
+        // Pop all indices whose prices are <= current price
+        while (!st.isEmpty() && arr[st.peek()] <= arr[i]) {
+            st.pop();
+        }
+
+        // If stack is empty, it means all previous prices were smaller
+        int currSpan = st.isEmpty() ? (i + 1) : (i - st.peek());
+
+        span.add(currSpan);
+        st.push(i);  // Push current day's index
+    }
+
+    return span;
+}
+
+```
+
