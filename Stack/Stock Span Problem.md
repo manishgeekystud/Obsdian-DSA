@@ -86,48 +86,39 @@ Span:        1     1    1    2  1    4   6
 
 **==Brute Force==**
 
-## 🔸 Plan:
+### 🔸 Idea:
 
-1. Push all prices into a stack.
+For each day `i`:
+
+- Look backwards to count how many consecutive days (including today) the stock price was **less than or equal** to today's price.
     
-2. Traverse the **original array** from left to right.
-    
-3. For each element, go **backwards** and **count how many previous prices (including itself)** are **less than or equal to the current price**.
-    
-4. Store that count as the span.
+- Stop when you hit a day with a **higher price**
     
 
 This is a simple **O(n²)** approach.
 
 **CODE**
 ```java
-public ArrayList<Integer> calculateSpanBruteForce(int[] arr) {
-    int n = arr.length;
-    ArrayList<Integer> result = new ArrayList<>();
-    Stack<Integer> st = new Stack<>();
+public ArrayList<Integer> calculateSpan(int[] price) {
+    ArrayList<Integer> span = new ArrayList<>();
 
-    // Step 1: Push all elements into the stack (not needed strictly, but to follow your idea)
-    for (int price : arr) {
-        st.push(price);
-    }
+    for (int i = 0; i < price.length; i++) {
+        int count = 1;  // Span always includes current day
 
-    // Step 2: For each price, count how many consecutive previous prices are <= current
-    for (int i = 0; i < n; i++) {
-        int span = 1;  // Always at least 1 (the current day itself)
-
-        // Look back at previous elements
+        // Look back at previous days
         for (int j = i - 1; j >= 0; j--) {
-            if (arr[j] <= arr[i]) {
-                span++;
+            if (price[j] <= price[i]) {
+                count++;
             } else {
-                break;  // Stop when a higher price is found
+                break;  // Stop if previous price is greater
             }
         }
 
-        result.add(span);
+        span.add(count);
     }
 
-    return result;
+    return span;
 }
+
 
 ```
