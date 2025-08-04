@@ -83,3 +83,51 @@ Span:        1     1    1    2  1    4   6
 
 ===========================================================
 **solution**
+
+**==Brute Force==**
+
+## 🔸 Plan:
+
+1. Push all prices into a stack.
+    
+2. Traverse the **original array** from left to right.
+    
+3. For each element, go **backwards** and **count how many previous prices (including itself)** are **less than or equal to the current price**.
+    
+4. Store that count as the span.
+    
+
+This is a simple **O(n²)** approach.
+
+**CODE**
+```java
+public ArrayList<Integer> calculateSpanBruteForce(int[] arr) {
+    int n = arr.length;
+    ArrayList<Integer> result = new ArrayList<>();
+    Stack<Integer> st = new Stack<>();
+
+    // Step 1: Push all elements into the stack (not needed strictly, but to follow your idea)
+    for (int price : arr) {
+        st.push(price);
+    }
+
+    // Step 2: For each price, count how many consecutive previous prices are <= current
+    for (int i = 0; i < n; i++) {
+        int span = 1;  // Always at least 1 (the current day itself)
+
+        // Look back at previous elements
+        for (int j = i - 1; j >= 0; j--) {
+            if (arr[j] <= arr[i]) {
+                span++;
+            } else {
+                break;  // Stop when a higher price is found
+            }
+        }
+
+        result.add(span);
+    }
+
+    return result;
+}
+
+```
