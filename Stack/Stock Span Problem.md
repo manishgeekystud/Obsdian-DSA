@@ -125,3 +125,66 @@ public ArrayList<Integer> calculateSpan(int[] price) {
 
 **Optimal** **Solution**
 
+# 💡 **Key Idea
+
+---
+
+## 🔄 Step-by-step Intuition:
+
+### ✅ 1. Process prices from **left to right**:
+
+We go through the stock prices one by one — from the first day to the last.
+
+---
+
+### ✅ 2. Use a **stack** to keep track of indices of **previous days**:
+
+- But only the **days with prices higher than today's price** remain in the stack.
+    
+- Why? Because only a **higher price** can tell us **how far back** today's span goes.
+    
+
+---
+
+### ✅ 3. For each day `i`:
+
+We want to find **how many consecutive previous days** had a price **less than or equal** to today’s.
+
+To do that, we:
+
+---
+
+### 👉 a. Pop from the stack:
+
+
+`while (!stack.isEmpty() && arr[stack.peek()] <= arr[i]) {     stack.pop(); }`
+
+- We remove all the days with **lower or equal prices** from the stack.
+    
+- Because they can’t help in limiting today's span — today’s price is greater than theirs.
+    
+
+---
+
+### 👉 b. Now check:
+
+- **If the stack is empty**:  
+    → There is **no previous day with a higher price**  
+    → That means all previous days are part of the span  
+    → So, `span = i + 1`  
+    (Because index starts from 0, span counts from 1)
+    
+- **If the stack is not empty**:  
+    → Top of the stack is the **last day with a higher price**  
+    → Span is from that day till today  
+    → So, `span = i - stack.peek()`
+    
+
+---
+
+### 👉 c. Push current day’s index to the stack:
+
+
+`stack.push(i);`
+
+- This day may help in calculating the span for future days.
