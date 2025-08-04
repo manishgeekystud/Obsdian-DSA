@@ -214,3 +214,13 @@ public ArrayList<Integer> calculateSpan(int[] arr) {
 
 ```
 
+## 📊 Dry Run (Quick Walkthrough)
+
+Let’s dry-run first 4 elements of `arr = [100, 80, 60, 70]`
+
+|i|arr[i]|Stack (indices) before|Stack After|Span|
+|---|---|---|---|---|
+|0|100|[]|[0]|1|
+|1|80|[0]|[0, 1]|1|
+|2|60|[0, 1]|[0, 1, 2]|1|
+|3|70|[0, 1, 2] → pop(2)|[0, 1, 3]|2|
