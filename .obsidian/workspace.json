@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Previous Greater Element.md",
+                "file": "Stack/Next greater element.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Previous Greater Element"
+              "title": "Next greater element"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Stack/Stock Span Problem.md",
     "Stack/Previous Greater Element.md",
+    "Stack/Next greater element.md",
+    "Stack/Stock Span Problem.md",
     "Arrays/Best time to Buy and sell Stock-1.md",
     "Arrays/Best time to Buy and sell stock-2.md",
     "Pasted image 20250731225407.png",
@@ -208,7 +209,6 @@
     "Algorithms/KMP Pattern Searching Algo.md",
     "Strings/First Occurence.md",
     "Strings/Palindrome String.md",
-    "Hashing/Count Distinct elements in a  window.md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
