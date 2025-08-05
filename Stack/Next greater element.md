@@ -22,7 +22,7 @@ For each element, scan all elements to its right until a greater element is foun
 
 ### 🔁 Code (O(n²)):
 
-```
+```java
 public ArrayList<Integer> nextGreaterBrute(int[] arr) {
     ArrayList<Integer> result = new ArrayList<>();
     int n = arr.length;
@@ -43,3 +43,52 @@ public ArrayList<Integer> nextGreaterBrute(int[] arr) {
 
 ```
 
+### ⏱️ Time Complexity:
+
+- **O(n²)** — Nested loop for each element
+    
+
+### 📦 Space Complexity:
+
+- **O(n)** — Output list
+    
+
+---
+
+## ✅ **Optimized Stack-Based Approach** 
+
+### 🔸 Idea:
+
+We process elements **from right to left**, keeping a stack of "potential next greater elements".
+
+> For each element, we pop smaller/equal elements from the stack.  
+> The top of the stack (if any) is the **next greater element**.
+
+---
+
+### 🔁 Your Code (O(n)):
+
+```java
+public ArrayList<Integer> nextLargerElement(int[] arr) {
+    ArrayList<Integer> nextG = new ArrayList<>();
+    Stack<Integer> st = new Stack<>();
+    int n = arr.length;
+
+    nextG.add(-1);            // Last element has no next greater
+    st.push(arr[n - 1]);      // Start from the end
+
+    for (int i = n - 2; i >= 0; i--) {
+        while (!st.isEmpty() && st.peek() <= arr[i]) {
+            st.pop();         // Remove smaller/equal elements
+        }
+
+        int ans = st.isEmpty() ? -1 : st.peek();  // Top of stack is next greater
+        nextG.add(ans);
+        st.push(arr[i]);      // Add current element to stack
+    }
+
+    Collections.reverse(nextG);  // Because we filled it in reverse
+    return nextG;
+}
+
+```
