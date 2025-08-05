@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Untitled.md",
+                "file": "Stack/Previous Greater Element.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Previous Greater Element"
             }
           }
         ]
@@ -182,7 +182,7 @@
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
     "Stack/Stock Span Problem.md",
-    "Stack/Untitled.md",
+    "Stack/Previous Greater Element.md",
     "Arrays/Best time to Buy and sell Stock-1.md",
     "Arrays/Best time to Buy and sell stock-2.md",
     "Pasted image 20250731225407.png",
