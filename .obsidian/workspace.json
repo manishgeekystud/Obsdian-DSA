@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Stock Span Problem.md",
+                "file": "Stack/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stock Span Problem"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,9 +181,10 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
+    "Stack/Stock Span Problem.md",
+    "Stack/Untitled.md",
     "Arrays/Best time to Buy and sell Stock-1.md",
     "Arrays/Best time to Buy and sell stock-2.md",
-    "Stack/Stock Span Problem.md",
     "Pasted image 20250731225407.png",
     "Stack/Implement Two Stacks in an Array.md",
     "Stack/Removing consecutive duplicates.md",
@@ -209,7 +210,6 @@
     "Strings/Palindrome String.md",
     "Hashing/Count Distinct elements in a  window.md",
     "Pasted image 20250602232830.png",
-    "Hashing/SubArrays longest with Equal 0s and 1s.md",
     "Hashing",
     "Sorting",
     "Pasted image 20250521011215.png",
