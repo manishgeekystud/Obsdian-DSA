@@ -110,7 +110,7 @@ Reverse nextG → [5, 25, 25, -1]
 
 ## ⏱️ Time & Space Complexity
 
-|Metric|Value|
-|---|---|
-|Time Complexity|**O(n)**|
-|Space Complexity|**O(n)** (stack + result)|
+| Metric           | Value                     |
+| ---------------- | ------------------------- |
+| Time Complexity  | **O(n)**                  |
+| Space Complexity | **O(n)** (stack + result) |
