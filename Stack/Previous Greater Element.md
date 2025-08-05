@@ -53,3 +53,10 @@ static void prevGreater(int arr[],
 }
 ```
 
+**Optimal** **Solution**
+
+An ****efficient solution**** is to use [stack data structure](https://www.geeksforgeeks.org/stack-data-structure/). If we take a closer look, we can notice that this problem is a variation of [stock span problem](https://www.geeksforgeeks.org/the-stock-span-problem/). We maintain previous greater element in a stack.
+
+```
+
+```
