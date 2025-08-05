@@ -92,3 +92,25 @@ public ArrayList<Integer> nextLargerElement(int[] arr) {
 }
 
 ```
+
+## 🔍 Dry Run Example: `arr = [4, 5, 2, 25]`
+
+Processing from right to left:
+
+|i|arr[i]|Stack before|Stack after|nextG added|
+|---|---|---|---|---|
+|3|25|[]|[25]|-1|
+|2|2|[25]|[25, 2]|25|
+|1|5|[25, 2] → pop 2|[25, 5]|25|
+|0|4|[25, 5]|[25, 5, 4]|5|
+
+Reverse nextG → [5, 25, 25, -1]
+
+---
+
+## ⏱️ Time & Space Complexity
+
+|Metric|Value|
+|---|---|
+|Time Complexity|**O(n)**|
+|Space Complexity|**O(n)** (stack + result)|
