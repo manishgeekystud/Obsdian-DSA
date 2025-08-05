@@ -14,4 +14,41 @@ Given an array of distinct elements, find previous greater element for every ele
 
 Expected time complexity : O(n)
 
+-------------------------------------------------------------------------------------------------
 A ****simple solution**** is to run two nested loops. The outer loop picks an element one by one. The inner loop, find the previous element that is greater.
+
+Naive **Solution**
+```
+static void prevGreater(int arr[], 
+                        int n)
+{ 
+
+    // first element never
+    // exists, so we print -1.
+    System.out.print("-1, ");
+
+ 
+    // remaining elements.
+    for (int i = 1; i < n; i++)
+    {
+
+        // Find first element on 
+        // left side that is 
+        // greater than arr[i].
+        int j;
+        for (j = i-1; j >= 0; j--) 
+        {
+            if (arr[i] < arr[j]) 
+            {
+            System.out.print(arr[j] + ", ");
+            break;
+            }             
+        }
+
+        // If all elements on 
+        // left are smaller.
+        if (j == -1)
+        System.out.print("-1, ");
+    }
+}
+```
