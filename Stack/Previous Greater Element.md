@@ -18,7 +18,7 @@ Expected time complexity : O(n)
 A ****simple solution**** is to run two nested loops. The outer loop picks an element one by one. The inner loop, find the previous element that is greater.
 
 Naive **Solution**
-```
+```java
 static void prevGreater(int arr[], 
                         int n)
 { 
@@ -52,3 +52,4 @@ static void prevGreater(int arr[],
     }
 }
 ```
+
