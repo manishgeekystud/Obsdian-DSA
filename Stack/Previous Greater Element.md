@@ -57,6 +57,43 @@ static void prevGreater(int arr[],
 
 An ****efficient solution**** is to use [stack data structure](https://www.geeksforgeeks.org/stack-data-structure/). If we take a closer look, we can notice that this problem is a variation of [stock span problem](https://www.geeksforgeeks.org/the-stock-span-problem/). We maintain previous greater element in a stack.
 
-```
+```java
+static void prevGreater(int arr[], 
+                        int n)
+{
+    // Create a stack and push 
+    // index of first element 
+    // to it
+    Stack<Integer> s = new Stack<Integer>();
+    s.push(arr[0]);
+    
+    // Previous greater for 
+    // first element is always -1.
+    System.out.print("-1, ");
 
+    // Traverse remaining elements
+    for (int i = 1; i < n; i++) 
+    {
+
+        // Pop elements from stack 
+        // while stack is not empty 
+        // and top of stack is smaller 
+        // than arr[i]. We always have 
+        // elements in decreasing order 
+        // in a stack.
+        while (s.empty() == false && 
+            s.peek() < arr[i])
+            s.pop();
+
+        // If stack becomes empty, then 
+        // no element is greater on left 
+        // side. Else top of stack is 
+        // previous greater.
+        if (s.empty() == true) 
+            System.out.print("-1, ");
+        else
+            System.out.print(s.peek() + ", ");
+
+        s.push(arr[i]);
+    }
 ```
