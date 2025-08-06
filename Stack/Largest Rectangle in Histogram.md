@@ -103,6 +103,49 @@ Using **monotonic stacks**, we can compute the **Nearest Smaller to Left (NSL)
 **CODE**
 
 ```java
+public int largestRectangleArea(int[] heights) {
+    int n = heights.length;
+    int[] left = new int[n];   // Stores index of nearest smaller element to the left for each bar
+    int[] right = new int[n];  // Stores index of nearest smaller element to the right for each bar
+    Stack<Integer> stack = new Stack<>();
+
+    // Step 1: Compute Nearest Smaller to Left (NSL) for each bar
+    for (int i = 0; i < n; i++) {
+        // Pop all indices with heights >= current bar
+        while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
+            stack.pop();
+        }
+        // If stack is empty, no smaller element to the left
+        // Else, top of the stack is index of nearest smaller
+        left[i] = stack.isEmpty() ? -1 : stack.peek();
+        stack.push(i); // Push current index
+    }
+
+    stack.clear(); // Reuse the same stack for NSR
+
+    // Step 2: Compute Nearest Smaller to Right (NSR) for each bar
+    for (int i = n - 1; i >= 0; i--) {
+        // Pop all indices with heights >= current bar
+        while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
+            stack.pop();
+        }
+        // If stack is empty, no smaller element to the right
+        // Else, top of the stack is index of nearest smaller
+        right[i] = stack.isEmpty() ? n : stack.peek();
+        stack.push(i); // Push current index
+    }
+
+    int maxArea = 0;
+
+    // Step 3: Compute the area for each bar as the smallest height in the width
+    for (int i = 0; i < n; i++) {
+        int width = right[i] - left[i] - 1; // Total bars the current bar can expand
+        int area = heights[i] * width;      // Rectangle area = height × width
+        maxArea = Math.max(maxArea, area);  // Track the maximum area
+    }
+
+    return maxArea;
+}
 
 
 ```
