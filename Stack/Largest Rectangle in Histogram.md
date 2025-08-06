@@ -20,3 +20,28 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 
 - `1 <= heights.length <= 105`
 - `0 <= heights[i] <= 104`
+-----------------------------------------------------------------------
+
+Solution
+
+## 🔄 Brute Force Steps:
+
+1. For every bar `i` from `0` to `n-1`:
+    
+    - Expand to the **left** until you find a bar smaller than `heights[i]`
+        
+    - Expand to the **right** until you find a bar smaller than `heights[i]`
+        
+    - Calculate:  
+        `width = right - left + 1 area = width * heights[i]`
+        
+    - Keep track of the **maximum area**
+        
+
+---
+
+## ✅ Java Code (Brute Force)
+
+```
+
+```
