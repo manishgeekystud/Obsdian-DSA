@@ -150,3 +150,17 @@ public int largestRectangleArea(int[] heights) {
 
 ```
 
+## ✅ Example Walkthrough
+
+Input: `[2, 1, 5, 6, 2, 3]`
+
+|Index|Height|NSL|NSR|Width|Area|
+|---|---|---|---|---|---|
+|0|2|-1|1|1|2|
+|1|1|-1|6|6|6|
+|2|5|1|4|2|10|
+|3|6|2|4|1|6|
+|4|2|1|5|3|6|
+|5|3|4|6|1|3|
+
+**Max area = 10**
