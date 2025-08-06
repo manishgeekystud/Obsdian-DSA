@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Next greater element.md",
+                "file": "Stack/Largest Rectangle in Histogram.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Next greater element"
+              "title": "Largest Rectangle in Histogram"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Stack/Previous Greater Element.md",
     "Stack/Next greater element.md",
+    "Stack/Largest Rectangle in Histogram.md",
+    "Stack/Previous Greater Element.md",
     "Stack/Stock Span Problem.md",
     "Arrays/Best time to Buy and sell Stock-1.md",
     "Arrays/Best time to Buy and sell stock-2.md",
@@ -208,7 +209,6 @@
     "Linked List/Find Length of Loop.md",
     "Algorithms/KMP Pattern Searching Algo.md",
     "Strings/First Occurence.md",
-    "Strings/Palindrome String.md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
