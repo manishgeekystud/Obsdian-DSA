@@ -102,4 +102,8 @@ Using **monotonic stacks**, we can compute the **Nearest Smaller to Left (NSL)
 
 **CODE**
 
+```java
+
+
+```
 
