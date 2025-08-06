@@ -81,4 +81,25 @@ public class LargestRectangleBruteForce {
 
 ```
 
-Optiman solution
+**Optimal solution**
+## Intuition
+
+To find the largest rectangle area, we need to determine for each bar **how far it can extend to the left and right** without encountering a shorter bar.  
+Using **monotonic stacks**, we can compute the **Nearest Smaller to Left (NSL)** and **Nearest Smaller to Right (NSR)** efficiently.
+
+## Approach
+
+1️⃣ Use a stack to compute `left[i]` → index of the **nearest smaller element to the left**.  
+2️⃣ Clear stack and compute `right[i]` → index of the **nearest smaller element to the right**.  
+3️⃣ For each bar, calculate `width[i] = right[i] - left[i] - 1`.  
+4️⃣ Compute `area = heights[i] * width[i]` and track `maxArea`.  
+5️⃣ Return `maxArea`.
+
+## Complexity
+
+- **Time complexity:** O(n) – Each element is pushed and popped at most once.
+- **Space complexity:** O(n) – Arrays `left`, `right`, and stack storage.
+
+**CODE**
+
+
