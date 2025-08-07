@@ -54,3 +54,46 @@ Breakdown:
 
 ## ✅ Java Code:
 
+```java
+import java.util.Stack;
+
+class Solution {
+    public static int evaluatePostfix(String exp) {
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = 0; i < exp.length(); i++) {
+            char ch = exp.charAt(i);
+
+            // If operand (digit), push to stack
+            if (Character.isDigit(ch)) {
+                stack.push(ch - '0');  // Convert char to int
+            }
+            // If operator, pop 2 elements and apply operation
+            else {
+                int b = stack.pop(); // Second operand
+                int a = stack.pop(); // First operand
+
+                int result = 0;
+
+                switch (ch) {
+                    case '+': result = a + b; break;
+                    case '-': result = a - b; break;
+                    case '*': result = a * b; break;
+                    case '/': result = a / b; break;
+                }
+
+                stack.push(result);
+            }
+        }
+
+        return stack.pop(); // Final result
+    }
+
+    public static void main(String[] args) {
+        String exp = "231*+9-";
+        System.out.println("Result: " + evaluatePostfix(exp));  // Output: -4
+    }
+}
+
+
+```
