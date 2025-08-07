@@ -154,3 +154,50 @@ public class InfixToPostfix {
 }
 
 ```
+
+## 🧪 Example Walkthrough
+
+### Infix:
+
+`A + B * C`
+
+### Steps:
+
+1. `A` → operand → result: `A`
+    
+2. `+` → operator → stack: `+`
+    
+3. `B` → operand → result: `AB`
+    
+4. `*` → operator with higher precedence than `+` → stack: `+ *`
+    
+5. `C` → operand → result: `ABC`
+    
+6. End → pop stack: `*`, `+` → result: `ABC*+`
+    
+
+### ✅ Final Postfix:
+
+`ABC*+`
+
+---
+
+## 📦 Time & Space Complexity
+
+- **Time:** O(n)
+    
+- **Space:** O(n) (for stack and result)
+    
+
+---
+
+## 🔁 Related Interview Questions
+
+- Convert Infix to Prefix
+    
+- Evaluate Postfix Expression
+    
+- Balanced Parentheses using Stack
+    
+
+---
