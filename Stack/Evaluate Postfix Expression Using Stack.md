@@ -97,3 +97,40 @@ class Solution {
 
 
 ```
+
+## ✅ Output:
+
+`Result: -4`
+
+---
+
+## 🧠 Dry Run of `"231*+9-"`
+
+|Step|Stack|Action|
+|---|---|---|
+|2|[2]|Push 2|
+|3|[2, 3]|Push 3|
+|1|[2, 3, 1]|Push 1|
+|*|[2, 3×1=3] → [2,3]|Pop 1 & 3 → 3×1=3|
+|+|[2+3=5]|Pop 2 & 3 → 2+3=5|
+|9|[5, 9]|Push 9|
+|-|[5−9=−4]|Pop 9 & 5 → 5−9=−4|
+
+Final result: `-4`
+
+---
+
+## ❗ Notes:
+
+- Only works for **single-digit operands** (`Character.isDigit()` checks one char).
+    
+- For full expressions like `"12 3 +"`, you need to **split by space** and **parse integers**, not chars. Ask me if you want that version too!
+    
+
+---
+
+## 🧠 Time & Space Complexity:
+
+- **Time Complexity:** `O(n)` — one pass through expression
+    
+- **Space Complexity:** `O(n)` — for stack (in worst case)
