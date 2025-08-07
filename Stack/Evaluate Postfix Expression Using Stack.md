@@ -58,28 +58,25 @@ Breakdown:
 import java.util.Stack;
 
 class Solution {
-    public static int evaluatePostfix(String exp) {
+    public static int evaluatePostfix(String[] arr) {
         Stack<Integer> stack = new Stack<>();
 
-        for (int i = 0; i < exp.length(); i++) {
-            char ch = exp.charAt(i);
-
-            // If operand (digit), push to stack
-            if (Character.isDigit(ch)) {
-                stack.push(ch - '0');  // Convert char to int
-            }
-            // If operator, pop 2 elements and apply operation
+        for (String token : arr) {
+            // If it's a number
+            if (isNumber(token)) {
+                stack.push(Integer.parseInt(token));
+            } 
+            // It's an operator
             else {
-                int b = stack.pop(); // Second operand
-                int a = stack.pop(); // First operand
-
+                int b = stack.pop();
+                int a = stack.pop();
                 int result = 0;
 
-                switch (ch) {
-                    case '+': result = a + b; break;
-                    case '-': result = a - b; break;
-                    case '*': result = a * b; break;
-                    case '/': result = a / b; break;
+                switch (token) {
+                    case "+": result = a + b; break;
+                    case "-": result = a - b; break;
+                    case "*": result = a * b; break;
+                    case "/": result = a / b; break;
                 }
 
                 stack.push(result);
@@ -89,11 +86,22 @@ class Solution {
         return stack.pop(); // Final result
     }
 
+    // Helper function to check if string is a number
+    private static boolean isNumber(String s) {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch(NumberFormatException e) {
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
-        String exp = "231*+9-";
-        System.out.println("Result: " + evaluatePostfix(exp));  // Output: -4
+        String[] arr = {"12", "3", "+", "4", "*"}; // (12 + 3) * 4 = 60
+        System.out.println("Result: " + evaluatePostfix(arr));  // Output: 60
     }
 }
+
 
 
 ```
