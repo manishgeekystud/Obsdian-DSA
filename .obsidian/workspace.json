@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/Infix to PostFix.md",
+                "file": "Stack/Evaluate Postfix Expression Using Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Infix to PostFix"
+              "title": "Evaluate Postfix Expression Using Stack"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8b91f237b390eee6",
   "lastOpenFiles": [
-    "Stack/Largest Rectangle in Histogram.md",
     "Stack/Infix to PostFix.md",
+    "Stack/Evaluate Postfix Expression Using Stack.md",
+    "Stack/Largest Rectangle in Histogram.md",
     "Stack/Next greater element.md",
     "Stack/Previous Greater Element.md",
     "Stack/Stock Span Problem.md",
@@ -208,7 +209,6 @@
     "Linked List/Swap Kth Node from begining and last.md",
     "Linked List/Add Two Numbers.md",
     "Linked List/Find Length of Loop.md",
-    "Algorithms/KMP Pattern Searching Algo.md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
