@@ -47,8 +47,8 @@ We need to **find the index** of the celebrity or return **-1** if none exists.
 #### **Input**
 
 `mat = [   [1, 1, 0],   
-           [0, 1, 0],  
-           [0, 1, 1] ]`
+           [0,    1,   0],  
+           [0,    1,   1] ]`
 
 #### **Matrix Table**
 
@@ -73,10 +73,6 @@ We need to **find the index** of the celebrity or return **-1** if none exists.
 
 ### **Example 2**
 
-csharp
-
-CopyEdit
-
 `mat = [   [1, 1],   [1, 1] ]`
 
 - Both know each other → ❌ No celebrity.
@@ -87,10 +83,6 @@ CopyEdit
 ---
 
 ### **Example 3**
-
-ini
-
-CopyEdit
 
 `mat = [   [1] ]`
 
@@ -141,12 +133,9 @@ For each person `i`:
 
 ### **Brute Force Code**
 
-java
+```java
 
-CopyEdit
-
-`int celebrityBruteForce(int[][] mat, int n) {     for (int i = 0; i < n; i++) {         boolean knowsSomeone = false;         boolean everyoneKnows = true;                  for (int j = 0; j < n; j++) {             if (i != j && mat[i][j] == 1) knowsSomeone = true;             if (i != j && mat[j][i] == 0) everyoneKnows = false;         }                  if (!knowsSomeone && everyoneKnows) return i;     }     return -1; }`
-
+```
 ---
 
 ## **Optimal Approach — Stack Method (Your Solution)**
@@ -206,11 +195,7 @@ Instead of checking everyone individually, we can **eliminate non-celebrities** 
 
 ### **Your Code with Comments**
 
-java
-
-CopyEdit
-
-`class Solution {     int celebrity(int mat[][], int n) {         Stack<Integer> st = new Stack<>();                  // Step 1: Push all people into stack         for (int i = 0; i < n; i++) {             st.push(i);         }                  // Step 2: Eliminate non-celebrities         while (st.size() > 1) {             int A = st.pop();             int B = st.pop();                          if (mat[A][B] == 1) {                 // A knows B → A cannot be celebrity                 st.push(B);             } else {                 // A does not know B → B cannot be celebrity                 st.push(A);             }         }                  // Step 3: Possible celebrity         int candidate = st.pop();                  // Step 4: Verify candidate         for (int i = 0; i < n; i++) {             if (i != candidate) {                 if (mat[candidate][i] == 1 || mat[i][candidate] == 0) {                     return -1; // Fails condition                 }             }         }                  return candidate; // Celebrity found     } }`
+j
 
 ---
 
