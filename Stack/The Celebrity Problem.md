@@ -195,18 +195,53 @@ Instead of checking everyone individually, we can **eliminate non-celebrities** 
 
 ### **Your Code with Comments**
 
-j
+```java
+class Solution {
+    int celebrity(int mat[][], int n) {
+        Stack<Integer> st = new Stack<>();
+        
+        // Step 1: Push all people into stack
+        for (int i = 0; i < n; i++) {
+            st.push(i);
+        }
+        
+        // Step 2: Eliminate non-celebrities
+        while (st.size() > 1) {
+            int A = st.pop();
+            int B = st.pop();
+            
+            if (mat[A][B] == 1) {
+                // A knows B → A cannot be celebrity
+                st.push(B);
+            } else {
+                // A does not know B → B cannot be celebrity
+                st.push(A);
+            }
+        }
+        
+        // Step 3: Possible celebrity
+        int candidate = st.pop();
+        
+        // Step 4: Verify candidate
+        for (int i = 0; i < n; i++) {
+            if (i != candidate) {
+                if (mat[candidate][i] == 1 || mat[i][candidate] == 0) {
+                    return -1; // Fails condition
+                }
+            }
+        }
+        
+        return candidate; // Celebrity found
+    }
+}
+
+```
 
 ---
 
 ### **Dry Run for Example**
 
 **Input:**
-
-ini
-
-CopyEdit
-
 `mat = [   [1, 1, 0],   [0, 1, 0],   [0, 1, 1] ] n = 3`
 
 **Step-by-step:**
