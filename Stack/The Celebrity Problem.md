@@ -134,6 +134,20 @@ For each person `i`:
 ### **Brute Force Code**
 
 ```java
+int celebrityBruteForce(int[][] mat, int n) {
+    for (int i = 0; i < n; i++) {
+        boolean knowsSomeone = false;
+        boolean everyoneKnows = true;
+        
+        for (int j = 0; j < n; j++) {
+            if (i != j && mat[i][j] == 1) knowsSomeone = true;
+            if (i != j && mat[j][i] == 0) everyoneKnows = false;
+        }
+        
+        if (!knowsSomeone && everyoneKnows) return i;
+    }
+    return -1;
+}
 
 ```
 ---
