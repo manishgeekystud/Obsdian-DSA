@@ -152,7 +152,7 @@ int celebrityBruteForce(int[][] mat, int n) {
 ```
 ---
 
-## **Optimal Approach — Stack Method (Your Solution)**
+## **Optimal Approach — Stack Method 
 
 ### **Idea**
 
