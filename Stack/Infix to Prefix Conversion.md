@@ -82,30 +82,17 @@ Expression:
 Original: `(A - B / C) * (A / K - L)`  
 Reverse: `(L - K / A) * (C / B - A)`  
 Swap parentheses:
-
-css
-
-CopyEdit
-
-`( L - K / A ) * ( C / B - A )`
+  `( L - K / A ) * ( C / B - A )`
 
 → actually in reversed form:
 
-css
-
-CopyEdit
-
-`) L - K / A ( * ) C / B - A (`
+   `) L - K / A ( * ) C / B - A (`
 
 ---
 
 ### Step 2: Apply Infix → Postfix on reversed string
 
 We use stack rules and precedence to produce:
-
-css
-
-CopyEdit
 
 `L K A / - C B A - / *`
 
@@ -114,23 +101,15 @@ CopyEdit
 ### Step 3: Reverse Postfix to get Prefix
 
 Reverse:
-
-css
-
-CopyEdit
-
 `* - L / K A / - C / B A`
 
 ---
 
 ## 7️⃣ Java Implementation
 
-java
+```
 
-CopyEdit
-
-`import java.util.*;  public class InfixToPrefix {          static int precedence(char ch) {         switch (ch) {             case '+': case '-': return 1;             case '*': case '/': return 2;             case '^': return 3;         }         return -1;     }      static String infixToPrefix(String s) {         // Step 1: Reverse the string and swap brackets         StringBuilder sb = new StringBuilder(s);         sb.reverse();         for (int i = 0; i < sb.length(); i++) {             if (sb.charAt(i) == '(') sb.setCharAt(i, ')');             else if (sb.charAt(i) == ')') sb.setCharAt(i, '(');         }                  // Step 2: Convert reversed expression to postfix         String postfix = infixToPostfix(sb.toString());                  // Step 3: Reverse postfix to get prefix         return new StringBuilder(postfix).reverse().toString();     }      static String infixToPostfix(String s) {         StringBuilder result = new StringBuilder();         Stack<Character> st = new Stack<>();          for (int i = 0; i < s.length(); i++) {             char ch = s.charAt(i);              // Operand             if (Character.isLetterOrDigit(ch)) {                 result.append(ch);             }             // Opening bracket             else if (ch == '(') {                 st.push(ch);             }             // Closing bracket             else if (ch == ')') {                 while (!st.isEmpty() && st.peek() != '(') {                     result.append(st.pop());                 }                 st.pop();             }             // Operator             else {                 while (!st.isEmpty() && precedence(st.peek()) >= precedence(ch)) {                     result.append(st.pop());                 }                 st.push(ch);             }         }         while (!st.isEmpty()) {             result.append(st.pop());         }         return result.toString();     }      public static void main(String[] args) {         String exp = "(A-B/C)*(A/K-L)";         System.out.println("Infix: " + exp);         System.out.println("Prefix: " + infixToPrefix(exp));     } }`
-
+```
 ---
 
 ## 8️⃣ Key Notes & Differences
