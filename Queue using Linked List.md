@@ -97,10 +97,6 @@ Check if the queue is empty.
 
 java
 
-CopyEdit
-
-`public void enqueue(int data) {     Node newNode = new Node(data);     if (rear == null) { // Queue is empty         front = rear = newNode;         return;     }     rear.next = newNode;     rear = newNode; }`
-
 ---
 
 ### **3) dequeue()**
@@ -121,21 +117,13 @@ CopyEdit
 
 java
 
-CopyEdit
-
-`public int dequeue() {     if (front == null) {         throw new RuntimeException("Queue is empty");     }     int value = front.data;     front = front.next;     if (front == null) { // Queue became empty         rear = null;     }     return value; }`
-
 ---
 
 ### **4) peek()**
 
 Return the element at the front without removing it.
 
-java
 
-CopyEdit
-
-`public int peek() {     if (front == null) {         throw new RuntimeException("Queue is empty");     }     return front.data; }`
 
 ---
 
@@ -143,23 +131,95 @@ CopyEdit
 
 Optional helper method.
 
-java
-
-CopyEdit
-
-`public int size() {     int count = 0;     Node temp = front;     while (temp != null) {         count++;         temp = temp.next;     }     return count; }`
-
 Or maintain a `size` variable and update it in enqueue/dequeue for O(1) size retrieval.
 
 ---
 
 ## **7. Full Java Implementation**
 
-java
+```java
+class Node {
+    int data;
+    Node next;
 
-CopyEdit
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
 
-`class Node {     int data;     Node next;      Node(int data) {         this.data = data;         this.next = null;     } }  class QueueUsingLinkedList {     private Node front, rear;      public QueueUsingLinkedList() {         front = rear = null;     }      public boolean isEmpty() {         return front == null;     }      public void enqueue(int data) {         Node newNode = new Node(data);         if (rear == null) {             front = rear = newNode;             return;         }         rear.next = newNode;         rear = newNode;     }      public int dequeue() {         if (front == null) {             throw new RuntimeException("Queue is empty");         }         int value = front.data;         front = front.next;         if (front == null) {             rear = null;         }         return value;     }      public int peek() {         if (front == null) {             throw new RuntimeException("Queue is empty");         }         return front.data;     }      public void display() {         if (front == null) {             System.out.println("Queue is empty");             return;         }         Node temp = front;         while (temp != null) {             System.out.print(temp.data + " ");             temp = temp.next;         }         System.out.println();     } }  public class Main {     public static void main(String[] args) {         QueueUsingLinkedList queue = new QueueUsingLinkedList();                  queue.enqueue(10);         queue.enqueue(20);         queue.enqueue(30);          queue.display(); // 10 20 30          System.out.println("Dequeued: " + queue.dequeue()); // 10         System.out.println("Front element: " + queue.peek()); // 20          queue.display(); // 20 30     } }`
+class QueueUsingLinkedList {
+    private Node front, rear;
+
+    public QueueUsingLinkedList() {
+        front = rear = null;
+    }
+
+    public boolean isEmpty() {
+        return front == null;
+    }
+
+    public void enqueue(int data) {
+        Node newNode = new Node(data);
+        if (rear == null) {
+            front = rear = newNode;
+            return;
+        }
+        rear.next = newNode;
+        rear = newNode;
+    }
+
+    public int dequeue() {
+        if (front == null) {
+            throw new RuntimeException("Queue is empty");
+        }
+        int value = front.data;
+        front = front.next;
+        if (front == null) {
+            rear = null;
+        }
+        return value;
+    }
+
+    public int peek() {
+        if (front == null) {
+            throw new RuntimeException("Queue is empty");
+        }
+        return front.data;
+    }
+
+    public void display() {
+        if (front == null) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        Node temp = front;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        QueueUsingLinkedList queue = new QueueUsingLinkedList();
+        
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        queue.display(); // 10 20 30
+
+        System.out.println("Dequeued: " + queue.dequeue()); // 10
+        System.out.println("Front element: " + queue.peek()); // 20
+
+        queue.display(); // 20 30
+    }
+}
+
+```
 
 ---
 
