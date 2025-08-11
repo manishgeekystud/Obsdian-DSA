@@ -116,13 +116,34 @@ java
 **Code:**
 
 java
+```java
+public int dequeue() {
+    if (front == null) {
+        throw new RuntimeException("Queue is empty");
+    }
+    int value = front.data;
+    front = front.next;
+    if (front == null) { // Queue became empty
+        rear = null;
+    }
+    return value;
+}
 
+```
 ---
 
 ### **4) peek()**
 
 Return the element at the front without removing it.
+```java
+public int peek() {
+    if (front == null) {
+        throw new RuntimeException("Queue is empty");
+    }
+    return front.data;
+}
 
+```
 
 
 ---
@@ -130,6 +151,18 @@ Return the element at the front without removing it.
 ### **5) size()**
 
 Optional helper method.
+```java
+public int size() {
+    int count = 0;
+    Node temp = front;
+    while (temp != null) {
+        count++;
+        temp = temp.next;
+    }
+    return count;
+}
+
+```
 
 Or maintain a `size` variable and update it in enqueue/dequeue for O(1) size retrieval.
 
