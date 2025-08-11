@@ -96,7 +96,18 @@ Check if the queue is empty.
 **Code:**
 
 java
+```java
+public void enqueue(int data) {
+    Node newNode = new Node(data);
+    if (rear == null) { // Queue is empty
+        front = rear = newNode;
+        return;
+    }
+    rear.next = newNode;
+    rear = newNode;
+}
 
+```
 ---
 
 ### **3) dequeue()**
