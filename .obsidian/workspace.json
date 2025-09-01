@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Queue/3. Implementing Stack Using Queues.md",
+                "file": "Queue/5. Reverse a Queue.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Implementing Stack Using Queues"
+              "title": "5. Reverse a Queue"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
-    "Queue/4.Implementing Queue  using Stack.md",
     "Queue/3. Implementing Stack Using Queues.md",
+    "Queue/5. Reverse a Queue.md",
+    "Queue/4.Implementing Queue  using Stack.md",
     "Pasted image 20250901223801.png",
     "Queue/2.Queue using Linked List.md",
     "Queue/1. Queue using Array.md",
@@ -210,7 +211,6 @@
     "Linked List/Swap Nodes in Pairs.md",
     "Linked List/Segregate even and Odd Nodes.md",
     "Linked List/Remove loop in Linked List.md",
-    "Algorithms/Floyd's Cycle Detection Algorithm.md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
