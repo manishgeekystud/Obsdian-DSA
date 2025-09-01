@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Queue/3. Implementing Stack Using Queues.md",
+                "file": "Queue/4.Implementing Queue  using Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Implementing Stack Using Queues"
+              "title": "4.Implementing Queue  using Stack"
             }
           }
         ]
@@ -181,13 +181,14 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Queue/3. Implementing Stack Using Queues.md",
+    "Queue/4.Implementing Queue  using Stack.md",
     "Pasted image 20250901223801.png",
     "Queue/2.Queue using Linked List.md",
     "Queue/1. Queue using Array.md",
     "Recursion/Rope Cutting Problem.md",
     "Recursion/Subset Sum Problem.md",
     "Recursion/Tower of Hanoi.md",
-    "Queue/3. Implementing Stack Using Queues.md",
     "Stack/Infix to Prefix Conversion.md",
     "Queue",
     "Stack/The Celebrity Problem.md",
@@ -220,7 +221,6 @@
     "Pasted image 20250521011134.png",
     "Pasted image 20250521011122.png",
     "Pasted image 20250521011108.png",
-    "Pasted image 20250521011046.png",
     "Searching",
     "Untitled.canvas",
     "Untitled/desktop.ini",
