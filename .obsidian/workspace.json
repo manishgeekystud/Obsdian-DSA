@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Queue/Queue using Linked List.md",
+                "file": "Recursion/Subset Sum Problem.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Queue using Linked List"
+              "title": "Subset Sum Problem"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
-    "Queue/Untitled.md",
+    "Recursion/Tower of Hanoi.md",
     "Queue/Queue using Linked List.md",
+    "Queue/Untitled.md",
     "Stack/Infix to Prefix Conversion.md",
     "Queue",
     "Stack/The Celebrity Problem.md",
@@ -209,7 +210,6 @@
     "Linked List/Reverse a Linked List.md",
     "Linked List/Middle of Linked List.md",
     "Linked List/Remove Duplicates from LL.md",
-    "Linked List/Intersection of Two Nodes(no loop).md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
