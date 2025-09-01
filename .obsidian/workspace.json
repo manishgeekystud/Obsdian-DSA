@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Recursion/Subset Sum Problem.md",
+                "file": "Recursion/Rope Cutting Problem.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Subset Sum Problem"
+              "title": "Rope Cutting Problem"
             }
           }
         ]
@@ -181,6 +181,7 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Recursion/Subset Sum Problem.md",
     "Recursion/Tower of Hanoi.md",
     "Queue/Queue using Linked List.md",
     "Queue/Untitled.md",
@@ -209,7 +210,6 @@
     "Linked List/LOOP detection-length-starting point.md",
     "Linked List/Reverse a Linked List.md",
     "Linked List/Middle of Linked List.md",
-    "Linked List/Remove Duplicates from LL.md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
