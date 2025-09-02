@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Queue/7.  Generate Binary number till N using Queue.md",
+                "file": "Queue/8 .imp- Gas Station Problem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7.  Generate Binary number till N using Queue"
+              "title": "8 .imp- Gas Station Problem"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
-    "Queue/6. Reverse First K queue Elements.md",
     "Queue/7.  Generate Binary number till N using Queue.md",
+    "Queue/8 .imp- Gas Station Problem.md",
+    "Queue/6. Reverse First K queue Elements.md",
     "Queue/5. Reverse a Queue.md",
     "Queue/3. Implementing Stack Using Queues.md",
     "Queue/4.Implementing Queue  using Stack.md",
@@ -210,7 +211,6 @@
     "Linked List/Palindrome Linked List.md",
     "Stack",
     "Linked List/Merge Sorted Linked List.md",
-    "Linked List/Swap Nodes in Pairs.md",
     "Pasted image 20250602232830.png",
     "Hashing",
     "Sorting",
