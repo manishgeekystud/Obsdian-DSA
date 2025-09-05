@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arrays/Maximum Subarray Sum with k Elements.md",
+                "file": "Strings/First Occurence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Maximum Subarray Sum with k Elements"
+              "title": "First Occurence"
             }
           }
         ]
@@ -181,12 +181,12 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Arrays/Maximum Subarray Sum with k Elements.md",
     "Arrays/Minimum adjacent difference in a circular array.md",
     "Arrays/Frequencies in a Limited Array.md",
     "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Arrays/Majority Element.md",
     "Arrays/Maximum Circular SubArray sum.md",
-    "Arrays/Maximum Subarray Sum with k Elements.md",
     "Queue/8 .imp- Gas Station Problem.md",
     "Queue/7.  Generate Binary number till N using Queue.md",
     "Queue/6. Reverse First K queue Elements.md",
