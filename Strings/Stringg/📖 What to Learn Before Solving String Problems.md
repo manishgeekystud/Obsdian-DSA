@@ -284,6 +284,36 @@ for (int right = 0; right < s.length(); right++) {
 - Store frequencies → `HashMap`.
     
 - Pattern problems: Group Anagrams, Isomorphic Strings.
+
+# Hashing & Sets in String Problems
+
+## 1. Why Hashing/Sets in Strings?
+
+- Strings involve characters and substrings.
+    
+- Need to check:
+    
+    - Duplicates (seen before?).
+        
+    - Frequency counts (anagrams, subsequences).
+        
+    - Fast lookups (membership in O(1)).
+        
+- **Hashing (HashMap/HashSet)** helps achieve O(1) average time.
+    
+
+---
+
+## 2. Common Uses
+
+### A. HashSet
+
+- Stores unique characters/substrings.
+    
+- Helps with **duplicate detection** or **uniqueness constraints**.
+    
+
+#### Example: Longest Substring Without Repeating Characters (LeetCode 3)
     
 
 ---
