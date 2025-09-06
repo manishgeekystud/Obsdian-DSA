@@ -96,3 +96,15 @@
     
 - **Hard** → ~3–4  
     📌 Total: ~20 must-do problems
+
+
+## Strings – Sliding Window / Hashing
+
+- [LeetCode 3: Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) → Pattern: Sliding Window + HashSet
+- [LeetCode 76: Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) → Pattern: Sliding Window + HashMap
+- [LeetCode 242: Valid Anagram](https://leetcode.com/problems/valid-anagram/) → Pattern: Frequency Count (Hashing)
+- [LeetCode 438: Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) → Pattern: Sliding Window + Frequency
+- [LeetCode 567: Permutation in String](https://leetcode.com/problems/permutation-in-string/) → Pattern: Sliding Window + Frequency
+- [LeetCode 424: Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) → Pattern: Sliding Window + HashMap
+- [LeetCode 340: Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) → Pattern: Sliding Window + HashMap
+- [LeetCode 159: Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) → Pattern: Sliding Window + HashMap
