@@ -353,17 +353,6 @@ for (int i = 0; i + k <= s.length(); i++) {
 ```
 ---
 
-## 2. Common Uses
-
-### A. HashSet
-
-- Stores unique characters/substrings.
-    
-- Helps with **duplicate detection** or **uniqueness constraints**.
-    
-
-#### Example: Longest Substring Without Repeating Characters (LeetCode 3)
-    
 
 ---
 
