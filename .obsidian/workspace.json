@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Stringg/what to learn.md",
+                "file": "Strings/Stringg/📖 What to Learn Before Solving String Problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what to learn"
+              "title": "📖 What to Learn Before Solving String Problems"
             }
           }
         ]
@@ -182,7 +182,7 @@
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
     "Strings/Stringg/imp problems.md",
-    "Strings/Stringg/what to learn.md",
+    "Strings/Stringg/📖 What to Learn Before Solving String Problems.md",
     "Stack/check Valid Parenthesis.md",
     "Strings/Stringg",
     "Strings/Palindrome String.md",
