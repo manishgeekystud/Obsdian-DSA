@@ -32,7 +32,88 @@
     
 
 ---------------------------------------------------------------------
+# Count Frequency & Compare Frequency
 
+## 1. What it Means
+
+- Count Frequency → track how many times each character (or number) appears.
+    
+- Compare Frequency → check if two strings/arrays have the same distribution of characters.
+    
+
+---
+
+## 2. Ways to Count
+
+### Fixed Character Set (lowercase a–z)
+
+```java
+int[] freq = new int[26]; 
+for (char c : s.toCharArray()) {     freq[c - 'a']++;   // map 'a' → 0, 'b' → 1, etc. }
+```
+
+### Full ASCII / Unicode
+
+`int[] freq = new int[256]; for (char c : s.toCharArray()) {     freq[c]++;   // direct indexing }`
+
+### Using HashMap (when input not fixed size)
+
+`Map<Character, Integer> freq = new HashMap<>(); for (char c : s.toCharArray()) {     freq.put(c, freq.getOrDefault(c, 0) + 1); }`
+
+---
+
+## 3. Comparing Frequencies
+
+### Two Strings Anagram Check (array)
+
+`if (Arrays.equals(freq1, freq2)) {     return true; }`
+
+### HashMap Comparison
+
+`if (map1.equals(map2)) {     return true; }`
+
+---
+
+## 4. Example Problems
+
+1. Valid Anagram (LeetCode 242)  
+    Count frequencies of both strings → compare.
+    
+2. Ransom Note (LeetCode 383)  
+    Count letters in magazine → check if ransomNote letters can be satisfied.
+    
+3. First Unique Character (LeetCode 387)  
+    Count frequency → find first index with freq = 1.
+    
+
+---
+
+## 5. Interview Tips
+
+- Use array when possible → O(1) access, less overhead.
+    
+- Use HashMap when input domain is unknown/large (Unicode, words).
+    
+- Avoid sorting (O(n log n)) → prefer frequency counting (O(n)).
+    
+
+---
+
+## 6. Complexity
+
+- Counting → O(n)
+    
+- Comparing → O(1) for fixed array (26/256), O(k) for HashMap (k = unique chars)
+    
+- Space → O(1) for array, O(k) for HashMap
+    
+
+---
+
+## Key Idea
+
+Convert problem into count arrays/maps → then compare.  
+This avoids sorting and yields linear-time solutions.
 ---
 
 ### **3. Sliding Window Pattern**
