@@ -217,6 +217,26 @@ for (int right = 0; right < s.length(); right++) {
 
 ```
 
+## 4. Common Sliding Window String Problems
+
+### Frequency/Character Tracking
+
+- **Valid Anagram Window** (LeetCode 438) → check substring anagrams.
+- **Minimum Window Substring** (LeetCode 76).
+- **Permutation in String** (LeetCode 567).
+    
+
+### Distinct / Unique Characters
+
+- **Longest substring without repeating characters** (LeetCode 3).
+- **Longest substring with at most K distinct characters** (LeetCode 340).
+
+### Count / Length Problems
+
+- **Smallest substring with all distinct characters** (GFG).
+- **Longest repeating character replacement** (LeetCode 424).
+
+5. General Template (Variable Size)
 
 
 ---
