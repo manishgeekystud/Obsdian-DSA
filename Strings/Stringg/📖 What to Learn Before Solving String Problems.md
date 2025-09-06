@@ -251,7 +251,17 @@ for (int right = 0; right < s.length(); right++) {
 }
 
 ```
+## 6. Interview Tips
 
+- **Fixed window** → size `k` is explicitly mentioned.
+    
+- **Variable window** → condition depends on content (distinct chars, matching pattern).
+    
+- Use `HashMap<Character, Integer>` for general problems.
+    
+- Use `int[26]` if only lowercase letters → faster.
+    
+- Practice dry runs to avoid off-by-one errors.
 ---
 
 ### **4. Two Pointer Technique**
