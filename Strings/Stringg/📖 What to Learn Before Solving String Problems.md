@@ -166,6 +166,17 @@ Look for problems with these keywords:
 
 If problem asks for _contiguous substring_ → almost always **Sliding Window**.
 
+```java
+for (int i = 0; i < k; i++) {
+    freq[s.charAt(i)]++;
+}
+for (int i = k; i < n; i++) {
+    freq[s.charAt(i)]++;
+    freq[s.charAt(i - k)]--;
+}
+
+```
+
 ---
 
 ## 3. Types of Sliding Window in Strings
