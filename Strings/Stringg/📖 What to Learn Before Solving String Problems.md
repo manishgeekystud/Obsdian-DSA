@@ -337,7 +337,20 @@ return true;
 
 
 ```
+### C. Hashing for Substrings
 
+- Store substrings in HashSet for duplicate detection.
+    
+- Example: Repeated Substring of length K.
+```java
+Set<String> seen = new HashSet<>();
+for (int i = 0; i + k <= s.length(); i++) {
+    String sub = s.substring(i, i + k);
+    if (seen.contains(sub)) return true;
+    seen.add(sub);
+}
+
+```
 ---
 
 ## 2. Common Uses
