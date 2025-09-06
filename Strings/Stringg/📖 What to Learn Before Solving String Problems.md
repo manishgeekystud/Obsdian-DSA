@@ -132,6 +132,53 @@ Many string problems = **substring with some property** → use sliding window.
 
 👉 Learn: expand `right`, shrink `left` while maintaining condition.
 
+## 1. Why Sliding Window for Strings?
+
+- Many string problems deal with **substrings (contiguous parts of a string)**.
+    
+- Often need to find:
+    
+    - Longest/shortest substring with certain property.
+        
+    - Count substrings satisfying a condition.
+        
+- Brute force = O(n²) → Sliding Window reduces to **O(n)**.
+    
+
+---
+
+## 2. Identifying Sliding Window in Strings
+
+Look for problems with these keywords:
+
+- **Substring / subarray**
+    
+- **Longest / shortest**
+    
+- **At most K distinct characters**
+    
+- **Exactly K distinct characters**
+    
+- **No repeating characters**
+    
+- **Minimum window covering all characters**
+    
+
+If problem asks for _contiguous substring_ → almost always **Sliding Window**.
+
+---
+
+## 3. Types of Sliding Window in Strings
+
+### Fixed Size Window
+
+- Substring length `k` given.
+    
+- Maintain frequency map/array.
+    
+
+**Example:** Count distinct characters in every substring of length `k`
+
 ---
 
 ### **4. Two Pointer Technique**
