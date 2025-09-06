@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/check Valid Parenthesis.md",
+                "file": "Strings/Stringg/imp problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "check Valid Parenthesis"
+              "title": "imp problems"
             }
           }
         ]
@@ -181,6 +181,9 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Stack/check Valid Parenthesis.md",
+    "Strings/Stringg/imp problems.md",
+    "Strings/Stringg",
     "Strings/Palindrome String.md",
     "Strings/First Occurence.md",
     "Arrays/Maximum Subarray Sum with k Elements.md",
@@ -207,8 +210,6 @@
     "Stack/Next greater element.md",
     "Stack/Infix to PostFix.md",
     "Stack/Evaluate Postfix Expression Using Stack.md",
-    "Stack/check Valid Parenthesis.md",
-    "Stack/Largest Rectangle in Histogram.md",
     "Pasted image 20250731225407.png",
     "Stack",
     "Pasted image 20250602232830.png",
@@ -226,7 +227,6 @@
     "Untitled/desktop.ini",
     "images",
     "Arrays",
-    "Recursion",
-    "Strings"
+    "Recursion"
   ]
 }
