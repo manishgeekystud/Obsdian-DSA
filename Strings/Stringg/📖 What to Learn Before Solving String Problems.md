@@ -315,6 +315,31 @@ for (int right = 0; right < s.length(); right++) {
 
     
 ```
+## 2. Common Uses
+
+### A. HashSet
+
+- Stores unique characters/substrings.
+    
+- Helps with **duplicate detection** or **uniqueness constraints**.
+    
+
+#### Example: Longest Substring Without Repeating Characters (LeetCode 3)
+```java
+    Set<Character> set = new HashSet<>();
+int left = 0, maxLen = 0;
+
+for (int right = 0; right < s.length(); right++) {
+    while (set.contains(s.charAt(right))) {
+        set.remove(s.charAt(left));
+        left++;
+    }
+    set.add(s.charAt(right));
+    maxLen = Math.max(maxLen, right - left + 1);
+}
+
+```
+
 ### B. HashMap
 
 - Tracks **frequency of characters** or **last seen indices**.
@@ -351,6 +376,14 @@ for (int i = 0; i + k <= s.length(); i++) {
 }
 
 ```
+## How to Identify When to Use Hashing/Sets
+
+- If you see words like:
+    
+    - **Duplicate / Unique** → HashSet.
+    - **Frequency / Count** → HashMap or int[].
+    - **Last seen index** → HashMap<Character, Integer>.
+    - **Check membership quickly** → HashSet.
 ---
 
 
