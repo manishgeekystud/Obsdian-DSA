@@ -237,7 +237,20 @@ for (int right = 0; right < s.length(); right++) {
 - **Longest repeating character replacement** (LeetCode 424).
 
 5. General Template (Variable Size)
+```java
+int left = 0;
+for (int right = 0; right < s.length(); right++) {
+    // include s.charAt(right) into window
+    
+    while (condition violated) {
+        // remove s.charAt(left) from window
+        left++;
+    }
+    
+    // check/update answer
+}
 
+```
 
 ---
 
