@@ -22,17 +22,10 @@
 - Use **HashMap<Character,Integer>** when characters are not fixed.
     
 - Build muscle memory for **count frequency, compare frequency**.
-    
 
-👉 Example:
-
-- Check Anagram (`listen`, `silent`).
-    
-- First Unique Character in a String.
-    
 
 ---------------------------------------------------------------------
-# Count Frequency & Compare Frequency
+# 2.Count Frequency & Compare Frequency
 
 ## 1. What it Means
 
@@ -125,7 +118,7 @@ for (char c : s.toCharArray()) {
 ## Key Idea
 
 Convert problem into count arrays/maps → then compare.  
-This avoids sorting and yields linear-time solutions.
+
 ---
 
 ### **3. Sliding Window Pattern**
