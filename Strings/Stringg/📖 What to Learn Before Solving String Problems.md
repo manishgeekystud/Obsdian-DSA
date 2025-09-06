@@ -49,16 +49,28 @@
 
 ```java
 int[] freq = new int[26]; 
-for (char c : s.toCharArray()) {     freq[c - 'a']++;   // map 'a' → 0, 'b' → 1, etc. }
+for (char c : s.toCharArray())
+{     freq[c - 'a']++;   // map 'a' → 0, 'b' → 1, etc. }
 ```
 
 ### Full ASCII / Unicode
+```java
+int[] freq = new int[256];
+for (char c : s.toCharArray()) {
+    freq[c]++;   // direct indexing
+}
 
-`int[] freq = new int[256]; for (char c : s.toCharArray()) {     freq[c]++;   // direct indexing }`
+```
 
 ### Using HashMap (when input not fixed size)
 
-`Map<Character, Integer> freq = new HashMap<>(); for (char c : s.toCharArray()) {     freq.put(c, freq.getOrDefault(c, 0) + 1); }`
+```java
+Map<Character, Integer> freq = new HashMap<>();
+for (char c : s.toCharArray()) {
+    freq.put(c, freq.getOrDefault(c, 0) + 1);
+}
+
+```
 
 ---
 
