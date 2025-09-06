@@ -300,7 +300,43 @@ for (int right = 0; right < s.length(); right++) {
     - Fast lookups (membership in O(1)).
         
 - **Hashing (HashMap/HashSet)** helps achieve O(1) average time.
+```java
+Set<Character> set = new HashSet<>();
+int left = 0, maxLen = 0;
+
+for (int right = 0; right < s.length(); right++) {
+    while (set.contains(s.charAt(right))) {
+        set.remove(s.charAt(left));
+        left++;
+    }
+    set.add(s.charAt(right));
+    maxLen = Math.max(maxLen, right - left + 1);
+}
+
     
+```
+### B. HashMap
+
+- Tracks **frequency of characters** or **last seen indices**.
+    
+- Useful for anagram, substring count, and pattern matching.
+
+#### Example: Valid Anagram (LeetCode 242)
+```java
+Map<Character, Integer> freq = new HashMap<>();
+for (char c : s.toCharArray()) {
+    freq.put(c, freq.getOrDefault(c, 0) + 1);
+}
+for (char c : t.toCharArray()) {
+    freq.put(c, freq.getOrDefault(c, 0) - 1);
+}
+for (int val : freq.values()) {
+    if (val != 0) return false;
+}
+return true;
+
+
+```
 
 ---
 
