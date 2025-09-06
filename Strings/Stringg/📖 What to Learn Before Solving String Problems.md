@@ -166,16 +166,6 @@ Look for problems with these keywords:
 
 If problem asks for _contiguous substring_ → almost always **Sliding Window**.
 
-```java
-for (int i = 0; i < k; i++) {
-    freq[s.charAt(i)]++;
-}
-for (int i = k; i < n; i++) {
-    freq[s.charAt(i)]++;
-    freq[s.charAt(i - k)]--;
-}
-
-```
 
 ---
 
@@ -186,9 +176,35 @@ for (int i = k; i < n; i++) {
 - Substring length `k` given.
     
 - Maintain frequency map/array.
-    
 
 **Example:** Count distinct characters in every substring of length `k`
+```java
+for (int i = 0; i < k; i++) {
+    freq[s.charAt(i)]++;
+}
+for (int i = k; i < n; i++) {
+    freq[s.charAt(i)]++;
+    freq[s.charAt(i - k)]--;
+}
+```
+
+### Variable Size Window
+
+- Window expands/contracts based on condition.
+    
+- Use **two pointers (left, right)**.
+    
+- Track character frequencies with **HashMap or array**.
+    
+
+#### Example: Longest Substring Without Repeating Characters (LeetCode 3)
+
+- Expand `right`.
+    
+- If char repeats → shrink `left` until valid.
+```
+
+```
 
 ---
 
