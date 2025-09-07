@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Stringg/misc.md",
+                "file": "Strings/Stringg/imp problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "misc"
+              "title": "imp problems"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
-    "Strings/Stringg/imp problems.md",
     "Strings/Stringg/misc.md",
+    "Strings/Stringg/imp problems.md",
     "Strings/Stringg/📖 What to Learn Before Solving String Problems.md",
     "Stack/check Valid Parenthesis.md",
     "Strings/Stringg",
