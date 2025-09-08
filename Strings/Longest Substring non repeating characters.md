@@ -19,3 +19,26 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 -----------------------------------------------------------------------
 
+## 1️⃣ Brute Force (Generate All Substrings)
+
+### Algorithm:
+
+1. Generate all substrings `s[i..j]`.
+    
+2. For each substring, check if it has duplicates (using HashSet).
+    
+3. Track max length.
+    
+
+### Complexity:
+
+- O(N³) time (generate + check)
+    
+- O(N) space
+    
+
+### Java Code:
+```java
+
+
+```
