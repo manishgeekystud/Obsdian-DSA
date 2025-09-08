@@ -132,6 +132,37 @@ class Solution {
 
 ### Java Code:
 ```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        Set<Character> set = new HashSet<>();
+        int i = 0, j = 0, maxLen = 0;
+
+        while (j < n) {
+            if (!set.contains(s.charAt(j))) {
+                set.add(s.charAt(j));
+                maxLen = Math.max(maxLen, j - i + 1);
+                j++;
+            } else {
+                set.remove(s.charAt(i));
+                i++;
+            }
+        }
+        return maxLen;
+    }
+}
 
 
 ```
+Dry run
+
+|Step|i|j|set|Action|maxLen|
+|---|---|---|---|---|---|
+|1|0|0|{}|add `a`|1|
+|2|0|1|{a}|add `b`|2|
+|3|0|2|{a,b}|add `c`|3|
+|4|0|3|{a,b,c}|`a` duplicate → remove `a`|3|
+|5|1|3|{b,c}|add `a`|3|
+|6|2|4|{c,a}|add `b`|3|
+|7|3|5|{a,b}|add `c`|3|
+|8|…|…|keeps moving|max stays 3 (`abc`)|3|
