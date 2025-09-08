@@ -85,6 +85,25 @@
 ### Java Code
 
 ```java
+import java.util.*;
+
+class Solution {
+    public boolean checkInclusion(String s1, String s2) {
+        char[] arr1 = s1.toCharArray();
+        Arrays.sort(arr1);
+        String sortedS1 = new String(arr1);
+
+        int m = s1.length();
+        for (int i = 0; i <= s2.length() - m; i++) {
+            char[] arr2 = s2.substring(i, i+m).toCharArray();
+            Arrays.sort(arr2);
+            if (sortedS1.equals(new String(arr2))) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
 
 ```
 
@@ -130,6 +149,26 @@
 ### Java Code
 
 ```java
+import java.util.*;
+
+class Solution {
+    public boolean checkInclusion(String s1, String s2) {
+        int m = s1.length(), n = s2.length();
+        if (m > n) return false;
+
+        int[] freq1 = new int[26];
+        for (char c : s1.toCharArray()) freq1[c - 'a']++;
+
+        for (int i = 0; i <= n - m; i++) {
+            int[] freq2 = new int[26];
+            for (int j = 0; j < m; j++) {
+                freq2[s2.charAt(i+j) - 'a']++;
+            }
+            if (Arrays.equals(freq1, freq2)) return true;
+        }
+        return false;
+    }
+}
 
 ```
 
@@ -178,7 +217,37 @@
 
 ### Java Code
 
+```java
+import java.util.*;
 
+class Solution {
+    public boolean checkInclusion(String s1, String s2) {
+        if (s1.length() > s2.length()) return false;
+
+        int[] freq1 = new int[26];
+        int[] freq2 = new int[26];
+
+        for (char c : s1.toCharArray()) freq1[c - 'a']++;
+
+        int m = s1.length();
+        for (int i = 0; i < m; i++) {
+            freq2[s2.charAt(i) - 'a']++;
+        }
+
+        if (Arrays.equals(freq1, freq2)) return true;
+
+        for (int i = m; i < s2.length(); i++) {
+            freq2[s2.charAt(i) - 'a']++; // add right char
+            freq2[s2.charAt(i - m) - 'a']--; // remove left char
+            if (Arrays.equals(freq1, freq2)) return true;
+        }
+
+        return false;
+    }
+}
+
+
+```
 
 ### Complexity
 
