@@ -148,7 +148,7 @@ public class Solution {
             window.put(c, window.getOrDefault(c, 0) + 1);
 
             // if character matches frequency in t
-            if (need.containsKey(c) && window.get(c).intValue() == need.get(c).intValue()) {
+            if (need.containsKey(c) && window.get(c).intValue() ==                                                                 need.get(c).intValue()) {
                 formed++;
             }
 
@@ -162,7 +162,7 @@ public class Solution {
                 char leftChar = s.charAt(left);
                 window.put(leftChar, window.get(leftChar) - 1);
 
-                if (need.containsKey(leftChar) && window.get(leftChar) < need.get(leftChar)) {
+                if (need.containsKey(leftChar) && window.get(leftChar) <                                                                  need.get(leftChar)) {
                     formed--;
                 }
                 left++;
