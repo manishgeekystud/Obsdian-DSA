@@ -116,7 +116,76 @@ class Solution {
 - Keep track of the smallest valid window.
     
 - If none found, return `""`.
-    
+
+**CODE**
+```java
+import java.util.HashMap;
+
+public class Solution {
+    public String minWindow(String s, String t) {
+        if (s == null || s.length() == 0 || t == null || t.length() == 0) {
+            return "";
+        }
+
+        // Step 1: Build frequency map for string t
+        HashMap<Character, Integer> need = new HashMap<>();
+        for (char c : t.toCharArray()) {
+            need.put(c, need.getOrDefault(c, 0) + 1);
+        }
+
+        // Step 2: Sliding window variables
+        HashMap<Character, Integer> window = new HashMap<>();
+        int left = 0, right = 0;  // window boundaries
+        int formed = 0;           // number of chars that meet the requirement
+        int required = need.size(); // unique characters needed
+
+        int minLen = Integer.MAX_VALUE;
+        int start = 0; // track starting index of result
+
+        // Step 3: Expand the window
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            window.put(c, window.getOrDefault(c, 0) + 1);
+
+            // if character matches frequency in t
+            if (need.containsKey(c) && window.get(c).intValue() == need.get(c).intValue()) {
+                formed++;
+            }
+
+            // Step 4: Try to shrink from left while window is valid
+            while (left <= right && formed == required) {
+                if (right - left + 1 < minLen) {
+                    minLen = right - left + 1;
+                    start = left;
+                }
+
+                char leftChar = s.charAt(left);
+                window.put(leftChar, window.get(leftChar) - 1);
+
+                if (need.containsKey(leftChar) && window.get(leftChar) < need.get(leftChar)) {
+                    formed--;
+                }
+                left++;
+            }
+
+            // Move right pointer forward
+            right++;
+        }
+
+        return (minLen == Integer.MAX_VALUE) ? "" : s.substring(start, start + minLen);
+    }
+
+    // Quick test
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        System.out.println(sol.minWindow(s, t)); // Output: "BANC"
+    }
+}
+
+
+```
 
 ---
 
