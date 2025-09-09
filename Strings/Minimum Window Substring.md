@@ -22,8 +22,58 @@ The testcases will be generated such that the answer is **unique**.
 Since the largest window of s only has one 'a', return empty string
 
 --------------------------------------------------------------------
-**Brute Force**
+**Brute Force** ----TLE n3
 ```java
+class Solution {
+    // Function to find the minimum window substring
+    public String minWindow(String s, String t) {
+        String result = "";                   // Final answer
+        int minLen = Integer.MAX_VALUE;       // Track minimum length found
+
+        // Generate all substrings of s
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j <= s.length(); j++) {
+                String sub = s.substring(i, j);
+
+                // Check if this substring contains all characters of t
+                if (containsAll(sub, t)) {
+                    // Update result if this is smaller than previous
+                    if (sub.length() < minLen) {
+                        minLen = sub.length();
+                        result = sub;
+                    }
+                }
+            }
+        }
+
+        return result; // If not found, result will remain empty
+    }
+
+    // Helper function to check if substring "sub" contains all chars of "t"
+    static boolean containsAll(String sub, String t) {
+        int[] freqSub = new int[128]; // Frequency array for substring
+        int[] freqT = new int[128];   // Frequency array for t
+
+        // Count characters in substring
+        for (char c : sub.toCharArray()) {
+            freqSub[c]++;
+        }
+
+        // Count characters in t
+        for (char c : t.toCharArray()) {
+            freqT[c]++;
+        }
+
+        // Check if substring covers all requirements of t
+        for (int i = 0; i < 128; i++) {
+            if (freqSub[i] < freqT[i]) {
+                return false; // Missing required characters
+            }
+        }
+        return true;
+    }
+}
 
 
 ```
+
