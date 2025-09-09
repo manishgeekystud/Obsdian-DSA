@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Minimum Window Substring.md",
+                "file": "Strings/Stringg/imp problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Minimum Window Substring"
+              "title": "imp problems"
             }
           }
         ]
@@ -181,10 +181,10 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Strings/Minimum Window Substring.md",
     "Strings/Permutation in String.md",
     "Strings/Stringg/imp problems.md",
     "Strings/Stringg/📖 What to Learn Before Solving String Problems.md",
-    "Strings/Minimum Window Substring.md",
     "Strings/Longest Substring non repeating characters.md",
     "Algorithms/Sliding Window Technique.md",
     "Strings/Stringg/misc.md",
