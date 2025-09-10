@@ -56,7 +56,8 @@ Given an array of strings `strs`, group the anagrams together. You can return
 - Comparing every pair = O(n²).
     
 - **Time: O(n² · L log L)** → very slow for large input.
-    
+
+![[Pasted image 20250910234203.png]]
 
 ---
 
