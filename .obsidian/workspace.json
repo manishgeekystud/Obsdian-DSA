@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Group Anagrams.md",
+                "file": "Strings/Stringg/imp problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Group Anagrams"
+              "title": "imp problems"
             }
           }
         ]
@@ -181,9 +181,9 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Strings/Group Anagrams.md",
     "Pasted image 20250910234203.png",
     "Strings/Stringg/imp problems.md",
-    "Strings/Group Anagrams.md",
     "Strings/Longest Repeating Character.md",
     "Strings/Permutation in String.md",
     "Strings/Palindrome String.md",
@@ -221,7 +221,6 @@
     "Pasted image 20250521011144.png",
     "Pasted image 20250521011134.png",
     "Pasted image 20250521011122.png",
-    "Pasted image 20250521011108.png",
     "Searching",
     "Untitled.canvas",
     "Untitled/desktop.ini",
