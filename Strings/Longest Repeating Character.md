@@ -95,37 +95,29 @@ You can change at most `k` characters in the string.
 **Key Intuition:**
 
 - Use a window `[left, right]`.
-    
 - Inside the window, we want to know if we can make all characters equal by replacing at most `k`.
-    
 - Formula:
     
     `replacements = (window size - count of most frequent char)`
     
 - If `replacements ≤ k` → valid window.
-    
 - Else, shrink window from the left.
     
 
 **Steps:**
 
 1. Expand `right` pointer, add character frequency.
-    
 2. Track `maxCount` = frequency of most common char in the window.
-    
 3. If window is invalid (`window size - maxCount > k`), move `left` forward (shrink).
-    
 4. Track maximum valid window size.
     
 
 **Complexity:**
 
 - Time → `O(n)` (each char enters & exits window once).
-    
 - Space → `O(26)` for frequency array (constant).
     
 - ✅ Efficient and elegant.
-    
 - ✅ Standard interview solution.
     
 
@@ -161,6 +153,25 @@ public int characterReplacementBruteForce(String s, int k) {
 ### 🟢 Sliding Window (Optimized)
 
 ```java
+public int characterReplacement(String s, int k) {
+    int[] freq = new int[26];
+    int left = 0, maxCount = 0, maxLength = 0;
+
+    for (int right = 0; right < s.length(); right++) {
+        char c = s.charAt(right);
+        freq[c - 'A']++;
+        maxCount = Math.max(maxCount, freq[c - 'A']);
+
+        while ((right - left + 1) - maxCount > k) {
+            freq[s.charAt(left) - 'A']--;
+            left++;
+        }
+
+        maxLength = Math.max(maxLength, right - left + 1);
+    }
+
+    return maxLength;
+}
 
 ```
 
