@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Longest Substring non repeating characters.md",
+                "file": "Strings/Longest Repeating Character.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Longest Substring non repeating characters"
+              "title": "Longest Repeating Character"
             }
           }
         ]
@@ -181,16 +181,17 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
-    "Strings/Stringg/imp problems.md",
-    "Strings/Minimum Window Substring.md",
     "Strings/Permutation in String.md",
-    "Strings/Stringg/📖 What to Learn Before Solving String Problems.md",
+    "Strings/Longest Repeating Character.md",
+    "Strings/Palindrome String.md",
+    "Strings/Minimum Window Substring.md",
     "Strings/Longest Substring non repeating characters.md",
+    "Strings/Stringg/imp problems.md",
+    "Strings/Stringg/📖 What to Learn Before Solving String Problems.md",
     "Algorithms/Sliding Window Technique.md",
     "Strings/Stringg/misc.md",
     "Stack/check Valid Parenthesis.md",
     "Strings/Stringg",
-    "Strings/Palindrome String.md",
     "Strings/First Occurence.md",
     "Arrays/Maximum Subarray Sum with k Elements.md",
     "Arrays/Minimum adjacent difference in a circular array.md",
@@ -208,7 +209,6 @@
     "Queue/2.Queue using Linked List.md",
     "Queue/1. Queue using Array.md",
     "Recursion/Rope Cutting Problem.md",
-    "Recursion/Subset Sum Problem.md",
     "Queue",
     "Pasted image 20250731225407.png",
     "Stack",
