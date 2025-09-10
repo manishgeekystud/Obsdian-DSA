@@ -74,9 +74,35 @@ Given an array of strings `strs`, group the anagrams together. You can return
 
 ---
 
-### Code (Beginner-friendly, without `computeIfAbsent`)
+### Code ()
+```java
+import java.util.*;
 
-`import java.util.*;  class Solution {     public List<List<String>> groupAnagrams(String[] strs) {         if (strs == null || strs.length == 0) return new ArrayList<>();          Map<String, List<String>> map = new HashMap<>();          for (String word : strs) {             char[] temp = word.toCharArray();             Arrays.sort(temp);              // sort characters             String key = new String(temp);  // create key from sorted chars              if (!map.containsKey(key)) {                 map.put(key, new ArrayList<>());             }             map.get(key).add(word);         // add word to group         }          return new ArrayList<>(map.values());     } }`
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs == null || strs.length == 0) return new ArrayList<>();
+
+        Map<String, List<String>> map = new HashMap<>();
+
+        for (String word : strs) {
+            char[] temp = word.toCharArray();
+            Arrays.sort(temp);              // sort characters
+            String key = new String(temp);  // create key from sorted chars
+
+            if (!map.containsKey(key)) {
+                map.put(key, new ArrayList<>());
+            }
+            map.get(key).add(word);         // add word to group
+        }
+
+        return new ArrayList<>(map.values());
+    }
+}
+
+
+```
+
+
 
 ---
 
