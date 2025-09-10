@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Longest Repeating Character.md",
+                "file": "Strings/Stringg/imp problems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Longest Repeating Character"
+              "title": "imp problems"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
-    "Strings/Permutation in String.md",
     "Strings/Longest Repeating Character.md",
+    "Strings/Permutation in String.md",
     "Strings/Palindrome String.md",
     "Strings/Minimum Window Substring.md",
     "Strings/Longest Substring non repeating characters.md",
