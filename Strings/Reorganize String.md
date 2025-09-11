@@ -54,3 +54,9 @@ Given the input "aab":
 - Max heap after initialization: `[(-2, 'a'), (-1, 'b')]`
 - Result after first iteration: "ab"
 - Wrap-up: Result is "aba"
+
+**CODE**
+```java
+
+
+```
