@@ -95,7 +95,7 @@ public class Solution {
 
 # 🔹 Code Explanation
 
-```
+```java
 public String reorganizeString(String s) {
     // Step 1: Count frequency of each character
     HashMap<Character, Integer> freqMap = new HashMap<>();
@@ -110,7 +110,7 @@ Example `s = "aab"` →
 `freqMap = {a=2, b=1}`
 
 ---
-```
+```java
     // Step 2: Create a max-heap based on frequency
     PriorityQueue<Character> maxHeap = new PriorityQueue<>(
         (a, b) -> freqMap.get(b) - freqMap.get(a) // higher freq first
@@ -125,7 +125,7 @@ Example `s = "aab"` →
 For `"aab"`, heap = `[a, b]` (`a` before `b` since a=2, b=1).
 
 ---
-```
+```java
     // Step 3: Greedily build result by picking 2 most frequent chars
     StringBuilder res = new StringBuilder();
     while (maxHeap.size() >= 2) {
@@ -164,7 +164,7 @@ For `"aab"`, heap = `[a, b]` (`a` before `b` since a=2, b=1).
     
 
 ---
-```
+```java
     // Step 4: Handle leftover
     if (!maxHeap.isEmpty()) {
         char ch = maxHeap.poll();
