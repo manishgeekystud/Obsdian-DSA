@@ -219,8 +219,9 @@ For `"aab"` → `a` left with count 1 → result `"aba"`. ✅
 
 -----------------------------------------------------------------------
 
-Example 3-aabaccdef
-Step 1: Count frequencies
+**Example 3-aabaccdef**
+
+**Step 1: Count frequencies**
 
 `s = "aabaccdef"` → length = 9
 
