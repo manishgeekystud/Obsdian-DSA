@@ -57,7 +57,6 @@ Given the input "aab":
 
 **CODE**
 ```java
-```java
 public class Solution {
     public String reorganizeString(String s) {
         HashMap<Character, Integer> freqMap = new HashMap<>();
@@ -94,3 +93,98 @@ public class Solution {
 }
 ```
 
+# 🔹 Code Explanation
+
+`public String reorganizeString(String s) {     // Step 1: Count frequency of each character     HashMap<Character, Integer> freqMap = new HashMap<>();     for (char c : s.toCharArray()) {         freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);     }`
+
+👉 Here we build a frequency map.  
+Example `s = "aab"` →  
+`freqMap = {a=2, b=1}`
+
+---
+
+
+
+👉 `PriorityQueue` stores characters sorted by **frequency (highest first)**.  
+For `"aab"`, heap = `[a, b]` (`a` before `b` since a=2, b=1).
+
+---
+
+   
+
+👉 Here’s the greedy trick:
+
+- Always take **top 2 most frequent characters** → prevents same letters from being adjacent.
+    
+- Append them → decrease count → push back if still > 0.
+    
+
+**Dry Run `s = "aab"`:**
+
+- Heap = `[a(2), b(1)]`
+    
+- Poll: `a, b` → append `"ab"`
+    
+    - New freq: `a=1, b=0` → push back `a`.
+        
+- Heap = `[a(1)]`
+    
+
+---
+
+   
+
+👉 If one char remains:
+
+- If freq = 1 → safe → append.
+    
+- If freq > 1 → impossible (adjacent duplicate).
+    
+
+For `"aab"` → `a` left with count 1 → result `"aba"`. ✅
+
+---
+
+    `return res.toString(); }`
+
+---
+
+# 🔹 Dry Run Examples
+
+### Example 1: `"aab"`
+
+- freqMap = `{a=2, b=1}`
+    
+- Heap = `[a, b]`
+    
+- Poll `a, b` → res = `"ab"`
+    
+    - freq = `{a=1, b=0}` → push back `a`
+        
+- Heap = `[a]` → append `"a"` → result `"aba"` ✅
+    
+
+---
+
+### Example 2: `"aaab"`
+
+- freqMap = `{a=3, b=1}`
+    
+- Heap = `[a, b]`
+    
+- Poll `a, b` → res = `"ab"`, freq = `{a=2, b=0}` → push back `a`
+    
+- Heap = `[a]` → but freq[a]=2 → cannot place safely → return `""` ❌
+    
+
+---
+
+# 🔹 Complexity
+
+- **Time:** O(n log k)
+    
+    - n = length of string
+        
+    - k = unique characters
+        
+- **Space:** O(k) for map + heap
