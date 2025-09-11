@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Untitled.md",
+                "file": "Strings/Word Pattern.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Word Pattern"
             }
           }
         ]
@@ -182,7 +182,7 @@
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
     "Strings/Stringg/imp problems.md",
-    "Strings/Untitled.md",
+    "Strings/Word Pattern.md",
     "Strings/Reorganize String.md",
     "Strings/Group Anagrams.md",
     "Hashing/First repeating Element.md",
