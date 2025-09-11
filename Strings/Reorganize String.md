@@ -126,6 +126,21 @@ For `"aab"`, heap = `[a, b]` (`a` before `b` since a=2, b=1).
 
 ---
 ```
+    // Step 3: Greedily build result by picking 2 most frequent chars
+    StringBuilder res = new StringBuilder();
+    while (maxHeap.size() >= 2) {
+        char char1 = maxHeap.poll();
+        char char2 = maxHeap.poll();
+
+        res.append(char1);
+        res.append(char2);
+
+        freqMap.put(char1, freqMap.get(char1) - 1);
+        freqMap.put(char2, freqMap.get(char2) - 1);
+
+        if (freqMap.get(char1) > 0) maxHeap.add(char1);
+        if (freqMap.get(char2) > 0) maxHeap.add(char2);
+    }
 
 ```
    
@@ -149,7 +164,15 @@ For `"aab"`, heap = `[a, b]` (`a` before `b` since a=2, b=1).
     
 
 ---
+```
+    // Step 4: Handle leftover
+    if (!maxHeap.isEmpty()) {
+        char ch = maxHeap.poll();
+        if (freqMap.get(ch) > 1) return ""; // cannot place safely
+        res.append(ch);
+    }
 
+```
    
 
 👉 If one char remains:
