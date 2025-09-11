@@ -231,4 +231,95 @@ For `"aab"` → `a` left with count 1 → result `"aba"`. ✅
 - **Space:** O(k) for map + heap
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
-things t
+**Guide**
+
+# 🔹 Default Behavior of Java PriorityQueue
+
+- By default, `PriorityQueue` in Java is a **min-heap** → the _smallest_ element (according to natural ordering) comes out first.
+    
+- Example:
+    
+    `PriorityQueue<Integer> pq = new PriorityQueue<>(); pq.add(5); pq.add(1); pq.add(3); System.out.println(pq.poll()); // 1 (smallest first)`
+    
+
+But in **Reorganize String**, we want the **most frequent character first**, i.e., a **max-heap** based on frequency.
+
+---
+
+# 🔹 Custom Comparator
+
+That’s where this line comes in:
+
+`PriorityQueue<Character> maxHeap = new PriorityQueue<>(     (a, b) -> freqMap.get(b) - freqMap.get(a) );`
+
+### How this works:
+
+- `(a, b) -> freqMap.get(b) - freqMap.get(a)` is a **lambda comparator**.
+    
+- When inserting elements, PriorityQueue compares them:
+    
+    - If result < 0 → `a` comes before `b`.
+        
+    - If result > 0 → `b` comes before `a`.
+        
+
+Here:
+
+- `freqMap.get(b) - freqMap.get(a)` ensures **higher frequency characters come first**.
+    
+    - Example: if `freq[a] = 2` and `freq[b] = 5`:
+        
+        - compare(a,b) = 5 - 2 = 3 > 0 → means `b` (higher freq) should be before `a`.
+            
+- This makes the heap behave like a **max-heap**.
+    
+
+---
+
+# 🔹 Step-by-step example
+
+Suppose `s = "aab"`.
+
+- freqMap = `{a=2, b=1}`
+    
+- Heap comparator uses `(a,b) -> freqMap.get(b) - freqMap.get(a)`
+    
+
+When comparing `a` and `b`:
+
+- freqMap.get(a) = 2
+    
+- freqMap.get(b) = 1
+    
+- compute = `1 - 2 = -1` → so `a` should come before `b`.
+    
+
+Thus, heap orders elements as `[a(2), b(1)]`.
+
+---
+
+# 🔹 Alternative Ways to Write Comparator
+
+1. **Using `Comparator.comparingInt`:**
+    
+
+`PriorityQueue<Character> maxHeap = new PriorityQueue<>(     Comparator.comparingInt((Character c) -> freqMap.get(c)).reversed() );`
+
+2. **Using an explicit comparator class:**
+    
+
+`PriorityQueue<Character> maxHeap = new PriorityQueue<>(new Comparator<Character>() {     @Override     public int compare(Character a, Character b) {         return freqMap.get(b) - freqMap.get(a);     } });`
+
+3. **Natural ordering but negative frequencies (trick):**  
+    Instead of comparator, store pairs `[char, -freq]` so that default min-heap acts like max-heap.
+    
+
+---
+
+# 🔑 Key Things to Remember about Comparator
+
+- `PriorityQueue` uses comparator to decide ordering.
+    
+- `(a, b) -> freqMap.get(b) - freqMap.get(a)` means **higher freq = higher priority**.
+    
+- If two chars have same frequency, order between them doesn’t matter (heap property takes care).
