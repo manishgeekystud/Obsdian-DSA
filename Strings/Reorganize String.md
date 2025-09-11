@@ -216,7 +216,58 @@ For `"aab"` → `a` left with count 1 → result `"aba"`. ✅
 - Poll `a, b` → res = `"ab"`, freq = `{a=2, b=0}` → push back `a`
     
 - Heap = `[a]` → but freq[a]=2 → cannot place safely → return `""` ❌
+
+-----------------------------------------------------------------------
+
+Example 3-aabaccdef
+Step 1: Count frequencies
+
+`s = "aabaccdef"` → length = 9
+
+|Character|Frequency|
+|---|---|
+|a|3|
+|b|1|
+|c|2|
+|d|1|
+|e|1|
+|f|1|
+
+So: `freqMap = {a=3, b=1, c=2, d=1, e=1, f=1}`
+
+---
+
+# 🔹 Step 2: Build Max-Heap
+
+Heap order is based on frequency (high → low):
+
+`[a(3), c(2), b(1), d(1), e(1), f(1)]`
+
+---
+
+# 🔹 Step 3: Greedy pairing (while loop)
+
+|Step|Heap Before|Poll 1|Poll 2|Result After Append|Updated Frequencies|Heap After|
+|---|---|---|---|---|---|---|
+|1|[a(3), c(2), b(1), d(1), e(1), f(1)]|a(3)|c(2)|`"ac"`|a=2, c=1, others same|[a(2), c(1), b(1), d(1), e(1), f(1)]|
+|2|[a(2), c(1), b(1), d(1), e(1), f(1)]|a(2)|b(1)|`"acab"`|a=1, b=0|[a(1), c(1), d(1), e(1), f(1)]|
+|3|[a(1), c(1), d(1), e(1), f(1)]|a(1)|c(1)|`"acabc"`|a=0, c=0|[d(1), e(1), f(1)]|
+|4|[d(1), e(1), f(1)]|d(1)|e(1)|`"acabcd e"`|d=0, e=0|[f(1)]|
+
+---
+
+# 🔹 Step 4: Handle leftover
+
+- Heap = `[f(1)]`
     
+- freq[f] = 1 → append → `"acabcde f"`
+    
+
+---
+
+# ✅ Final Result
+
+`"acabcdef"` (valid, no two adjacent same letters).
 
 ---
 
