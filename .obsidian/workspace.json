@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strings/Stringg/imp problems.md",
+                "file": "Strings/Reorganize String.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "imp problems"
+              "title": "Reorganize String"
             }
           }
         ]
@@ -181,10 +181,11 @@
   },
   "active": "3c21bdbb2f18629e",
   "lastOpenFiles": [
+    "Strings/Stringg/imp problems.md",
+    "Strings/Reorganize String.md",
     "Strings/Group Anagrams.md",
     "Hashing/First repeating Element.md",
     "Hashing/Count Distinct elements in a  window.md",
-    "Strings/Stringg/imp problems.md",
     "Pasted image 20250910234203.png",
     "Strings/Longest Repeating Character.md",
     "Strings/Permutation in String.md",
@@ -208,7 +209,6 @@
     "Queue/6. Reverse First K queue Elements.md",
     "Queue/5. Reverse a Queue.md",
     "Queue/3. Implementing Stack Using Queues.md",
-    "Queue/4.Implementing Queue  using Stack.md",
     "Pasted image 20250901223801.png",
     "Queue",
     "Pasted image 20250731225407.png",
