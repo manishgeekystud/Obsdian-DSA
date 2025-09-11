@@ -95,21 +95,39 @@ public class Solution {
 
 # 🔹 Code Explanation
 
-`public String reorganizeString(String s) {     // Step 1: Count frequency of each character     HashMap<Character, Integer> freqMap = new HashMap<>();     for (char c : s.toCharArray()) {         freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);     }`
+```
+public String reorganizeString(String s) {
+    // Step 1: Count frequency of each character
+    HashMap<Character, Integer> freqMap = new HashMap<>();
+    for (char c : s.toCharArray()) {
+        freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+    }
+
+```
 
 👉 Here we build a frequency map.  
 Example `s = "aab"` →  
 `freqMap = {a=2, b=1}`
 
 ---
+```
+    // Step 2: Create a max-heap based on frequency
+    PriorityQueue<Character> maxHeap = new PriorityQueue<>(
+        (a, b) -> freqMap.get(b) - freqMap.get(a) // higher freq first
+    );
+    maxHeap.addAll(freqMap.keySet());
 
+
+```
 
 
 👉 `PriorityQueue` stores characters sorted by **frequency (highest first)**.  
 For `"aab"`, heap = `[a, b]` (`a` before `b` since a=2, b=1).
 
 ---
+```
 
+```
    
 
 👉 Here’s the greedy trick:
