@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Word Pattern"
             }
+          },
+          {
+            "id": "4b6ab1e34dec1a23",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,6 +183,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -179,7 +193,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c21bdbb2f18629e",
+  "active": "4b6ab1e34dec1a23",
   "lastOpenFiles": [
     "Strings/Stringg/imp problems.md",
     "Strings/Word Pattern.md",
