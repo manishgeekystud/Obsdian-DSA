@@ -114,7 +114,7 @@ If code can throw a checked exception, you **must** either:
 - Declare it using the `throws` keyword.
 
 Otherwise, the program will not compile
-```
+```java
 import java.io.FileReader;
 
 public class Demo {
@@ -156,3 +156,5 @@ public class Demo {
 
 }
 ```
+Here, the responsibility of handling the exception is transferred to the caller.
+
