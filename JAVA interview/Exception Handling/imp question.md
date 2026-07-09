@@ -157,4 +157,14 @@ public class Demo {
 }
 ```
 Here, the responsibility of handling the exception is transferred to the caller.
+# Common Checked Exceptions
 
+| Exception                | When It Occurs               |
+| ------------------------ | ---------------------------- |
+| `IOException`            | Input/output operations fail |
+| `FileNotFoundException`  | File does not exist          |
+| `SQLException`           | Database-related errors      |
+| `ClassNotFoundException` | Class cannot be located      |
+| `InterruptedException`   | Thread interruption          |
+| `ParseException`         | Parsing invalid input        |
+**What is an Unchecked Exception?**
