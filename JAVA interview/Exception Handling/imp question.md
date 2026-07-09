@@ -175,4 +175,24 @@ These exceptions occur **at runtime**.
 The compiler does **not** force you to handle them.
 They are subclasses of `RuntimeException`.
 
+```java
+public class Demo {
 
+    public static void main(String[] args) {
+
+        String name = null;
+
+        System.out.println(name.length());
+
+    }
+
+}
+```
+Compilation succeeds.
+
+At runtime:
+
+```java
+Exception in thread "main"
+java.lang.NullPointerException
+```
