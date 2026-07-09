@@ -9,7 +9,7 @@ In Java, an exception is represented as an **object** created by the JVM or expl
 > 
 > "An exception is an object that represents an abnormal condition occurring during program execution. When an exception occurs, Java interrupts the normal execution flow and transfers control to an appropriate exception handler (`catch` block). If no handler is found, the program terminates and the JVM prints the stack trace."
 
-2.Exception Heirarchy
+**2.Exception Heirarchy**
 
 The Java Exception Hierarchy is built around the **`Throwable`** class.
 ```
@@ -80,4 +80,27 @@ Examples:
 - VirtualMachineError
 - LinkageError
 
-3.checked vs unchecked 
+3. **checked vs unchecked exception?**
+
+Java exceptions are divided into two categories:
+
+```
+Throwable
+    |
+    +-- Exception
+            |
+            +-- Checked Exceptions
+            |       |
+            |       +-- IOException
+            |       +-- SQLException
+            |       +-- ClassNotFoundException
+            |       +-- InterruptedException
+            |
+            +-- RuntimeException (Unchecked)
+                    |
+                    +-- NullPointerException
+                    +-- ArithmeticException
+                    +-- ArrayIndexOutOfBoundsException
+                    +-- NumberFormatException
+                    +-- IllegalArgumentException
+```
