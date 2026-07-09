@@ -80,4 +80,4 @@ Examples:
 - VirtualMachineError
 - LinkageError
 
-3.
+3.checked vs unchecked 
