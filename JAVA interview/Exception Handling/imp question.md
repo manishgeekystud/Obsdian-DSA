@@ -167,4 +167,12 @@ Here, the responsibility of handling the exception is transferred to the caller.
 | `ClassNotFoundException` | Class cannot be located      |
 | `InterruptedException`   | Thread interruption          |
 | `ParseException`         | Parsing invalid input        |
-**What is an Unchecked Exception?**
+==**What is an Unchecked Exception?**==
+
+An **Unchecked Exception** is an exception that the compiler **does not check** during compilation.
+
+These exceptions occur **at runtime**.
+The compiler does **not** force you to handle them.
+They are subclasses of `RuntimeException`.
+
+
