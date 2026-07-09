@@ -104,3 +104,16 @@ Throwable
                     +-- NumberFormatException
                     +-- IllegalArgumentException
 ```
+# What is a Checked Exception?
+
+A **Checked Exception** is an exception that the **Java compiler checks at compile time**.
+
+If code can throw a checked exception, you **must** either:
+
+- Handle it using `try-catch`, or
+- Declare it using the `throws` keyword.
+
+Otherwise, the program will not compile
+```
+
+```
