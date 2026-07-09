@@ -12,6 +12,7 @@ In Java, an exception is represented as an **object** created by the JVM or expl
 2.Exception Heirarchy
 
 The Java Exception Hierarchy is built around the **`Throwable`** class.
+```
                     Object
                        |
                  Throwable
@@ -25,3 +26,46 @@ The Java Exception Hierarchy is built around the **`Throwable`** class.
 NullPointer  Arithmetic  ArrayIndex   IllegalArgument
 Exception    Exception   OutOfBounds  Exception
                           Exception
+```
+```
+// A more detailed hierarchy:
+java.lang.Object
+        |
+        +-- java.lang.Throwable
+                |
+                +-- java.lang.Error
+                |      |
+                |      +-- VirtualMachineError
+                |      |      +-- OutOfMemoryError
+                |      |      +-- StackOverflowError
+                |      |
+                |      +-- LinkageError
+                |      +-- AssertionError
+                |
+                +-- java.lang.Exception
+                       |
+                       +-- IOException
+                       |      |
+                       |      +-- FileNotFoundException
+                       |      +-- EOFException
+                       |
+                       +-- SQLException
+                       |
+                       +-- ClassNotFoundException
+                       |
+                       +-- InterruptedException
+                       |
+                       +-- ParseException
+                       |
+                       +-- RuntimeException
+                              |
+                              +-- NullPointerException
+                              +-- ArithmeticException
+                              +-- ArrayIndexOutOfBoundsException
+                              +-- StringIndexOutOfBoundsException
+                              +-- NumberFormatException
+                              +-- IllegalArgumentException
+                              +-- IllegalStateException
+                              +-- ClassCastException
+                              +-- UnsupportedOperationException
+```
