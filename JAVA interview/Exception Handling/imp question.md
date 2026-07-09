@@ -115,5 +115,17 @@ If code can throw a checked exception, you **must** either:
 
 Otherwise, the program will not compile
 ```
+import java.io.FileReader;
 
+public class Demo {
+    public static void main(String[] args) {
+        FileReader fr = new FileReader("data.txt");
+    }
+}
+
+
+o/p:-Unhandled exception type FileNotFoundException
 ```
+# Handling a Checked Exception
+
+### Using try-catch
