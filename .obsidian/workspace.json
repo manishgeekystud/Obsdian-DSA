@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Rope Cutting Problem"
             }
+          },
+          {
+            "id": "4ed4b71cc0f1ff4a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,7 +193,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c21bdbb2f18629e",
+  "active": "4ed4b71cc0f1ff4a",
   "lastOpenFiles": [
     "Recursion/Palindrome check using Recusrion.md",
     "Recursion/Rope Cutting Problem.md",
