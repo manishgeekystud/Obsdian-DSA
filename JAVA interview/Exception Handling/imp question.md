@@ -129,3 +129,30 @@ o/p:-Unhandled exception type FileNotFoundException
 # Handling a Checked Exception
 
 ### Using try-catch
+```java
+import java.io.*;
+
+public class Demo {
+    public static void main(String[] args) {
+
+        try {
+            FileReader fr = new FileReader("data.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
+        }
+
+    }
+}
+```
+**Using throws**
+```java
+import java.io.*;
+
+public class Demo {
+
+    public static void readFile() throws IOException {
+        FileReader fr = new FileReader("data.txt");
+    }
+
+}
+```
