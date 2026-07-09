@@ -69,3 +69,15 @@ java.lang.Object
                               +-- ClassCastException
                               +-- UnsupportedOperationException
 ```
+Errors indicate **serious problems** in the JVM.
+
+They are **not intended to be handled** by application code.
+
+Examples:
+
+- OutOfMemoryError
+- StackOverflowError
+- VirtualMachineError
+- LinkageError
+
+3.
