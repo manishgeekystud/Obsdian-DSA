@@ -199,12 +199,12 @@ java.lang.NullPointerException
 
 # Comparison Table
 
-|Feature|Checked Exception|Unchecked Exception|
-|---|---|---|
-|Compiler Checks|✅ Yes|❌ No|
-|Detected|Compile time|Runtime|
-|Must Handle|✅ Yes|❌ No|
-|Parent Class|`Exception`|`RuntimeException`|
-|Program Compiles Without Handling|❌ No|✅ Yes|
-|Represents|External conditions|Programming bugs|
-|Recovery Expected|Usually|Sometimes|
+| Feature                           | Checked Exception   | Unchecked Exception |
+| --------------------------------- | ------------------- | ------------------- |
+| Compiler Checks                   | ✅ Yes               | ❌ No                |
+| Detected                          | Compile time        | Runtime             |
+| Must Handle                       | ✅ Yes               | ❌ No                |
+| Parent Class                      | `Exception`         | `RuntimeException`  |
+| Program Compiles Without Handling | ❌ No                | ✅ Yes               |
+| Represents                        | External conditions | Programming bugs    |
+| Recovery Expected                 | Usually             | Sometimes           |
