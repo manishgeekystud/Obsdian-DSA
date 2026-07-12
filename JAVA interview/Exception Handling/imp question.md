@@ -208,3 +208,107 @@ java.lang.NullPointerException
 | Program Compiles Without Handling | ❌ No                | ✅ Yes               |
 | Represents                        | External conditions | Programming bugs    |
 | Recovery Expected                 | Usually             | Sometimes           |
+### 1. Can we have a try block without catch?
+
+**Yes**, if there is a `finally`.
+
+```
+try {
+    System.out.println("Hello");
+}
+finally {
+    System.out.println("Cleanup");
+}
+```
+
+---
+
+### 2. Can we have a catch without try?
+
+**No.** A `catch` block must always follow a `try` block.
+
+---
+
+### 3. Can we have multiple catch blocks?
+
+**Yes.**
+
+```
+try {
+
+}
+catch(IOException e){
+
+}
+catch(SQLException e){
+
+}
+```
+
+---
+
+### 4. Can we have multiple finally blocks?
+
+**No.** Only one `finally` block can be associated with a `try`.
+
+---
+
+### 5. Does finally always execute?
+
+**Almost always.** It executes whether an exception occurs or not, except in situations like `System.exit(0)`, JVM crashes, or forced process termination.
+
+---
+
+### 6. What happens if an exception occurs inside the catch block?
+
+It propagates unless it is handled by another surrounding `try-catch`.
+
+Example:
+
+```
+try {
+    int x = 10 / 0;
+}
+catch (ArithmeticException e) {
+    String s = null;
+    System.out.println(s.length()); // New NullPointerException
+}
+```
+
+The new `NullPointerException` is **not** handled by the same `catch`; it propagates unless there is an outer handler.
+
+---
+
+### 7. Can we return from try, catch, and finally?
+
+Yes, but returning from `finally` is discouraged because it overrides returns from `try` or `catch` and can even suppress exceptions.
+
+---
+
+# One-Minute Interview Revision
+
+|Block|Purpose|Executes When|
+|---|---|---|
+|`try`|Contains risky code|Always entered first|
+|`catch`|Handles matching exceptions|Only if a matching exception occurs|
+|`finally`|Cleanup code|Almost always, regardless of whether an exception occurred|
+
+### Execution Order
+
+```
+try
+ ↓
+Exception?
+ ↓
+catch (if matched)
+ ↓
+finally
+ ↓
+Program continues (or exception propagates if unhandled)
+```
+
+### Interview Tip
+
+If asked, **"Which block is guaranteed to execute?"**, answer:
+
+> **`finally` is designed to execute regardless of whether an exception occurs or is caught, making it the preferred place for cleanup logic. The main exceptions are when the JVM exits abruptly (for example, via `System.exit(0)`) or crashes.**
