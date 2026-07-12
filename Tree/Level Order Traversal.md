@@ -6,7 +6,7 @@ Consider the below binary tree:
   
 The Level Order Traversal of the above Binary Tree will be: **10 20 30 40 50 60 70 80**.  
   
-**Algorithm**: The Level Order Traversal can be implemented efficiently using a Queue.  
+**Algorithm**: The Level Order Traversal can be implemented efficiently using a **Queue**.  
 
 1. Create an empty queue q.
 2. Push the root node of tree to q. That is, q.push(root).
