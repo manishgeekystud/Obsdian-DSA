@@ -343,7 +343,7 @@ Although their names are similar, they serve **completely different purposes**.
 
 # Visual Difference
 
-```
+``
                     Exception Handling
 
           throw                      throws
