@@ -14,3 +14,54 @@ The Level Order Traversal of the above Binary Tree will be: **10 20 30 40 50 60
     - Pop the top node from queue and print the node.
     - Enqueue node's children (first left then right children) to q
     - Repeat the process until queue is not empty.
+**Code**
+```java
+// Iterative Queue based Java program to do
+// level order traversal of Binary Tree 
+
+import java.util.Queue; 
+import java.util.LinkedList; 
+
+/* Class to represent Tree node */
+class Node { 
+    int data; 
+    Node left, right; 
+
+    public Node(int item) { 
+        data = item; 
+        left = null; 
+        right = null; 
+    } 
+} 
+
+/* Class to print Level Order Traversal */
+class BinaryTree { 
+
+    Node root; 
+
+    /* Given a binary tree. Print its nodes in  
+       level order using array for implementing queue */
+    void printLevelOrder() 
+    { 
+        Queue<Node> queue = new LinkedList<Node>(); 
+        queue.add(root); 
+        while (!queue.isEmpty()) 
+        { 
+            Node tempNode = queue.poll(); 
+            System.out.print(tempNode.data + " "); 
+
+            /* Enqueue left child */
+            if (tempNode.left != null) { 
+                queue.add(tempNode.left); 
+            } 
+
+            /* Enqueue right child */
+            if (tempNode.right != null) { 
+                queue.add(tempNode.right); 
+            } 
+        } 
+    } 
+
+}
+
+```
