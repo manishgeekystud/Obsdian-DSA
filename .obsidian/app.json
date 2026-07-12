@@ -9,5 +9,5 @@
   "strictLineBreaks": true,
   "tabSize": 4,
   "vimMode": false,
-  "showLineNumber": true
+  "showLineNumber": false
 }
