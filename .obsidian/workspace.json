@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/Untitled.md",
+                "file": "Tree/8. Print Left view of Binary tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "8. Print Left view of Binary tree"
             }
           }
         ]
@@ -183,7 +183,7 @@
   "active": "f177b724172c53e8",
   "lastOpenFiles": [
     "Tree/7. Maximum Of Binary Tree.md",
-    "Tree/Untitled.md",
+    "Tree/8. Print Left view of Binary tree.md",
     "Tree/6.Size of a Binary Tree.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
     "Tree/4.Level Order Traversal.md",
