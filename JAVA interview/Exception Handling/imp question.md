@@ -891,7 +891,3 @@ It only informs the compiler and the caller about possible exceptions.
 - **`throw` → Action**: _"I am throwing an exception now."_
 - **`throws` → Declaration**: _"This method might throw these exceptions, so the caller should be prepared."_
   
-  ,,,
-  
-
-**Custom Exceptions**

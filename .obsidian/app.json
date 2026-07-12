@@ -8,5 +8,6 @@
   "defaultViewMode": "preview",
   "strictLineBreaks": true,
   "tabSize": 4,
-  "vimMode": false
+  "vimMode": false,
+  "showLineNumber": true
 }
