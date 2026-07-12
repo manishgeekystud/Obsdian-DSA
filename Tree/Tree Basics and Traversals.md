@@ -104,3 +104,24 @@ class BinaryTree {
 > 2. _Traverse the left subtree, i.e., call Preorder(left->subtree)_
 > 3. _Traverse the right subtree, i.e., call Preorder(right->subtree)_
 
+### Uses of Preorder:
+
+Preorder traversal is used to create a copy of the tree. Preorder traversal is also used to get prefix expressions on an expression tree.
+
+```java
+/* Given a binary tree, print its nodes in preorder*/
+	void printPreorder(Node node)
+	{
+		if (node == null)
+			return;
+
+		/* first print data of node */
+		System.out.print(node.key + " ");
+
+		/* then recur on left subtree */
+		printPreorder(node.left);
+
+		/* now recur on right subtree */
+		printPreorder(node.right);
+	}
+```
