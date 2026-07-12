@@ -315,3 +315,578 @@ If asked, **"Which block is guaranteed to execute?"**, answer:
 
 ==**Throw vs Throws?**==
 
+# Throw vs Throws in Java (Complete Interview Guide)
+
+One of the most common Java interview questions is:
+
+> **What is the difference between `throw` and `throws`?**
+
+Although their names are similar, they serve **completely different purposes**.
+
+- **`throw`** is used to **explicitly create and throw an exception object**.
+- **`throws`** is used in a **method declaration** to indicate that the method may pass an exception to its caller.
+
+---
+
+# Quick Comparison
+
+|Feature|`throw`|`throws`|
+|---|---|---|
+|Purpose|Explicitly throws an exception|Declares possible exceptions|
+|Used In|Method body|Method signature|
+|Followed By|Exception object|Exception class(es)|
+|Number Allowed|One exception object at a time|Multiple exception classes|
+|Used With|Checked & Unchecked exceptions|Mainly checked exceptions|
+|Responsibility|Creates/throws exception|Passes handling responsibility to caller|
+
+---
+
+# Visual Difference
+
+```
+                    Exception Handling
+
+          throw                      throws
+             |                          |
+    Inside Method Body         Method Declaration
+             |                          |
+    Throws Exception Object    Declares Exception Types
+```
+
+---
+
+# What is `throw`?
+
+The `throw` keyword is used to **manually throw an exception**.
+
+### Syntax
+
+```
+throw new ExceptionType("Message");
+```
+
+---
+
+## Example 1: Throwing an ArithmeticException
+
+```
+public class Demo {
+
+    public static void main(String[] args) {
+
+        throw new ArithmeticException("Division by zero");
+
+    }
+
+}
+```
+
+### Output
+
+```
+Exception in thread "main"
+java.lang.ArithmeticException: Division by zero
+```
+
+---
+
+# How JVM Executes `throw`
+
+```
+throw new ArithmeticException("Invalid");
+```
+
+### Execution Steps
+
+|Step|Action|
+|---|---|
+|1|Create `ArithmeticException` object|
+|2|Store message inside object|
+|3|JVM throws the object|
+|4|JVM searches for matching `catch`|
+|5|If not found, program terminates|
+
+---
+
+# Memory Representation
+
+```
+Stack
+
+main()
+   |
+throw new ArithmeticException()
+
+           |
+           V
+
+Heap
++---------------------------+
+| ArithmeticException       |
+| Message = "Invalid"       |
++---------------------------+
+```
+
+The exception object is created on the **heap**, and the reference is thrown.
+
+---
+
+# Example 2: Throw with try-catch
+
+```
+public class Demo {
+
+    public static void main(String[] args) {
+
+        try {
+
+            throw new ArithmeticException("Invalid Division");
+
+        }
+
+        catch (ArithmeticException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+}
+```
+
+### Output
+
+```
+Invalid Division
+```
+
+---
+
+# Throwing a Custom Exception
+
+```
+public class Demo {
+
+    static void validateAge(int age) {
+
+        if(age < 18) {
+
+            throw new IllegalArgumentException("Not Eligible");
+
+        }
+
+        System.out.println("Eligible");
+
+    }
+
+    public static void main(String[] args) {
+
+        validateAge(15);
+
+    }
+
+}
+```
+
+Output
+
+```
+Exception in thread "main"
+java.lang.IllegalArgumentException: Not Eligible
+```
+
+---
+
+# What is `throws`?
+
+The `throws` keyword is used to **declare** that a method may throw one or more exceptions.
+
+It does **not** throw an exception itself.
+
+### Syntax
+
+```
+returnType methodName() throws ExceptionType {
+
+}
+```
+
+---
+
+# Example
+
+```
+import java.io.*;
+
+public class Demo {
+
+    static void readFile() throws IOException {
+
+        FileReader fr = new FileReader("abc.txt");
+
+    }
+
+}
+```
+
+Here:
+
+- `readFile()` may throw `IOException`.
+- The caller must handle it or declare it again.
+
+---
+
+# Flow of `throws`
+
+```
+readFile()
+
+        |
+        V
+
+throws IOException
+
+        |
+        V
+
+Caller
+
+Handle?
+  /      \
+Yes      No
+ |         |
+Continue  Compilation Error
+```
+
+---
+
+# Complete Example
+
+```
+import java.io.*;
+
+public class Demo {
+
+    static void readFile() throws IOException {
+
+        FileReader fr = new FileReader("abc.txt");
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            readFile();
+
+        }
+
+        catch(IOException e){
+
+            System.out.println("Handled");
+
+        }
+
+    }
+
+}
+```
+
+Output
+
+```
+Handled
+```
+
+---
+
+# Multiple Exceptions with `throws`
+
+A method can declare multiple exception types.
+
+```
+public void process()
+        throws IOException,
+               SQLException,
+               ClassNotFoundException {
+
+}
+```
+
+---
+
+# Can `throw` Throw Checked Exceptions?
+
+Yes.
+
+```
+import java.io.IOException;
+
+public class Demo {
+
+    static void test() throws IOException {
+
+        throw new IOException("File Missing");
+
+    }
+
+}
+```
+
+Since `IOException` is checked, the method must declare it with `throws` or handle it with `try-catch`.
+
+---
+
+# Can `throw` Throw Runtime Exceptions?
+
+Yes.
+
+```
+throw new NullPointerException();
+```
+
+No `throws` declaration is required because `NullPointerException` is unchecked.
+
+---
+
+# Dry Run
+
+```
+public class Demo {
+
+    static void checkAge(int age) {
+
+        if(age < 18)
+
+            throw new ArithmeticException();
+
+        System.out.println("Eligible");
+
+    }
+
+    public static void main(String[] args) {
+
+        checkAge(15);
+
+    }
+
+}
+```
+
+### Execution Table
+
+|Step|Statement|Result|
+|---|---|---|
+|1|`main()`|Starts|
+|2|`checkAge(15)`|Called|
+|3|`15 < 18`|True|
+|4|`throw new ArithmeticException()`|Exception created|
+|5|Search for `catch`|Not found|
+|6|Program terminates|Stack trace printed|
+
+---
+
+# `throw` vs `throws` (Side-by-Side)
+
+## `throw`
+
+```
+throw new IOException();
+```
+
+- Creates an exception object.
+- Immediately transfers control to the exception-handling mechanism.
+
+---
+
+## `throws`
+
+```
+void read() throws IOException {
+
+}
+```
+
+- Declares that the method may throw an exception.
+- Shifts handling responsibility to the caller.
+
+---
+
+# Flow Diagram
+
+```
+                  Method
+
+         +--------------------+
+         |                    |
+         | throw Exception    |
+         |                    |
+         +--------------------+
+                   |
+              Exception Object
+                   |
+             Search catch block
+
+
+         +--------------------+
+         |                    |
+         | throws IOException |
+         |                    |
+         +--------------------+
+                   |
+          Caller Handles Later
+```
+
+---
+
+# Common Mistakes
+
+### ❌ Using an exception class with `throw`
+
+Wrong:
+
+```
+throw IOException;
+```
+
+Correct:
+
+```
+throw new IOException();
+```
+
+`throw` requires an **exception object**, not a class name.
+
+---
+
+### ❌ Using an object with `throws`
+
+Wrong:
+
+```
+public void test() throws new IOException();
+```
+
+Correct:
+
+```
+public void test() throws IOException {
+}
+```
+
+`throws` lists **exception classes**, not objects.
+
+---
+
+### ❌ Assuming `throws` actually throws an exception
+
+`throws` only declares a possibility. The exception is thrown only if code inside the method executes a `throw` statement or calls another method that throws an exception.
+
+---
+
+# Best Practices
+
+- Use **`throw`** when validating business rules or method arguments.
+
+```
+if (salary < 0) {
+    throw new IllegalArgumentException("Salary cannot be negative");
+}
+```
+
+- Use **`throws`** for checked exceptions that callers are expected to handle.
+
+```
+public void readFile() throws IOException {
+}
+```
+
+- Prefer specific exception types instead of generic `Exception`.
+
+---
+
+# Interview Questions
+
+### 1. What is the difference between `throw` and `throws`?
+
+- `throw` explicitly throws an exception object.
+- `throws` declares that a method may throw one or more exceptions.
+
+---
+
+### 2. Can we use `throw` without `throws`?
+
+**Yes**, for unchecked exceptions.
+
+```
+throw new NullPointerException();
+```
+
+---
+
+### 3. Can we use `throws` without `throw`?
+
+**Yes**.
+
+```
+void read() throws IOException {
+
+}
+```
+
+The method may call another method that throws the exception, or it may be implemented later.
+
+---
+
+### 4. Can `throws` declare multiple exceptions?
+
+**Yes.**
+
+```
+void process()
+throws IOException,
+       SQLException,
+       ParseException {
+
+}
+```
+
+---
+
+### 5. Can `throw` throw multiple exceptions at once?
+
+**No.**
+
+Only **one exception object** can be thrown by a single `throw` statement.
+
+---
+
+### 6. Does `throws` create an exception object?
+
+**No.**
+
+It only informs the compiler and the caller about possible exceptions.
+
+---
+
+### 7. Which keyword transfers responsibility to the caller?
+
+**Answer:** `throws`
+
+---
+
+# One-Minute Interview Revision
+
+|`throw`|`throws`|
+|---|---|
+|Used inside a method|Used in the method declaration|
+|Throws an exception object|Declares exception classes|
+|Immediate exception generation|Passes responsibility to the caller|
+|Followed by `new Exception()`|Followed by exception class names|
+|One exception object at a time|Can declare multiple exception types|
+
+### Easy Way to Remember
+
+- **`throw` → Action**: _"I am throwing an exception now."_
+- **`throws` → Declaration**: _"This method might throw these exceptions, so the caller should be prepared."_
