@@ -27,7 +27,7 @@ Unlike linear data structures (Array, Linked List, Queues, Stacks, etc.), which 
 - Preorder (Root, Left, Right) : 1 2 4 5 3.
 - Postorder (Left, Right, Root) : 4 5 2 3 1
 
-**Inorder traversal**
+==**Inorder traversal**==
    **_Algorithm Inorder(tree)_**
 _Traverse the left subtree, i.e., call Inorder(left->subtree)_
 _Visit the root._
