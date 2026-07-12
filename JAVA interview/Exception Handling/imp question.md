@@ -394,7 +394,7 @@ java.lang.ArithmeticException: Division by zero
 
 ```
 throw new ArithmeticException("Invalid");
-```
+```java
 
 ### Execution Steps
 
