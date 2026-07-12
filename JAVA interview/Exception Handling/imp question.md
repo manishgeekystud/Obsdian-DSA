@@ -312,3 +312,5 @@ Program continues (or exception propagates if unhandled)
 If asked, **"Which block is guaranteed to execute?"**, answer:
 
 > **`finally` is designed to execute regardless of whether an exception occurs or is caught, making it the preferred place for cleanup logic. The main exceptions are when the JVM exits abruptly (for example, via `System.exit(0)`) or crashes.**
+
+**Throw vs Throws?**
