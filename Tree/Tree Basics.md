@@ -15,3 +15,14 @@ A Sample tree is as shown below:
 - **Siblings**: The children nodes of same parent are called siblings. That is, the nodes with same parent are called siblings. In the above tree, nodes _5, 11, and 63_ are siblings.
 - **Leaf Node**: A node is said to be the leaf node if it has no children. In the above tree, node **15** is one of the leaf nodes.
 - **Height of a Tree**: Height of a tree is defined as the total number of levels in the tree or the length of the path from the root node to the node present at the last level. The above tree is of height **2**.
+
+**Binary Tree Traversals**
+
+Unlike linear data structures (Array, Linked List, Queues, Stacks, etc.), which have only one logical way to traverse them, trees can be traversed in different ways. Following are the generally used ways for traversing trees:  
+  
+![Example Tree](https://media.geeksforgeeks.org/wp-content/cdn-uploads/2009/06/tree12.gif "tree12")  
+  
+
+- Inorder (Left, Root, Right) : 4 2 5 1 3
+- Preorder (Root, Left, Right) : 1 2 4 5 3.
+- Postorder (Left, Right, Root) : 4 5 2 3 1

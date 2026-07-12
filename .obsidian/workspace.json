@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/Tree Termonologies.md",
+                "file": "Tree/Tree Basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tree Termonologies"
+              "title": "Tree Basics"
             }
           }
         ]
@@ -183,7 +183,7 @@
   "active": "f177b724172c53e8",
   "lastOpenFiles": [
     "JAVA interview/Exception Handling/imp question.md",
-    "Tree/Tree Termonologies.md",
+    "Tree/Tree Basics.md",
     "Tree",
     "JAVA interview/Exception Handling",
     "Untitled",
