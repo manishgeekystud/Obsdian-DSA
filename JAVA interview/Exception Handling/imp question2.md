@@ -1,0 +1,627 @@
+
+# Custom Exceptions in Java (Complete Interview Masterclass)
+
+A **Custom Exception** (also called a **User-Defined Exception**) is an exception class created by the programmer to represent **application-specific or business-specific errors**.
+
+Java provides many built-in exceptions such as:
+
+- `NullPointerException`
+- `ArithmeticException`
+- `IOException`
+
+However, these do not always clearly represent business rules.
+
+For example:
+
+- Bank account balance is insufficient
+- Age is below 18 for voting
+- Employee salary is negative
+- Invalid Aadhaar number
+- Invalid Passport number
+
+In such cases, creating a custom exception makes the code more meaningful and easier to maintain.
+
+---
+
+# Why Do We Need Custom Exceptions?
+
+Consider this example:
+
+```
+public class Demo {
+
+    static void withdraw(int balance, int amount) {
+
+        if (amount > balance) {
+            throw new ArithmeticException("Insufficient Balance");
+        }
+
+        System.out.println("Withdrawal Successful");
+    }
+
+    public static void main(String[] args) {
+        withdraw(5000, 7000);
+    }
+}
+```
+
+### Output
+
+```
+Exception in thread "main"
+java.lang.ArithmeticException: Insufficient Balance
+```
+
+### Problem
+
+`ArithmeticException` is intended for mathematical errors (like division by zero), **not** banking problems.
+
+A better solution is to create an exception that clearly represents the business rule.
+
+---
+
+# Solution: Create a Custom Exception
+
+```
+                Throwable
+                    |
+                Exception
+                    |
+        InsufficientBalanceException
+```
+
+Now the exception clearly describes the actual problem.
+
+---
+
+# Steps to Create a Custom Exception
+
+There are **three simple steps**.
+
+## Step 1: Create a class
+
+```
+class InsufficientBalanceException extends Exception {
+
+}
+```
+
+---
+
+## Step 2: Add Constructors
+
+```
+class InsufficientBalanceException extends Exception {
+
+    public InsufficientBalanceException(String message) {
+        super(message);
+    }
+
+}
+```
+
+`super(message)` passes the message to the `Exception` class.
+
+---
+
+## Step 3: Throw the Exception
+
+```
+throw new InsufficientBalanceException("Insufficient Balance");
+```
+
+---
+
+# Complete Program (Checked Custom Exception)
+
+```
+class InsufficientBalanceException extends Exception {
+
+    public InsufficientBalanceException(String message) {
+        super(message);
+    }
+}
+
+public class Bank {
+
+    static void withdraw(int balance, int amount)
+            throws InsufficientBalanceException {
+
+        if (amount > balance) {
+            throw new InsufficientBalanceException("Insufficient Balance");
+        }
+
+        System.out.println("Withdrawal Successful");
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            withdraw(5000, 7000);
+
+        }
+
+        catch (InsufficientBalanceException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+}
+```
+
+### Output
+
+```
+Insufficient Balance
+```
+
+---
+
+# Dry Run
+
+Suppose:
+
+```
+withdraw(5000,7000);
+```
+
+### Execution Table
+
+|Step|Statement|Result|
+|---|---|---|
+|1|`main()` starts|✔|
+|2|`withdraw()` called|✔|
+|3|`7000 > 5000`|True|
+|4|Create `InsufficientBalanceException`|✔|
+|5|`throw` exception|✔|
+|6|JVM searches for matching `catch`|✔|
+|7|`catch` executes|Prints message|
+|8|Program continues|✔|
+
+---
+
+# Memory Diagram
+
+```
+Stack Memory
+
+main()
+    |
+withdraw()
+    |
+throw new InsufficientBalanceException()
+
+                |
+                V
+
+Heap Memory
+
++----------------------------------------+
+| InsufficientBalanceException           |
+| Message = "Insufficient Balance"       |
++----------------------------------------+
+```
+
+The exception object is created on the **heap**, while the method calls are stored on the **stack**.
+
+---
+
+# Custom Unchecked Exception
+
+Instead of extending `Exception`, extend `RuntimeException`.
+
+```
+class InvalidAgeException extends RuntimeException {
+
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+
+}
+```
+
+Usage:
+
+```
+class Demo {
+
+    static void vote(int age) {
+
+        if (age < 18) {
+
+            throw new InvalidAgeException("Age must be 18 or above");
+
+        }
+
+        System.out.println("Eligible to Vote");
+    }
+
+    public static void main(String[] args) {
+
+        vote(15);
+
+    }
+
+}
+```
+
+### Output
+
+```
+Exception in thread "main"
+InvalidAgeException: Age must be 18 or above
+```
+
+No `throws` declaration is required because it is an **unchecked** exception.
+
+---
+
+# Checked vs Unchecked Custom Exceptions
+
+|Feature|Checked Custom Exception|Unchecked Custom Exception|
+|---|---|---|
+|Extends|`Exception`|`RuntimeException`|
+|Compiler checks|Yes|No|
+|Must handle or declare|Yes|No|
+|Best used for|Recoverable conditions|Programming/business rule violations|
+
+---
+
+# Real-Life Examples
+
+### Bank
+
+```
+class InsufficientBalanceException extends Exception
+```
+
+Thrown when withdrawal exceeds available balance.
+
+---
+
+### Student
+
+```
+class InvalidMarksException extends Exception
+```
+
+Thrown when marks are outside the valid range.
+
+---
+
+### Employee
+
+```
+class InvalidSalaryException extends RuntimeException
+```
+
+Thrown when salary is negative.
+
+---
+
+### Online Shopping
+
+```
+class ProductOutOfStockException extends Exception
+```
+
+Thrown when an item cannot be fulfilled due to lack of stock.
+
+---
+
+# Multiple Constructors
+
+```
+class InvalidAgeException extends Exception {
+
+    public InvalidAgeException() {
+    }
+
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+
+}
+```
+
+This allows creating the exception with or without a message.
+
+---
+
+# Exception Chaining
+
+```
+class DatabaseException extends Exception {
+
+    public DatabaseException(String message, Throwable cause) {
+
+        super(message, cause);
+
+    }
+
+}
+```
+
+Usage:
+
+```
+try {
+
+    // database code
+
+}
+
+catch(SQLException e){
+
+    throw new DatabaseException("Database Error", e);
+
+}
+```
+
+This preserves the original cause for debugging.
+
+---
+
+# Flow Diagram
+
+```
+Business Rule
+
+       |
+Condition Fails
+
+       |
+Create Custom Exception
+
+       |
+throw
+
+       |
+JVM Searches catch
+
+      / \
+Handled  Not Handled
+   |         |
+Continue   Program Terminates
+```
+
+---
+
+# Best Practices
+
+### ✔ Give meaningful names
+
+Good:
+
+```
+InvalidAgeException
+```
+
+Bad:
+
+```
+MyException
+```
+
+---
+
+### ✔ Add useful messages
+
+```
+throw new InvalidAgeException(
+        "Age must be greater than or equal to 18");
+```
+
+Avoid vague messages like:
+
+```
+throw new InvalidAgeException("Error");
+```
+
+---
+
+### ✔ Choose the right base class
+
+- Extend **`Exception`** when callers are expected to recover from the condition.
+- Extend **`RuntimeException`** when the error represents invalid usage or a programming/business rule violation that callers are not generally expected to recover from immediately.
+
+---
+
+### ✔ Keep exception classes focused
+
+Avoid placing business logic inside exception classes. They should mainly carry information about the error.
+
+---
+
+# Common Mistakes
+
+### ❌ Extending `Throwable`
+
+Wrong:
+
+```
+class MyException extends Throwable {
+
+}
+```
+
+Prefer extending `Exception` or `RuntimeException`.
+
+---
+
+### ❌ Forgetting `super(message)`
+
+Wrong:
+
+```
+class MyException extends Exception {
+
+    public MyException(String msg){
+
+    }
+
+}
+```
+
+The message will not be stored.
+
+Correct:
+
+```
+class MyException extends Exception {
+
+    public MyException(String msg){
+
+        super(msg);
+
+    }
+
+}
+```
+
+---
+
+### ❌ Using generic names
+
+Avoid:
+
+```
+class ErrorException extends Exception {
+
+}
+```
+
+Prefer descriptive names such as:
+
+```
+class InvalidOrderException extends Exception {
+
+}
+```
+
+---
+
+# Interview Questions
+
+### 1. What is a custom exception?
+
+A programmer-defined exception class used to represent application-specific or business-specific error conditions.
+
+---
+
+### 2. How do you create a custom exception?
+
+- Create a class.
+- Extend `Exception` (checked) or `RuntimeException` (unchecked).
+- Add constructors.
+- Throw it using the `throw` keyword.
+
+---
+
+### 3. Why do custom exceptions improve code?
+
+They make errors more descriptive, improve readability, and allow error handling to reflect business rules.
+
+---
+
+### 4. Should every custom exception extend `Exception`?
+
+No.
+
+- Extend `Exception` for checked exceptions.
+- Extend `RuntimeException` for unchecked exceptions.
+
+---
+
+### 5. Can a custom exception have methods?
+
+Yes. Although most custom exceptions only define constructors, they can also include fields and methods if additional error information is needed.
+
+Example:
+
+```
+class InvalidOrderException extends Exception {
+
+    private final int orderId;
+
+    public InvalidOrderException(int orderId, String message) {
+        super(message);
+        this.orderId = orderId;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+}
+```
+
+---
+
+### 6. Can we throw a custom exception using `throw`?
+
+Yes.
+
+```
+throw new InvalidAgeException("Age must be 18 or above");
+```
+
+---
+
+### 7. Can custom exceptions be caught like built-in exceptions?
+
+Yes.
+
+```
+try {
+
+    vote(15);
+
+}
+
+catch (InvalidAgeException e) {
+
+    System.out.println(e.getMessage());
+
+}
+```
+
+---
+
+# One-Minute Interview Revision
+
+```
+Need Business-Specific Error?
+            |
+          Create Class
+            |
+Extend Exception (Checked)
+        OR
+Extend RuntimeException (Unchecked)
+            |
+Add Constructors
+            |
+throw new MyException(...)
+            |
+Handle with try-catch (if checked)
+```
+
+## Quick Summary
+
+|Topic|Checked Custom Exception|Unchecked Custom Exception|
+|---|---|---|
+|Parent|`Exception`|`RuntimeException`|
+|Compiler Enforces Handling|✅ Yes|❌ No|
+|`throws` Needed|Usually yes|No|
+|Typical Use|Recoverable business conditions|Invalid input or programming/business rule violations|
+
+### Interview Tip
+
+A good custom exception should:
+
+- Have a **clear, descriptive name** (for example, `InsufficientBalanceException`).
+- Include a **meaningful error message**.
+- Extend the **appropriate base class** (`Exception` or `RuntimeException`) based on whether the caller is expected to handle the condition.
