@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "imp question"
             }
-          },
-          {
-            "id": "fc3988d369f8bbc3",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.12.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.12.7"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -193,8 +180,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc3988d369f8bbc3",
+  "active": "e41e1a8b582c5b11",
   "lastOpenFiles": [
+    "Tree",
     "JAVA interview/Exception Handling/imp question.md",
     "JAVA interview/Exception Handling",
     "Untitled",
@@ -225,7 +213,6 @@
     "Arrays/Indexes of SubArray Sum  (multiple companies).md",
     "Arrays/Majority Element.md",
     "Arrays/Maximum Circular SubArray sum.md",
-    "Queue/8 .imp- Gas Station Problem.md",
     "Pasted image 20250901223801.png",
     "Queue",
     "Pasted image 20250731225407.png",
