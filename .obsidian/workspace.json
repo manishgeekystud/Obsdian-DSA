@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/Tree Basics and Traversals.md",
+                "file": "Tree/2. Height of a Binary Tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tree Basics and Traversals"
+              "title": "2. Height of a Binary Tree"
             }
           }
         ]
@@ -182,9 +182,10 @@
   },
   "active": "f177b724172c53e8",
   "lastOpenFiles": [
+    "Tree/1.Tree Basics and Traversals.md",
+    "Tree/2. Height of a Binary Tree.md",
     "Pasted image 20260712221546.png",
     "JAVA interview/Exception Handling/imp question.md",
-    "Tree/Tree Basics and Traversals.md",
     "Tree",
     "JAVA interview/Exception Handling",
     "Untitled",
@@ -226,7 +227,6 @@
     "Pasted image 20250521011153.png",
     "Pasted image 20250521011144.png",
     "Pasted image 20250521011134.png",
-    "Pasted image 20250521011122.png",
     "Searching",
     "Untitled.canvas"
   ]
