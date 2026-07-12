@@ -287,11 +287,11 @@ Yes, but returning from `finally` is discouraged because it overrides returns fr
 
 # One-Minute Interview Revision
 
-|Block|Purpose|Executes When|
-|---|---|---|
-|`try`|Contains risky code|Always entered first|
-|`catch`|Handles matching exceptions|Only if a matching exception occurs|
-|`finally`|Cleanup code|Almost always, regardless of whether an exception occurred|
+| Block     | Purpose                     | Executes When                                              |
+| --------- | --------------------------- | ---------------------------------------------------------- |
+| `try`     | Contains risky code         | Always entered first                                       |
+| `catch`   | Handles matching exceptions | Only if a matching exception occurs                        |
+| `finally` | Cleanup code                | Almost always, regardless of whether an exception occurred |
 
 ### Execution Order
 
