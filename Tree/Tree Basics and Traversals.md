@@ -125,3 +125,13 @@ Preorder traversal is used to create a copy of the tree. Preorder traversal is a
 		printPreorder(node.right);
 	}
 ```
+
+## ==**Postorder Traversal**==
+
+_Algorithm Postorder(tree)_
+
+1. _Traverse the left subtree, i.e., call Postorder(left->subtree)_
+2. _Traverse the right subtree, i.e., call Postorder(right->subtree)_
+3. _Visit the root_
+
+Postorder traversal is used to delete the tree. Postorder traversal is also useful to get the postfix expression of an expression tree
