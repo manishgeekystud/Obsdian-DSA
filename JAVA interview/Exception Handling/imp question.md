@@ -893,3 +893,4 @@ It only informs the compiler and the caller about possible exceptions.
   
   
 
+Custom Exceptions
