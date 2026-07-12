@@ -156,3 +156,4 @@ Postorder traversal is used to delete the tree. Postorder traversal is also usef
 
 ```
 
+![[Pasted image 20260712221546.png]]
