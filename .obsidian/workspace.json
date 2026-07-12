@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
+                "file": "Tree/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.Level Order Traversal Line by Line (Level by Level)"
+              "title": "Untitled"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "f177b724172c53e8",
   "lastOpenFiles": [
-    "Tree/4.Level Order Traversal.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
+    "Tree/Untitled.md",
+    "Tree/4.Level Order Traversal.md",
     "Tree/3.Print Nodes at K Distance.md",
     "Tree/2. Height of a Binary Tree.md",
     "Pasted image 20260712222035.png",
@@ -215,7 +216,6 @@
     "Strings/Stringg",
     "Strings/First Occurence.md",
     "Arrays/Maximum Subarray Sum with k Elements.md",
-    "Arrays/Minimum adjacent difference in a circular array.md",
     "Pasted image 20250901223801.png",
     "Queue",
     "Pasted image 20250731225407.png",
