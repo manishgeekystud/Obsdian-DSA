@@ -96,3 +96,11 @@ class BinaryTree {
 }
 
 ```
+## ==**Preorder Traversal**==
+
+> _Algorithm Preorder(tree)_
+> 
+> 1. _Visit the root._
+> 2. _Traverse the left subtree, i.e., call Preorder(left->subtree)_
+> 3. _Traverse the right subtree, i.e., call Preorder(right->subtree)_
+
