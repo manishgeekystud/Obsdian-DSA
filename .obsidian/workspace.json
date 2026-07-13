@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/1.Tree Basics and Traversals.md",
+                "file": "Tree/8. Print Left view of Binary tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Tree Basics and Traversals"
+              "title": "8. Print Left view of Binary tree"
             }
           }
         ]
@@ -182,6 +182,7 @@
   },
   "active": "2fb562d6e7d76cd8",
   "lastOpenFiles": [
+    "Tree/1.Tree Basics and Traversals.md",
     "Tree/4.Level Order Traversal.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
     "Tree/8. Print Left view of Binary tree.md",
@@ -198,7 +199,6 @@
     "Tree/3.Print Nodes at K Distance.md",
     "Tree/2. Height of a Binary Tree.md",
     "Pasted image 20260712222035.png",
-    "Tree/1.Tree Basics and Traversals.md",
     "Pasted image 20260712221546.png",
     "Tree",
     "JAVA interview/Exception Handling",
