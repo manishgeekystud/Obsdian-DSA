@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Exception Handling/9.Exception Chaining.md",
+                "file": "JAVA interview/Exception Handling/10. Serialization Of Exceptions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9.Exception Chaining"
+              "title": "10. Serialization Of Exceptions"
             }
           }
         ]
@@ -182,6 +182,8 @@
   },
   "active": "2fb562d6e7d76cd8",
   "lastOpenFiles": [
+    "JAVA interview/Exception Handling/9.Exception Chaining.md",
+    "JAVA interview/Exception Handling/10. Serialization Of Exceptions.md",
     "JAVA interview/Exception Handling/8. Throwable class.md",
     "JAVA interview/Exception Handling/7.Exception LifeCycle.md",
     "JAVA interview/Exception Handling/6.Try with Resources.md",
@@ -190,7 +192,6 @@
     "JAVA interview/Exception Handling/3.Multiple Catch Blocks – Interview Questions & Answers.md",
     "JAVA interview/Exception Handling/2.Custom Exceptions.md",
     "JAVA interview/Exception Handling/1.Basics.md",
-    "JAVA interview/Exception Handling/9.Exception Chaining.md",
     "Tree/10.Mirror Binary tree.md",
     "Tree/4.Level Order Traversal.md",
     "Tree/9.Children Sum Property in Binary Tree.md",
@@ -214,7 +215,6 @@
     "Recursion/Palindrome check using Recusrion.md",
     "Recursion/Rope Cutting Problem.md",
     "Strings/Word Pattern.md",
-    "Strings/Stringg/imp problems.md",
     "Pasted image 20250910234203.png",
     "Strings/Stringg",
     "Pasted image 20250901223801.png",
