@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Exception Handling/2.Custom Exceptions.md",
+                "file": "JAVA interview/Exception Handling/4.Finally Block behavior.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.Custom Exceptions"
+              "title": "4.Finally Block behavior"
             }
           }
         ]
@@ -182,6 +182,8 @@
   },
   "active": "2fb562d6e7d76cd8",
   "lastOpenFiles": [
+    "JAVA interview/Exception Handling/2.Custom Exceptions.md",
+    "JAVA interview/Exception Handling/4.Finally Block behavior.md",
     "JAVA interview/Exception Handling/3.Multiple Catch Blocks – Interview Questions & Answers.md",
     "Tree/10.Mirror Binary tree.md",
     "Tree/4.Level Order Traversal.md",
@@ -190,7 +192,6 @@
     "Tree/8. Print Left view of Binary tree.md",
     "Tree/1.Tree Basics and Traversals.md",
     "Tree/6.Size of a Binary Tree.md",
-    "JAVA interview/Exception Handling/2.Custom Exceptions.md",
     "JAVA interview/Exception Handling/1.Basics.md",
     "Untitled.base",
     "Hashing/SubArrays Count with 0 Sum.md",
@@ -215,7 +216,6 @@
     "Hashing/Count Distinct elements in a  window.md",
     "Pasted image 20250910234203.png",
     "Strings/Longest Repeating Character.md",
-    "Strings/Permutation in String.md",
     "Strings/Stringg",
     "Pasted image 20250901223801.png",
     "Queue",
