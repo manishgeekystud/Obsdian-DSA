@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/4.Level Order Traversal.md",
+                "file": "Tree/Mirror Binary tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.Level Order Traversal"
+              "title": "Mirror Binary tree"
             }
           }
         ]
@@ -182,9 +182,10 @@
   },
   "active": "2fb562d6e7d76cd8",
   "lastOpenFiles": [
+    "Tree/4.Level Order Traversal.md",
+    "Tree/Mirror Binary tree.md",
     "Tree/9.Children Sum Property in Binary Tree.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
-    "Tree/4.Level Order Traversal.md",
     "Tree/8. Print Left view of Binary tree.md",
     "Tree/1.Tree Basics and Traversals.md",
     "Tree/6.Size of a Binary Tree.md",
@@ -215,7 +216,6 @@
     "Pasted image 20250910234203.png",
     "Strings/Longest Repeating Character.md",
     "Strings/Permutation in String.md",
-    "Strings/Palindrome String.md",
     "Strings/Stringg",
     "Pasted image 20250901223801.png",
     "Queue",

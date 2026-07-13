@@ -1,0 +1,602 @@
+> **Interview Frequency:** ⭐⭐⭐⭐⭐ (Very Frequently Asked)
+
+This is one of the most common Binary Tree interview questions asked in **Amazon, Microsoft, Google, Oracle, Adobe, Walmart, Flipkart, TCS Digital**, etc.
+
+---
+
+# Problem Statement
+
+Given the root of a binary tree, **convert the tree into its mirror image**.
+
+Mirroring a tree means:
+
+> **For every node, swap its left child and right child.**
+
+---
+
+## Example
+
+### Input
+
+```
+            1
+          /   \
+         2     3
+        / \   / \
+       4   5 6   7
+```
+
+### Output
+
+```
+            1
+          /   \
+         3     2
+        / \   / \
+       7   6 5   4
+```
+
+Notice that every node has its children interchanged.
+
+---
+
+# Idea
+
+For every node
+
+```
+Swap Left Child
+
+↓
+
+Swap Right Child
+
+↓
+
+Recursively mirror Left Subtree
+
+↓
+
+Recursively mirror Right Subtree
+```
+
+Since every node performs exactly one swap, eventually the entire tree becomes a mirror.
+
+---
+
+# Algorithm
+
+```
+Mirror(root)
+
+1. If root is NULL
+       return
+
+2. Swap left child and right child
+
+3. Mirror(left subtree)
+
+4. Mirror(right subtree)
+```
+
+---
+
+# Recursive Formula
+
+```
+mirror(root)
+
+↓
+
+Swap(root.left, root.right)
+
+↓
+
+mirror(root.left)
+
+↓
+
+mirror(root.right)
+```
+
+---
+
+# Complete Java Code (With Comments)
+
+```
+import java.util.LinkedList;
+import java.util.Queue;
+
+// Node Class
+class Node {
+
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+        left = null;
+        right = null;
+    }
+}
+
+public class MirrorBinaryTree {
+
+    // Function to convert Binary Tree into Mirror
+    static void mirror(Node root) {
+
+        // Base Case
+        if (root == null)
+            return;
+
+        // Swap left and right child
+        Node temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        // Mirror left subtree
+        mirror(root.left);
+
+        // Mirror right subtree
+        mirror(root.right);
+    }
+
+    // Level Order Traversal
+    static void levelOrder(Node root) {
+
+        if (root == null)
+            return;
+
+        Queue<Node> queue = new LinkedList<>();
+
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+
+            Node current = queue.poll();
+
+            System.out.print(current.data + " ");
+
+            if (current.left != null)
+                queue.offer(current.left);
+
+            if (current.right != null)
+                queue.offer(current.right);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        /*
+                    1
+                  /   \
+                 2     3
+                / \   / \
+               4   5 6   7
+        */
+
+        Node root = new Node(1);
+
+        root.left = new Node(2);
+        root.right = new Node(3);
+
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
+
+        System.out.println("Original Tree");
+
+        levelOrder(root);
+
+        mirror(root);
+
+        System.out.println("\nMirror Tree");
+
+        levelOrder(root);
+    }
+}
+```
+
+---
+
+# Output
+
+```
+Original Tree
+
+1 2 3 4 5 6 7
+
+Mirror Tree
+
+1 3 2 7 6 5 4
+```
+
+---
+
+# Dry Run
+
+Original Tree
+
+```
+            1
+          /   \
+         2     3
+        / \   / \
+       4   5 6   7
+```
+
+---
+
+## Step 1
+
+Call
+
+```
+mirror(1)
+```
+
+Swap
+
+```
+Before
+
+Left = 2
+
+Right = 3
+```
+
+After
+
+```
+Left = 3
+
+Right = 2
+```
+
+Tree becomes
+
+```
+            1
+          /   \
+         3     2
+        / \   / \
+       6   7 4   5
+```
+
+---
+
+## Step 2
+
+Call
+
+```
+mirror(3)
+```
+
+Swap
+
+```
+Before
+
+Left = 6
+
+Right = 7
+```
+
+After
+
+```
+      3
+     / \
+    7   6
+```
+
+---
+
+## Step 3
+
+Call
+
+```
+mirror(7)
+```
+
+Leaf node
+
+Nothing changes.
+
+Return.
+
+---
+
+## Step 4
+
+Call
+
+```
+mirror(6)
+```
+
+Leaf node
+
+Return.
+
+---
+
+## Step 5
+
+Return to root
+
+Now call
+
+```
+mirror(2)
+```
+
+Swap
+
+```
+Before
+
+Left = 4
+
+Right = 5
+```
+
+After
+
+```
+      2
+     / \
+    5   4
+```
+
+---
+
+## Step 6
+
+Mirror(5)
+
+Leaf
+
+Return
+
+---
+
+## Step 7
+
+Mirror(4)
+
+Leaf
+
+Return
+
+---
+
+Final Tree
+
+```
+            1
+          /   \
+         3     2
+        / \   / \
+       7   6 5   4
+```
+
+---
+
+# Step-by-Step Table
+
+|Function Call|Before Swap|After Swap|
+|---|---|---|
+|mirror(1)|Left=2 Right=3|Left=3 Right=2|
+|mirror(3)|Left=6 Right=7|Left=7 Right=6|
+|mirror(7)|Leaf|No Change|
+|mirror(6)|Leaf|No Change|
+|mirror(2)|Left=4 Right=5|Left=5 Right=4|
+|mirror(5)|Leaf|No Change|
+|mirror(4)|Leaf|No Change|
+
+---
+
+# Recursion Tree
+
+```
+mirror(1)
+│
+├── Swap(2,3)
+│
+├── mirror(3)
+│   │
+│   ├── Swap(6,7)
+│   │
+│   ├── mirror(7)
+│   │     │
+│   │     ├── Swap(NULL,NULL)
+│   │     ├── mirror(NULL)
+│   │     └── mirror(NULL)
+│   │
+│   └── mirror(6)
+│         │
+│         ├── Swap(NULL,NULL)
+│         ├── mirror(NULL)
+│         └── mirror(NULL)
+│
+└── mirror(2)
+    │
+    ├── Swap(4,5)
+    │
+    ├── mirror(5)
+    │     │
+    │     ├── Swap(NULL,NULL)
+    │     ├── mirror(NULL)
+    │     └── mirror(NULL)
+    │
+    └── mirror(4)
+          │
+          ├── Swap(NULL,NULL)
+          ├── mirror(NULL)
+          └── mirror(NULL)
+```
+
+---
+
+# Return Flow
+
+```
+mirror(7)
+↓
+
+Return
+
+mirror(6)
+↓
+
+Return
+
+mirror(3)
+↓
+
+Return
+
+mirror(5)
+↓
+
+Return
+
+mirror(4)
+↓
+
+Return
+
+mirror(2)
+↓
+
+Return
+
+mirror(1)
+↓
+
+Finished
+```
+
+---
+
+# Visualization of Swaps
+
+```
+Original
+
+            1
+          /   \
+         2     3
+```
+
+↓
+
+Swap at Root
+
+```
+            1
+          /   \
+         3     2
+```
+
+↓
+
+Swap at Node 3
+
+```
+            1
+          /   \
+         3     2
+        / \
+       7   6
+```
+
+↓
+
+Swap at Node 2
+
+```
+            1
+          /   \
+         3     2
+        / \   / \
+       7   6 5   4
+```
+
+---
+
+# Time Complexity
+
+Every node is visited exactly once.
+
+```
+Time Complexity = O(n)
+```
+
+where **n** is the number of nodes.
+
+---
+
+# Space Complexity
+
+The extra space is due to the recursion stack.
+
+- **Balanced Tree:** `O(log n)`
+- **Skewed Tree:** `O(n)`
+
+---
+
+# Interview Questions
+
+### 1. Why do we swap before making recursive calls?
+
+After swapping, the original left subtree becomes the right subtree and vice versa. Recursing on the swapped children ensures every subtree is mirrored exactly once.
+
+---
+
+### 2. Can we use BFS instead of recursion?
+
+Yes. Use a queue, dequeue each node, swap its children, and enqueue the children. Both recursive DFS and iterative BFS produce the same mirrored tree.
+
+---
+
+### 3. Why is the base case `root == null`?
+
+A `null` node has no children to swap, so recursion should stop.
+
+---
+
+### 4. Is this a preorder traversal?
+
+Yes. The recursive solution follows a **preorder pattern**:
+
+```
+Current Node (Swap)
+        ↓
+Left Subtree
+        ↓
+Right Subtree
+```
+
+The action (swap) is performed before the recursive calls.
+
+---
+
+# Interview Tip
+
+Many recursive tree problems follow one of these patterns:
+
+|Problem|Formula|
+|---|---|
+|Height|`1 + max(leftHeight, rightHeight)`|
+|Size|`1 + leftSize + rightSize`|
+|Maximum|`max(root.data, leftMax, rightMax)`|
+|Mirror|`swap(left, right)` → `mirror(left)` → `mirror(right)`|
+
+Recognizing these common recursion patterns makes it much easier to solve binary tree interview questions.
