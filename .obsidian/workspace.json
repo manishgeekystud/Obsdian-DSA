@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Exception Handling/5.Exception Propagation.md",
+                "file": "JAVA interview/Exception Handling/6.Try with Resources.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.Exception Propagation"
+              "title": "6.Try with Resources"
             }
           }
         ]
@@ -180,10 +180,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2fb562d6e7d76cd8",
+  "active": "e902c25ec9fa3149",
   "lastOpenFiles": [
-    "JAVA interview/Exception Handling/4.Finally Block behavior.md",
     "JAVA interview/Exception Handling/5.Exception Propagation.md",
+    "JAVA interview/Exception Handling/6.Try with Resources.md",
+    "JAVA interview/Exception Handling/4.Finally Block behavior.md",
     "JAVA interview/Exception Handling/2.Custom Exceptions.md",
     "JAVA interview/Exception Handling/3.Multiple Catch Blocks – Interview Questions & Answers.md",
     "Tree/10.Mirror Binary tree.md",
@@ -214,7 +215,6 @@
     "Strings/Reorganize String.md",
     "Strings/Group Anagrams.md",
     "Hashing/First repeating Element.md",
-    "Hashing/Count Distinct elements in a  window.md",
     "Pasted image 20250910234203.png",
     "Strings/Stringg",
     "Pasted image 20250901223801.png",
