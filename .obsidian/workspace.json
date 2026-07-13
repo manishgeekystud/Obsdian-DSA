@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/Mirror Binary tree.md",
+                "file": "Tree/10.Mirror Binary tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mirror Binary tree"
+              "title": "10.Mirror Binary tree"
             }
           }
         ]
@@ -183,7 +183,7 @@
   "active": "2fb562d6e7d76cd8",
   "lastOpenFiles": [
     "Tree/4.Level Order Traversal.md",
-    "Tree/Mirror Binary tree.md",
+    "Tree/10.Mirror Binary tree.md",
     "Tree/9.Children Sum Property in Binary Tree.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
     "Tree/8. Print Left view of Binary tree.md",
