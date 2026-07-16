@@ -276,16 +276,16 @@ Every Dog is an Animal, but not every Animal is a Dog.
 # Difference Between IS-A and HAS-A
 # Comparison Table
 
-|Feature|IS-A|HAS-A|
-|---|---|---|
-|Meaning|Inheritance|Composition|
-|Keyword|`extends`|Object Reference|
-|Relationship|Child is a Parent|Object contains another Object|
-|Code Reuse|Through inheritance|Through object composition|
-|Coupling|Tighter|Looser|
-|Flexibility|Less|More|
-|Supports Polymorphism|✅ Yes|Indirectly|
-|Preferred in Modern Design|Only when appropriate|✅ Often preferred|
+| Feature                    | IS-A                  | HAS-A                          |
+| -------------------------- | --------------------- | ------------------------------ |
+| Meaning                    | Inheritance           | Composition                    |
+| Keyword                    | `extends`             | Object Reference               |
+| Relationship               | Child is a Parent     | Object contains another Object |
+| Code Reuse                 | Through inheritance   | Through object composition     |
+| Coupling                   | Tighter               | Looser                         |
+| Flexibility                | Less                  | More                           |
+| Supports Polymorphism      | ✅ Yes                 | Indirectly                     |
+| Preferred in Modern Design | Only when appropriate | ✅ Often preferred              |
 ### HAS-A Example
 
 ```
