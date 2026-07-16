@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Inheritence/Basics.md",
+                "file": "Tree/10.Mirror Binary tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basics"
+              "title": "10.Mirror Binary tree"
             }
           }
         ]
@@ -182,8 +182,8 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Tree/11.Balaned Binary Tree.md",
     "JAVA interview/Inheritence/Basics.md",
+    "Tree/11.Balaned Binary Tree.md",
     "JAVA interview/Inheritence",
     "Tree/2. Height of a Binary Tree.md",
     "Tree/10.Mirror Binary tree.md",
