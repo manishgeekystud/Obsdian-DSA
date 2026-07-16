@@ -446,3 +446,133 @@ A simple way to remember the difference:
 |---|---|
 |**Same class, different parameters**|**Method Overloading**|
 |**Parent and Child, same method implementation changed**|**Method Overriding**|
+# What is Runtime Polymorphism?
+
+Runtime polymorphism happens when a **parent reference** points to a **child object**, and the JVM decides **at runtime** which overridden method to execute.
+
+Example:
+
+```
+Animal a = new Dog();
+
+a.sound();
+```
+
+Output
+
+```
+Dog Barks
+```
+
+Why?
+
+Because at runtime the JVM sees that:
+
+```
+Reference → Animal
+
+Object → Dog
+```
+
+So it executes
+
+```
+Dog.sound()
+```
+
+This behavior is **Runtime Polymorphism**.
+
+---
+
+# Visual Diagram
+
+```
+          Animal
+             ▲
+             │
+            Dog
+
+Animal a = new Dog();
+
+        │
+        ▼
+JVM checks actual object
+
+Dog
+
+↓
+
+Calls Dog.sound()
+```
+
+---
+
+# Interview Question
+
+### Is this Runtime Polymorphism?
+
+```
+Dog d = new Dog();
+
+d.sound();
+```
+
+**Answer:**
+
+❌ **No.**
+
+Although `sound()` is overridden, there is **no polymorphism** here because both the **reference type** and **object type** are `Dog`.
+
+The compiler already knows which method will be called.
+
+---
+
+### Is this Runtime Polymorphism?
+
+```
+Animal a = new Dog();
+
+a.sound();
+```
+
+**Answer:**
+
+✅ **Yes.**
+
+The reference is `Animal`, but the object is `Dog`.
+
+The JVM decides at runtime which method to execute.
+
+---
+
+# Comparison
+
+|Method Overriding|Runtime Polymorphism|
+|---|---|
+|A programming technique|A runtime behavior|
+|Child redefines parent's method|JVM chooses overridden method at runtime|
+|Happens while writing the class|Happens when the program runs|
+|Required for runtime polymorphism|Achieved because of method overriding|
+
+---
+
+# Interview Answer (Best Answer)
+
+> **Method Overriding and Runtime Polymorphism are closely related but not identical. Method Overriding is the mechanism where a child class provides its own implementation of a parent method. Runtime Polymorphism is the behavior where the JVM selects the appropriate overridden method at runtime based on the actual object. In other words, method overriding enables runtime polymorphism.**
+
+---
+
+## Easy Memory Trick ⭐⭐⭐⭐⭐
+
+```
+Method Overriding
+        ↓
+Creates
+        ↓
+Runtime Polymorphism
+```
+
+Remember:
+
+- **Overriding = Code you write**
+- **Runtime Polymorphism = Behavior the JVM performs**
