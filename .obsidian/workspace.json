@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Inheritence/5.Constructor chaining.md",
+                "file": "JAVA interview/Inheritence/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.Constructor chaining"
+              "title": "Untitled"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "JAVA interview/Inheritence/4.super Keyword.md",
     "JAVA interview/Inheritence/5.Constructor chaining.md",
+    "JAVA interview/Inheritence/Untitled.md",
+    "JAVA interview/Inheritence/4.super Keyword.md",
     "JAVA interview/Inheritence/3.Method Overloading vs Overriding.md",
     "JAVA interview/Inheritence/2.IS -A Relationship.md",
     "JAVA interview/Inheritence/1.Basics.md",
@@ -208,7 +209,6 @@
     "Tree/9.Children Sum Property in Binary Tree.md",
     "Tree/8. Print Left view of Binary tree.md",
     "Tree/1.Tree Basics and Traversals.md",
-    "Tree/6.Size of a Binary Tree.md",
     "Untitled.base",
     "Pasted image 20260712222035.png",
     "Pasted image 20260712221546.png",
