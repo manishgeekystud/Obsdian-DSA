@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/12. Identical tree.md",
+                "file": "Tree/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12. Identical tree"
+              "title": "Untitled"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Tree/11.Balaned Binary Tree.md",
     "Tree/12. Identical tree.md",
+    "Tree/Untitled.md",
+    "Tree/11.Balaned Binary Tree.md",
     "Tree/10.Mirror Binary tree.md",
     "JAVA interview/Inheritence/Basics.md",
     "JAVA interview/Inheritence",
@@ -209,7 +210,6 @@
     "Hashing/Longest Consecutive Subsequence.md",
     "Hashing/Count Non-Repeated Elements.md",
     "Tree/7. Maximum Of Binary Tree.md",
-    "Tree/3.Print Nodes at K Distance.md",
     "Pasted image 20260712222035.png",
     "Pasted image 20260712221546.png",
     "Tree",
