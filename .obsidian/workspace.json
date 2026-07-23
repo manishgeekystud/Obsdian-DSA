@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/16.Diameter of Tree.md",
+                "file": "Tree/17.LCA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16.Diameter of Tree"
+              "title": "17.LCA"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Tree/2. Height of a Binary Tree.md",
     "Tree/16.Diameter of Tree.md",
+    "Tree/17.LCA.md",
+    "Tree/2. Height of a Binary Tree.md",
     "Tree/15.ZigZag-Spiral Traversal.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
     "Tree/14.Binary Tree to DLL.md",
@@ -208,7 +209,6 @@
     "JAVA interview/Exception Handling/4.Finally Block behavior.md",
     "JAVA interview/Exception Handling/3.Multiple Catch Blocks – Interview Questions & Answers.md",
     "JAVA interview/Exception Handling/2.Custom Exceptions.md",
-    "JAVA interview/Exception Handling/1.Basics.md",
     "Untitled.base",
     "Pasted image 20260712222035.png",
     "Pasted image 20260712221546.png",
