@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/18. Maximum Path Sum.md",
+                "file": "JAVA interview/Inheritence/6. instance of.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "18. Maximum Path Sum"
+              "title": "6. instance of"
             }
           }
         ]
@@ -182,8 +182,8 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Tree/0. Master Tree Data Structure.md",
     "Tree/18. Maximum Path Sum.md",
+    "Tree/0. Master Tree Data Structure.md",
     "Tree/17.LCA.md",
     "Pasted image 20260723220018.png",
     "Tree/16.Diameter of Tree.md",
