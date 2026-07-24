@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/0. Master Tree Data Structure.md",
+                "file": "Tree/18. Maximum Path Sum.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. Master Tree Data Structure"
+              "title": "18. Maximum Path Sum"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Tree/17.LCA.md",
     "Tree/0. Master Tree Data Structure.md",
+    "Tree/18. Maximum Path Sum.md",
+    "Tree/17.LCA.md",
     "Pasted image 20260723220018.png",
     "Tree/16.Diameter of Tree.md",
     "Tree/2. Height of a Binary Tree.md",
@@ -209,7 +210,6 @@
     "JAVA interview/Exception Handling/6.Try with Resources.md",
     "JAVA interview/Exception Handling/5.Exception Propagation.md",
     "JAVA interview/Exception Handling/4.Finally Block behavior.md",
-    "JAVA interview/Exception Handling/3.Multiple Catch Blocks – Interview Questions & Answers.md",
     "Untitled.base",
     "Pasted image 20260712222035.png",
     "Pasted image 20260712221546.png",
