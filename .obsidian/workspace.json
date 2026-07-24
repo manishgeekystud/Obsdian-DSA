@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Inheritence/Untitled.md",
+                "file": "JAVA interview/Inheritence/7.Dynamic Method Dispatch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "7.Dynamic Method Dispatch"
             }
           }
         ]
@@ -183,7 +183,7 @@
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
     "JAVA interview/Inheritence/2.IS -A Relationship.md",
-    "JAVA interview/Inheritence/Untitled.md",
+    "JAVA interview/Inheritence/7.Dynamic Method Dispatch.md",
     "JAVA interview/Inheritence/5.Constructor chaining.md",
     "JAVA interview/Inheritence/6. instance of.md",
     "Tree/18. Maximum Path Sum.md",
