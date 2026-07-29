@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Binary Search Tree/4. kth Smallest in BST.md",
+                "file": "Binary Search Tree/5. Check If BST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. kth Smallest in BST"
+              "title": "5. Check If BST"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Binary Search Tree/3.Ceil - roof in a BST.md",
     "Binary Search Tree/4. kth Smallest in BST.md",
+    "Binary Search Tree/5. Check If BST.md",
+    "Binary Search Tree/3.Ceil - roof in a BST.md",
     "Binary Search Tree/2.Floor in BST.md",
     "Binary Search Tree/1.Introduction to Binary Search Trees.md",
     "Tree/1.Tree Basics and Traversals.md",
@@ -209,7 +210,6 @@
     "Tree/15.ZigZag-Spiral Traversal.md",
     "Tree/5.Level Order Traversal Line by Line (Level by Level).md",
     "Tree/14.Binary Tree to DLL.md",
-    "Tree/4.Level Order Traversal.md",
     "JAVA interview/Inheritence",
     "Untitled.base",
     "Pasted image 20260712222035.png",
