@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Multithreading/1.Basics.md",
+                "file": "JAVA interview/Multithreading/2.Thread Life cycle.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Basics"
+              "title": "2.Thread Life cycle"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "Tree/17.LCA.md",
     "JAVA interview/Multithreading/1.Basics.md",
+    "JAVA interview/Multithreading/2.Thread Life cycle.md",
+    "Tree/17.LCA.md",
     "JAVA interview/Multithreading",
     "Binary Search Tree/8.Vertical traversal of BST.md",
     "JAVA interview/String/6.intern().md",
@@ -210,7 +211,6 @@
     "JAVA interview/Inheritence/8.Constructor Execution Order.md",
     "JAVA interview/Inheritence/7.Dynamic Method Dispatch or Runtime Polymorphism.md",
     "JAVA interview/Inheritence/6. instance of.md",
-    "JAVA interview/Inheritence/5.Constructor chaining.md",
     "Pasted image 20260723220018.png",
     "JAVA interview/Inheritence",
     "Untitled.base",
