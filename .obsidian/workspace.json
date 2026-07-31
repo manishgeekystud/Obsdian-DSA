@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tree/17.LCA.md",
+                "file": "JAVA interview/Multithreading/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "17.LCA"
+              "title": "Untitled"
             }
           }
         ]
@@ -182,6 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
+    "Tree/17.LCA.md",
+    "JAVA interview/Multithreading/Untitled.md",
+    "JAVA interview/Multithreading",
     "Binary Search Tree/8.Vertical traversal of BST.md",
     "JAVA interview/String/6.intern().md",
     "JAVA interview/String/5.String vs StringBuilder vs StringBuffer.md",
@@ -208,8 +211,6 @@
     "JAVA interview/Inheritence/7.Dynamic Method Dispatch or Runtime Polymorphism.md",
     "JAVA interview/Inheritence/6. instance of.md",
     "JAVA interview/Inheritence/5.Constructor chaining.md",
-    "JAVA interview/Inheritence/4.super Keyword.md",
-    "JAVA interview/Inheritence/3.Method Overloading vs Overriding.md",
     "Pasted image 20260723220018.png",
     "JAVA interview/Inheritence",
     "Untitled.base",
@@ -222,7 +223,6 @@
     "Pasted image 20250910234203.png",
     "Strings/Stringg",
     "Pasted image 20250901223801.png",
-    "Queue",
     "Pasted image 20250731225407.png",
     "Pasted image 20250602232830.png",
     "Pasted image 20250521011215.png",
