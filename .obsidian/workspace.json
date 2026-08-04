@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph/1.Basics.md",
+                "file": "Graph/2.BFS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Basics"
+              "title": "2.BFS"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
-    "JAVA interview/Multithreading/5.Thread Safety.md",
     "Graph/1.Basics.md",
+    "Graph/2.BFS.md",
+    "JAVA interview/Multithreading/5.Thread Safety.md",
     "Graph",
     "JAVA interview/Multithreading/4.Synchronization.md",
     "JAVA interview/Multithreading/3. Ways to create thread.md",
@@ -212,7 +213,6 @@
     "Binary Search Tree",
     "JAVA interview/Inheritence/12.Static Keyword.md",
     "JAVA interview/Inheritence/11. Final Keyword.md",
-    "JAVA interview/Inheritence/10.Covariant return Type.md",
     "Pasted image 20260723220018.png",
     "JAVA interview/Inheritence",
     "Untitled.base",
