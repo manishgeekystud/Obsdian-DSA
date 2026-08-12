@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAVA interview/Multithreading/2.Thread Life cycle.md",
+                "file": "JAVA interview/Multithreading/3. Ways to create thread.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.Thread Life cycle"
+              "title": "3. Ways to create thread"
             }
           }
         ]
@@ -182,9 +182,9 @@
   },
   "active": "7e949b3703d2bd5d",
   "lastOpenFiles": [
+    "JAVA interview/Multithreading/2.Thread Life cycle.md",
     "JAVA interview/Multithreading/3. Ways to create thread.md",
     "JAVA interview/Multithreading/1.Basics.md",
-    "JAVA interview/Multithreading/2.Thread Life cycle.md",
     "JAVA interview/Multithreading/4.Synchronization.md",
     "JAVA interview/Multithreading/5.Thread Safety.md",
     "Graph/3.BFS Variations.md",
